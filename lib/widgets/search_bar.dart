@@ -1,3 +1,10 @@
+/*
+Author :
+Anshuman Mishra
+Team : Technocrats
+National Institute of Technology Warangal
+*/
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 

@@ -1,3 +1,10 @@
+/*
+Author :
+Anshuman Mishra
+Team : Technocrats
+National Institute of Technology Warangal
+*/
+
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -45,13 +52,12 @@ class TabScreen2 extends StatelessWidget {
                   ),
                   Text(
                     "CoVID-19 Emergency",
-                    style:TextStyle(color: Colors.black,fontSize: 24.0),
+                    style: TextStyle(color: Colors.black, fontSize: 24.0),
                     /*Theme.of(context)
                         .textTheme
                         .display1
                         .copyWith(fontWeight: FontWeight.w900),
                         */
-
                   ),
                   SearchBar(),
                   Expanded(

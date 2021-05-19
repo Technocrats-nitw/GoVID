@@ -1,12 +1,19 @@
+/*
+Author :
+Anshuman Mishra
+Team : Technocrats
+National Institute of Technology Warangal
+*/
+
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:technocrats/constants.dart';
-import 'package:technocrats/screens/details_screen.dart';
 import 'package:technocrats/widgets/category_card.dart';
 import 'package:technocrats/widgets/search_bar.dart';
 import 'package:technocrats/screens/tabscreen1.dart';
 import 'package:technocrats/screens/tabscreen2.dart';
+import 'package:technocrats/screens/doctor_ui/doctors.dart';
 
 void main() => runApp(MyApp());
 
@@ -38,7 +45,7 @@ class _PagesState extends State<Pages> {
   late PageController _pageController;
 
   @override
-  void initState(){
+  void initState() {
     super.initState();
     _pageController = PageController();
   }
@@ -54,7 +61,7 @@ class _PagesState extends State<Pages> {
         children: <Widget>[
           TabScreen1(),
           TabScreen2(),
-          TabScreen1(),
+          doctorUi(),
           TabScreen2(),
         ],
         onPageChanged: (int index) {
@@ -65,21 +72,23 @@ class _PagesState extends State<Pages> {
       ),
       // covid , doctor,hospital, self_history
       bottomNavigationBar: CurvedNavigationBar(
-          items:<Widget>[
-            Icon(Icons.medical_services_rounded,size:20,color:Colors.black),
-            Icon(Icons.maps_home_work_rounded,size:20,color:Colors.black),
-            Icon(Icons.medical_services_rounded,size:20,color:Colors.black),
-            Icon(Icons.account_circle,size:20,color:Colors.black),
+          items: <Widget>[
+            Icon(Icons.medical_services_outlined,
+                size: 20, color: Colors.black),
+            Icon(Icons.maps_home_work_outlined, size: 20, color: Colors.black),
+            Icon(Icons.medical_services_outlined,
+                size: 20, color: Colors.black),
+            Icon(Icons.account_circle_outlined, size: 20, color: Colors.black),
           ],
-          animationDuration: Duration(milliseconds: 200),
-          backgroundColor: Colors.indigo,
-          index:1,
-          onTap:(index){
-            setState((){
+          animationDuration: Duration(milliseconds: 400),
+          backgroundColor: Color.fromRGBO(44, 24, 83, 255),
+          buttonBackgroundColor: Color.fromRGBO(44, 24, 83, 255),
+          index: 1,
+          onTap: (index) {
+            setState(() {
               _pageController.jumpToPage(index);
             });
-          }
-      ),
+          }),
     );
   }
 }

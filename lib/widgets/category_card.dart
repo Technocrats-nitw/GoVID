@@ -1,3 +1,10 @@
+/*
+Author :
+Anshuman Mishra
+Team : Technocrats
+National Institute of Technology Warangal
+*/
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:technocrats/constants.dart';
@@ -9,9 +16,9 @@ class CategoryCard extends StatelessWidget {
   const CategoryCard({
     //Key key,
     this.svgSrc = "assets/icons/Meditation.svg",
-    this.title = "title" ,
+    this.title = "title",
     required this.press,
-  });// : super(key: key);
+  }); // : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -42,17 +49,16 @@ class CategoryCard extends StatelessWidget {
                   Spacer(),
                   SvgPicture.asset(svgSrc),
                   Spacer(),
-                  Text(
-                    title,
-                    textAlign: TextAlign.center,
-                    style: TextStyle(color: Colors.black,fontSize: 24.0)
-                    /*Theme.of(context)
+                  Text(title,
+                      textAlign: TextAlign.center,
+                      style: TextStyle(color: Colors.black, fontSize: 24.0)
+                      /*Theme.of(context)
                         .textTheme
                         .title
                         .copyWith(fontSize: 15),
                         */
 
-                  )
+                      )
                 ],
               ),
             ),

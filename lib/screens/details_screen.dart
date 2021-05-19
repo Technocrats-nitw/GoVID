@@ -1,7 +1,14 @@
+/*
+Author :
+Anshuman Mishra
+Team : Technocrats
+National Institute of Technology Warangal
+*/
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:technocrats/constants.dart';
-import 'package:technocrats/widgets/bottom_nav_bar.dart';
+
 import 'package:technocrats/widgets/search_bar.dart';
 
 class DetailsScreen extends StatelessWidget {
@@ -32,16 +39,15 @@ class DetailsScreen extends StatelessWidget {
                     SizedBox(
                       height: size.height * 0.05,
                     ),
-                    Text(
-                      "Meditation",
-                      style: TextStyle(color: Colors.black,fontSize: 24.0)
-                      /*Theme.of(context)
+                    Text("Meditation",
+                        style: TextStyle(color: Colors.black, fontSize: 24.0)
+                        /*Theme.of(context)
                           .textTheme
                           .display1
                           .copyWith(fontWeight: FontWeight.w900),
 
                        */
-                    ),
+                        ),
                     SizedBox(height: 10),
                     Text(
                       "3-10 MIN Course",
@@ -92,7 +98,7 @@ class DetailsScreen extends StatelessWidget {
                     SizedBox(height: 20),
                     Text(
                       "Meditation",
-                      style:TextStyle(color: Colors.black,fontSize: 24.0),
+                      style: TextStyle(color: Colors.black, fontSize: 24.0),
                       /*Theme.of(context)
                           .textTheme
                           .title
@@ -158,10 +164,10 @@ class SeassionCard extends StatelessWidget {
   final Function press;
   const SeassionCard({
     //Key key,
-    this.seassionNum=1,
+    this.seassionNum = 1,
     this.isDone = false,
     required this.press,
-  });// : super(key: key);
+  }); // : super(key: key);
 
   @override
   Widget build(BuildContext context) {
