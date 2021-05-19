@@ -10,6 +10,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:technocrats/widgets/category_card.dart';
 import 'package:technocrats/widgets/search_bar.dart';
+import 'package:technocrats/screens/doctor_ui/utsi.dart';
 
 class TabScreen2 extends StatelessWidget {
   @override
@@ -23,11 +24,19 @@ class TabScreen2 extends StatelessWidget {
           Container(
             // Here the height of the container is 45% of our total height
             height: size.height * .45,
+            /*
             decoration: BoxDecoration(
               color: Color(0xFFF5CEB8),
               image: DecorationImage(
                 alignment: Alignment.centerLeft,
                 image: AssetImage("assets/images/undraw_pilates_gpdb.png"),
+              ),
+            ),*/
+            decoration: BoxDecoration(
+              gradient: purpleGradient,
+              borderRadius: BorderRadius.only(
+                bottomLeft: Radius.circular(40),
+                bottomRight: Radius.circular(40),
               ),
             ),
           ),
@@ -52,7 +61,10 @@ class TabScreen2 extends StatelessWidget {
                   ),
                   Text(
                     "CoVID-19 Emergency",
-                    style: TextStyle(color: Colors.black, fontSize: 24.0),
+                    style: TextStyle(
+                        color: Colors.white70,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 28.0),
                     /*Theme.of(context)
                         .textTheme
                         .display1

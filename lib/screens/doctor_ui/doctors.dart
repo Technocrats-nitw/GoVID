@@ -444,6 +444,31 @@ class _doctorUiState extends State<doctorUi> {
                       ),
                     ),
                   ),
+                  RaisedButton(
+                    onPressed: () {},
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(80.0)),
+                    padding: const EdgeInsets.all(0.0),
+                    child: Ink(
+                      decoration: const BoxDecoration(
+                        gradient: purpleGradient,
+                        borderRadius: BorderRadius.all(Radius.circular(80.0)),
+                      ),
+                      child: Container(
+                        constraints: const BoxConstraints(
+                            minWidth: 88.0,
+                            minHeight: 36.0), // min sizes for Material buttons
+                        alignment: Alignment.center,
+                        child: const Text(
+                          'Consult',
+                          style: TextStyle(
+                              fontWeight: FontWeight.w300,
+                              fontSize: 13,
+                              color: Colors.white),
+                        ),
+                      ),
+                    ),
+                  ),
                 ],
               ),
             ],
