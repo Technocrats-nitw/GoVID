@@ -7,10 +7,7 @@ National Institute of Technology Warangal
 
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:technocrats/constants.dart';
-import 'package:technocrats/widgets/category_card.dart';
-import 'package:technocrats/widgets/search_bar.dart';
 import 'package:technocrats/screens/tabscreen1.dart';
 import 'package:technocrats/screens/tabscreen2.dart';
 import 'package:technocrats/screens/doctor_ui/doctors.dart';
