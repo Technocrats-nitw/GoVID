@@ -121,7 +121,7 @@ class _docInfoPageState extends State<docInfoPage> {
                                   SizedBox(
                                     height: 10,
                                   ),
-                                  Padding(
+                                  /*Padding(
                                     padding:
                                         EdgeInsets.symmetric(horizontal: 25.0),
                                     child: Row(
@@ -134,7 +134,7 @@ class _docInfoPageState extends State<docInfoPage> {
                                             name: "Certifications", total: 31),
                                       ],
                                     ),
-                                  ),
+                                  ),*/
                                   SizedBox(
                                     height: 10,
                                   ),
@@ -264,6 +264,7 @@ class _docInfoPageState extends State<docInfoPage> {
     );
   }
 }
+/*
 
 class Stats extends StatelessElement {
   String total, name;
@@ -285,3 +286,4 @@ class Stats extends StatelessElement {
         ]));
   }
 }
+*/
