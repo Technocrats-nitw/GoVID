@@ -10,7 +10,8 @@ import 'package:flutter/material.dart';
 import 'package:technocrats/constants.dart';
 import 'package:technocrats/screens/tabscreen1.dart';
 import 'package:technocrats/screens/tabscreen2.dart';
-import 'package:technocrats/screens/doctor_ui/doctors.dart';
+//import 'package:technocrats/screens/doctor_ui/doctors.dart';
+import 'package:technocrats/screens/dev_ui/dev.dart';
 import 'package:technocrats/screens/hospital_ui/hospitaldoctor.dart';
 import 'package:technocrats/screens/hospital_ui/DocInfo.dart';
 
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
       title: 'Hackon With Amazon',
       theme: ThemeData(
         fontFamily: "Cairo",
-        scaffoldBackgroundColor: Color.fromRGBO(245, 235, 201, 0),
+        scaffoldBackgroundColor: Colors.grey,
         textTheme: Theme.of(context).textTheme.apply(displayColor: kTextColor),
       ),
       home: Pages(),
@@ -63,7 +64,7 @@ class _PagesState extends State<Pages> {
         children: <Widget>[
           TabScreen1(),
           hospitaldoctor(),
-          doctorUi(),
+          devUi(),
           TabScreen2(),
         ],
         onPageChanged: (int index) {

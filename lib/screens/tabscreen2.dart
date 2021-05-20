@@ -10,7 +10,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:technocrats/widgets/category_card.dart';
 import 'package:technocrats/widgets/search_bar.dart';
-import 'package:technocrats/screens/doctor_ui/utsi.dart';
+import 'package:technocrats/constants.dart';
 
 class TabScreen2 extends StatelessWidget {
   @override

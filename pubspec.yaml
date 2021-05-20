@@ -65,6 +65,7 @@ flutter:
     - assets/onBoardDoc.png
     - assets/images/docprofile/
     - assets/images/docinfo/bg1.png
+    - assets/images/dev/
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg

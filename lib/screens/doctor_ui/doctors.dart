@@ -6,9 +6,9 @@ National Institute of Technology Warangal
 */
 
 import 'package:flutter/material.dart';
-import 'package:technocrats/screens/doctor_ui/utsi.dart';
 import 'package:technocrats/screens/doctor_ui/moods.dart';
 import 'package:line_awesome_icons/line_awesome_icons.dart';
+import 'package:technocrats/constants.dart';
 
 class doctorUi extends StatefulWidget {
   //doctorUI({Key key, this.title}) : super(key: key);

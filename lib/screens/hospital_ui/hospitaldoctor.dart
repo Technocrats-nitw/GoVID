@@ -5,7 +5,6 @@ Team : Technocrats
 National Institute of Technology Warangal
 */
 
-import 'package:technocrats/screens/doctor_ui/utsi.dart';
 import 'package:technocrats/screens/hospital_ui/DocInfo.dart';
 import 'package:technocrats/constants.dart';
 import 'package:flutter/material.dart';
