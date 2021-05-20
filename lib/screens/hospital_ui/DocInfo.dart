@@ -1,3 +1,4 @@
+import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:technocrats/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:technocrats/constants.dart';
@@ -91,6 +92,7 @@ class _docInfoPageState extends State<docInfoPage> {
                                         fontWeight: FontWeight.w400,
                                       ),
                                     )
+                                    //RatingBar.builder(itemBuilder: itemBuilder, onRatingUpdate: onRatingUpdate)
                                   ],
                                 )
                               ],
@@ -100,7 +102,7 @@ class _docInfoPageState extends State<docInfoPage> {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: <Widget>[
                                   Text(
-                                    "About the Doctor",
+                                    "About",
                                     style: TextStyle(
                                       fontSize: 18,
                                       fontWeight: FontWeight.w800,
@@ -114,6 +116,23 @@ class _docInfoPageState extends State<docInfoPage> {
                                     style: TextStyle(
                                       fontSize: 14,
                                       fontWeight: FontWeight.w400,
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    height: 10,
+                                  ),
+                                  Padding(
+                                    padding:
+                                        EdgeInsets.symmetric(horizontal: 25.0),
+                                    child: Row(
+                                      children: <Widget>[
+                                        //Container(),
+                                        Stats(name: "Patients", total: 352),
+                                        //Spacer(),
+                                        //Spacer(),
+                                        Stats(
+                                            name: "Certifications", total: 31),
+                                      ],
                                     ),
                                   ),
                                   SizedBox(
@@ -243,5 +262,26 @@ class _docInfoPageState extends State<docInfoPage> {
         ),
       ),
     );
+  }
+}
+
+class Stats extends StatelessElement {
+  String total, name;
+  Stats({this.total = 342, this.name = "Patients"});
+
+  @override
+  Widget build(BuildContext context) {
+    return RichText(
+        textAlign: TextAlign.center,
+        text: TextSpan(children: [
+          TextSpan(
+            text: "$total\n",
+            style: kTitleStyle,
+          ),
+          TextSpan(
+            text: "$name",
+            style: kSubtitleStyle.copyWith(fontSize: 14.0),
+          ),
+        ]));
   }
 }

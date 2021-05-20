@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
       title: 'Hackon With Amazon',
       theme: ThemeData(
         fontFamily: "Cairo",
-        scaffoldBackgroundColor: Colors.,
+        scaffoldBackgroundColor: Colors.white70,
         textTheme: Theme.of(context).textTheme.apply(displayColor: kTextColor),
       ),
       home: Pages(),

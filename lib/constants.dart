@@ -29,6 +29,10 @@ const lightColor = Color(0xFFA52C4D);
 const darkRedColor = Color(0xFFFA695C);
 const lightRedColor = Color(0xFFFD685A);
 
+var kTitleStyle = TextStyle(fontSize: 20.0,fontWeight: FontWeight.bold,color:Colors.black),);
+var kSubtitleStyle = TextStyle(fontSize: 16.0,fontWeight: FontWeight.bold,color:Colors.grey),);
+
+
 const purpleGradient = LinearGradient(
   colors: <Color>[darkColor, midColor, lightColor],
   stops: [0.0, 0.5, 1.0],
