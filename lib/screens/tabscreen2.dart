@@ -11,8 +11,27 @@ import 'package:flutter_svg/svg.dart';
 import 'package:technocrats/widgets/category_card.dart';
 import 'package:technocrats/widgets/search_bar.dart';
 import 'package:technocrats/screens/doctor_ui/utsi.dart';
+import 'package:technocrats/screens/hospital_ui/DocInfo.dart';
 
-class TabScreen2 extends StatelessWidget {
+class Tabscreen2 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        fontFamily: 'avenir',
+      ),
+      //home: DocInfoPage()
+      home: tab2home(),
+
+      routes: {
+        '/DocInfo': (context) => DocInfoPage(),
+      },
+    );
+  }
+}
+
+class tab2home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context)
@@ -109,5 +128,8 @@ class TabScreen2 extends StatelessWidget {
         ],
       ),
     );
+    void openDocInfo() {
+      Navigator.pushNamed(context, '/DocInfo');
+    }
   }
 }

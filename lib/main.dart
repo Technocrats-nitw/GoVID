@@ -11,6 +11,8 @@ import 'package:technocrats/constants.dart';
 import 'package:technocrats/screens/tabscreen1.dart';
 import 'package:technocrats/screens/tabscreen2.dart';
 import 'package:technocrats/screens/doctor_ui/doctors.dart';
+import 'package:technocrats/screens/hospital_ui/hospitaldoctor.dart';
+import 'package:technocrats/screens/hospital_ui/DocInfo.dart';
 
 void main() => runApp(MyApp());
 
@@ -27,6 +29,9 @@ class MyApp extends StatelessWidget {
         textTheme: Theme.of(context).textTheme.apply(displayColor: kTextColor),
       ),
       home: Pages(),
+      /*routes: {
+        '/DocInfo': (context) => DocInfoPage(),
+      },*/
     );
   }
 }
@@ -57,7 +62,7 @@ class _PagesState extends State<Pages> {
         controller: _pageController,
         children: <Widget>[
           TabScreen1(),
-          TabScreen2(),
+          hospitaldoctor(),
           doctorUi(),
           TabScreen2(),
         ],
@@ -80,7 +85,7 @@ class _PagesState extends State<Pages> {
           animationDuration: Duration(milliseconds: 400),
           backgroundColor: Color.fromRGBO(245, 235, 201, 255),
           buttonBackgroundColor: Color.fromRGBO(245, 235, 201, 255),
-          index: 1,
+          index: 0,
           onTap: (index) {
             setState(() {
               _pageController.jumpToPage(index);
