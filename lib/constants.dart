@@ -37,8 +37,8 @@ const purpleGradient = LinearGradient(
 );
 
 const greenGradient = LinearGradient(
-  colors: <Color>[getStartedColorEnd, getStartedColorStart, kBlueLightColor],
-  stops: [0.0, 0.5, 1.0],
+  colors: <Color>[getStartedColorStart, getStartedColorEnd],
+  stops: [0.0, 1.0],
   begin: Alignment.centerLeft,
   end: Alignment.centerRight,
 );

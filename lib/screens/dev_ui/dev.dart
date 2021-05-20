@@ -50,17 +50,17 @@ class _devUiState extends State<devUi> {
               child: Column(
                 children: <Container>[
                   Container(
-                    height: 400,
+                    height: 500,
                     child: SingleChildScrollView(
                       //physics: BouncingScrollPhysics(),
                       child: Column(
                         children: <Widget>[
                           createDevWidget("Ashiqa Rahman.jpeg", "Ashiqa Rahman",
-                              "Frontend Android+Flutter Developer\nPenetration Tester at Cybsec NITW"),
+                              "Frontend Android Developer\nPenetration Tester at Cybsec NITW"),
                           createDevWidget(
                               "Anshuman Mishra.jpeg",
                               "Anshuman Mishra",
-                              "Frontend Flutter Developer\nStudent ML Researcher at Nevronas NITW"),
+                              "Frontend Flutter\nStudent ML Researcher at Nevronas NITW"),
                           createDevWidget(
                               "Mohd Sufiyan Ansari.jpeg",
                               "Mohd. Sufiyan Ansari",
