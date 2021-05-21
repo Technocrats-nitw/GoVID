@@ -10,7 +10,7 @@ import '../../pkgs.dart';
 class OxygenList extends StatelessWidget {
   final List<OxygenSupplier> suppliers;
 
-  const OxygenList({Key key, @required this.suppliers}) : super(key: key);
+  const OxygenList({Key key, this.suppliers}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     final Store store = VxState.store;

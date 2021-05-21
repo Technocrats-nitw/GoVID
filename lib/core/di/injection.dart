@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
-import 'package:india_beats_covid/services/client/dio_client.dart';
-import 'package:india_beats_covid/services/client/i_client.dart';
-import 'package:india_beats_covid/services/client/mock_client.dart';
+import 'package:technocrats/services/client/dio_client.dart';
+import 'package:technocrats/services/client/i_client.dart';
+import 'package:technocrats/services/client/mock_client.dart';
 
 enum Flavor { MOCK, REST }
 

@@ -11,7 +11,7 @@ import 'action_card.dart';
 class Dashboard extends StatelessWidget {
   final Stats stats;
 
-  const Dashboard({Key key, @required this.stats}) : super(key: key);
+  const Dashboard({Key key, this.stats}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Column(

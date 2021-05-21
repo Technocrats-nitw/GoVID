@@ -1,6 +1,6 @@
 /*
 Coder : Ashiqa Rahman
-Team : Technocrats
+Team :technocrats
 National Institute of Technology Warangal
 */
 import 'package:flutter/material.dart';
@@ -15,13 +15,13 @@ class GridItem extends StatelessWidget {
   final String remarks;
 
   GridItem({
-    Key? key,
-    required this.status,
-    required this.value,
-    required this.unit,
-    required this.time,
-    required this.remarks,
-    required this.color,
+    Key key,
+    this.status,
+    this.value,
+    this.unit,
+    this.time,
+    this.remarks,
+    this.color,
   }) : super(key: key);
 
   @override

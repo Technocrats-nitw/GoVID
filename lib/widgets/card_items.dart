@@ -1,6 +1,6 @@
 /*
 Coder : Ashiqa Rahman
-Team : Technocrats
+Team :technocrats
 National Institute of Technology Warangal
 */
 import 'package:flutter/cupertino.dart';
@@ -16,12 +16,12 @@ class CardItems extends StatelessWidget {
   final Color color;
 
   CardItems({
-    Key? key,
-    required this.image,
-    required this.title,
-    required this.date,
-    required this.type,
-    required this.color,
+    Key key,
+    this.image,
+    this.title,
+    this.date,
+    this.type,
+    this.color,
   }) : super(key: key);
 
   @override

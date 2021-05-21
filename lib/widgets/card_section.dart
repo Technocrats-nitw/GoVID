@@ -1,6 +1,6 @@
 /*
 Coder : Ashiqa Rahman
-Team : Technocrats
+Team :technocrats
 National Institute of Technology Warangal
 */
 import 'package:flutter/cupertino.dart';
@@ -18,13 +18,13 @@ class CardSection extends StatelessWidget {
   final String link;
 
   CardSection(
-      {Key? key,
-      required this.title,
-      required this.value,
-      required this.unit,
-      required this.time,
-      required this.image,
-      required this.link})
+      {Key key,
+      this.title,
+      this.value,
+      this.unit,
+      this.time,
+      this.image,
+      this.link})
       : super(key: key);
 
   @override

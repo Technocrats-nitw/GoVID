@@ -1,5 +1,5 @@
 import 'package:technocrats/services/client/service_res.dart';
-import 'package:technocrats/utils/constants.dart';
+import 'package:technocrats/constants.dart';
 import 'package:technocrats/utils/exceptions.dart';
 import 'package:velocity_x/velocity_x.dart';
 

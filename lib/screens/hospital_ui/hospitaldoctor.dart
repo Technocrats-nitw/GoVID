@@ -1,7 +1,7 @@
 /*
 Author :
 Anshuman Mishra
-Team : Technocrats
+Team :technocrats
 National Institute of Technology Warangal
 */
 

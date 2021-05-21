@@ -1,6 +1,6 @@
 /*
 Coder : Ashiqa Rahman
-Team : Technocrats
+Team :technocrats
 National Institute of Technology Warangal
 */
 import 'package:flutter/cupertino.dart';
@@ -16,13 +16,7 @@ class CardMain extends StatelessWidget {
   final String unit;
   final Color color;
 
-  CardMain(
-      {Key? key,
-      required this.image,
-      required this.title,
-      required this.value,
-      required this.unit,
-      required this.color})
+  CardMain({Key key, this.image, this.title, this.value, this.unit, this.color})
       : super(key: key);
 
   @override

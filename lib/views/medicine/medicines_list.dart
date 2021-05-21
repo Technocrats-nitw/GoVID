@@ -10,8 +10,7 @@ import '../../pkgs.dart';
 class MedicinesList extends StatelessWidget {
   final List<MedicineSupply> medicineSupplies;
 
-  const MedicinesList({Key key, @required this.medicineSupplies})
-      : super(key: key);
+  const MedicinesList({Key key, this.medicineSupplies}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     final Store store = VxState.store;

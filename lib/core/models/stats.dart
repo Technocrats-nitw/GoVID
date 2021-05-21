@@ -17,10 +17,10 @@ class Stats {
   Total medicines;
 
   Stats({
-    required this.plasmaDonors,
-    required this.hospitalBeds,
-    required this.oxygenSuppliers,
-    required this.medicines,
+    this.plasmaDonors,
+    this.hospitalBeds,
+    this.oxygenSuppliers,
+    this.medicines,
   });
 
   factory Stats.fromJson(Map<String, dynamic> json) => Stats(

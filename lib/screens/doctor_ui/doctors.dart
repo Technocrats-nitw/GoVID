@@ -1,7 +1,7 @@
 /*
 Author :
 Anshuman Mishra
-Team : Technocrats
+Team :technocrats
 National Institute of Technology Warangal
 */
 
@@ -13,7 +13,7 @@ import 'package:technocrats/constants.dart';
 class doctorUi extends StatefulWidget {
   //doctorUI({Key key, this.title}) : super(key: key);
 
-  late final String title;
+  final String title = "";
 
   @override
   _doctorUiState createState() => _doctorUiState();

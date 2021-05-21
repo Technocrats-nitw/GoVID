@@ -1,8 +1,43 @@
 import 'package:flutter/material.dart';
 import 'package:technocrats/constants.dart';
-import 'package:technocrats/views/links/twitter_screen.dart';
+import 'package:technocrats/Start.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 
-class NavDrawer extends StatelessWidget {
+class NavDrawer extends StatefulWidget {
+  @override
+  _NavDrawerState createState() => _NavDrawerState();
+}
+
+class _NavDrawerState extends State<NavDrawer> {
+  final FirebaseAuth _auth = FirebaseAuth.instance;
+  User user;
+  bool isloggedin = false;
+
+  checkAuthentication() async {
+    _auth.authStateChanges().listen((user) {
+      if (user == null) {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => Start()),
+        );
+      }
+    });
+  }
+
+  signOut() async {
+    _auth.signOut();
+    final googleSignIn = GoogleSignIn();
+    await googleSignIn.signOut();
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    this.checkAuthentication();
+    //this.getUser();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -50,10 +85,12 @@ class NavDrawer extends StatelessWidget {
               onTap: () => {} //() => {Navigator.of(context).pop()},
               ),
           ListTile(
-              leading: Icon(Icons.exit_to_app),
-              title: Text('Logout'),
-              onTap: () => {} //() => {Navigator.of(context).pop()},
-              ),
+            leading: Icon(Icons.exit_to_app),
+            title: Text('Logout'),
+            onTap: () {
+              signOut();
+            },
+          ),
         ],
       ),
     );

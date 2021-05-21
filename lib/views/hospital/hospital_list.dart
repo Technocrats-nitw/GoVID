@@ -10,7 +10,7 @@ import 'package:vxstate/vxstate.dart';
 class HospitalList extends StatelessWidget {
   final List<HospitalBeds> beds;
 
-  const HospitalList({Key key, @required this.beds}) : super(key: key);
+  const HospitalList({Key key, this.beds}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     final Store store = VxState.store;

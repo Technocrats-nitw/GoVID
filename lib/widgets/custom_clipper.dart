@@ -1,6 +1,6 @@
 /*
 Coder : Ashiqa Rahman
-Team : Technocrats
+Team :technocrats
 National Institute of Technology Warangal
 */
 import 'dart:math';
@@ -12,7 +12,7 @@ enum ClipType { bottom, semiCircle, halfCircle, multiple }
 class MyCustomClipper extends CustomClipper<Path> {
   ClipType clipType;
 
-  MyCustomClipper({required this.clipType});
+  MyCustomClipper({this.clipType});
 
   @override
   getClip(Size size) {

@@ -11,19 +11,19 @@ import 'models/donors.dart';
 
 class Store extends VxStore {
   // App Settings
-  late VxNavigator navigator;
+  VxNavigator navigator;
   bool isDarkTheme = false;
 
   //Home
   int selectedIndex = 0;
 
   // Data
-  late Stats stats;
-  late List<Donors> donors;
-  late List<HospitalBeds> beds;
-  late List<OxygenSupplier> oxygenSuppliers;
-  late List<MedicineSupply> medicineSupplies;
-  late List<City> cities;
-  late List<ExternalLinks> externalLinks;
-  late VersionChecker versionChecker;
+  Stats stats;
+  List<Donors> donors;
+  List<HospitalBeds> beds;
+  List<OxygenSupplier> oxygenSuppliers;
+  List<MedicineSupply> medicineSupplies;
+  List<City> cities;
+  List<ExternalLinks> externalLinks;
+  VersionChecker versionChecker;
 }

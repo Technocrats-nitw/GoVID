@@ -1,6 +1,6 @@
 /*
 Coder : Ashiqa Rahman
-Team : Technocrats
+Team :technocrats
 National Institute of Technology Warangal
 */
 import 'package:flutter/cupertino.dart';
@@ -12,11 +12,7 @@ class ProgressVertical extends StatelessWidget {
   final String date;
   final bool isShowDate;
 
-  ProgressVertical(
-      {Key? key,
-      required this.value,
-      required this.date,
-      required this.isShowDate})
+  ProgressVertical({Key key, this.value, this.date, this.isShowDate})
       : super(key: key);
 
   @override

@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:technocrats/mutations/get_apis_mutation.dart';
-import 'package:technocrats/utils/constants.dart';
+import 'package:technocrats/constants.dart';
 import 'package:technocrats/views/common/error_page.dart';
 import 'package:technocrats/pkgs.dart';
 import 'links_list.dart';

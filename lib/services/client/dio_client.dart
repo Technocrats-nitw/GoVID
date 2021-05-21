@@ -6,7 +6,7 @@ import 'dart:io';
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 import 'package:technocrats/services/client/service_res.dart';
-import 'package:technocrats/utils/constants.dart';
+import 'package:technocrats/constants.dart';
 import 'package:meta/meta.dart';
 
 import 'i_client.dart';

@@ -77,7 +77,7 @@ class AddPlasmaScreen extends StatelessWidget {
                           "If you got cured more than 14 days ago, then people can contact you right now",
                           "If you got cured in under 14 days, then we will reach out to you as soon as 14 days pass"
                         ],
-                        color: context.textTheme.bodyText1.color,
+                        color: ? Colors.white : context.textTheme.bodyText1.color,
                       )
                     ],
                   ),

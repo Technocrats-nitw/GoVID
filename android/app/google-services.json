@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1094181021219",
+    "project_id": "care-346eb",
+    "storage_bucket": "care-346eb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1094181021219:android:d28cf3ab0ac99d0129f396",
+        "android_client_info": {
+          "package_name": "com.example.technocrats"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1094181021219-5psct2tomj02ks4klu82q3khb4dnqqpt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDzjnz0IVwH8oa9aOBor0vsvIySfPRNh2Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1094181021219-5psct2tomj02ks4klu82q3khb4dnqqpt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

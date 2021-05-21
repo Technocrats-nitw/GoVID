@@ -11,7 +11,7 @@ import 'package:technocrats/pkgs.dart';
 class LinksList extends StatelessWidget {
   final List<ExternalLinks> links;
 
-  const LinksList({Key key, @required this.links}) : super(key: key);
+  const LinksList({Key key, this.links}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     final Store store = VxState.store;

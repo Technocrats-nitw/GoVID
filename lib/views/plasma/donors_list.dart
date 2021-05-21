@@ -10,7 +10,7 @@ import 'package:technocrats/pkgs.dart';
 class DonorsList extends StatelessWidget {
   final List<Donors> donors;
 
-  const DonorsList({@required this.donors}); // : super(key: key);
+  const DonorsList({this.donors}); // : super(key: key);
   @override
   Widget build(BuildContext context) {
     final Store store = VxState.store;

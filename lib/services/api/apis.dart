@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:technocrats/services/client/service_res.dart';
-import 'package:technocrats/utils/constants.dart';
+import 'package:technocrats/constants.dart';
 import '../client/dio_client.dart';
 
 class APIService {

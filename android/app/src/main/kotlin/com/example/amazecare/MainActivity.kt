@@ -1,4 +1,4 @@
-package com.Technocrats.technocrats
+package com.example.technocrats
 
 import io.flutter.embedding.android.FlutterActivity
 

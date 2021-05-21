@@ -1,7 +1,7 @@
 /*
 Author :
 Anshuman Mishra
-Team : Technocrats
+Team :technocrats
 National Institute of Technology Warangal
 */
 
@@ -13,7 +13,7 @@ import 'package:technocrats/screens/side_nav.dart';
 class devUi extends StatefulWidget {
   //doctorUI({Key key, this.title}) : super(key: key);
 
-  late final String title;
+  final String title = "";
 
   @override
   _devUiState createState() => _devUiState();
@@ -199,7 +199,7 @@ class _devUiState extends State<devUi> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Text(
-            'Team Technocrats',
+            'Teamtechnocrats',
             style: TextStyle(
               fontSize: 36,
               fontWeight: FontWeight.w500,

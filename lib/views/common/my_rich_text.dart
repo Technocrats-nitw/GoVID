@@ -5,11 +5,7 @@ class MyRichText extends StatelessWidget {
   final String value;
   final bool isImportant;
 
-  const MyRichText(
-      {Key key,
-      @required this.title,
-      @required this.value,
-      this.isImportant = false})
+  const MyRichText({Key key, this.title, this.value, this.isImportant = false})
       : super(key: key);
   @override
   Widget build(BuildContext context) {
@@ -33,8 +29,7 @@ class MySelectableRichText extends StatelessWidget {
   final String title;
   final String value;
 
-  const MySelectableRichText(
-      {Key key, @required this.title, @required this.value})
+  const MySelectableRichText({Key key, this.title, this.value})
       : super(key: key);
   @override
   Widget build(BuildContext context) {

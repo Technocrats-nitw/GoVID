@@ -1,7 +1,7 @@
 /*
 Author :
 Anshuman Mishra
-Team : Technocrats
+Team :technocrats
 National Institute of Technology Warangal
 */
 
@@ -17,7 +17,7 @@ class CategoryCard extends StatelessWidget {
     //Key key,
     this.svgSrc = "assets/icons/Meditation.svg",
     this.title = "title",
-    required this.press,
+    this.press,
   }); // : super(key: key);
 
   @override

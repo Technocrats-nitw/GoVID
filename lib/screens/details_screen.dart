@@ -1,7 +1,7 @@
 /*
 Author :
 Anshuman Mishra
-Team : Technocrats
+Team :technocrats
 National Institute of Technology Warangal
 */
 
@@ -166,7 +166,7 @@ class SeassionCard extends StatelessWidget {
     //Key key,
     this.seassionNum = 1,
     this.isDone = false,
-    required this.press,
+    this.press,
   }); // : super(key: key);
 
   @override
