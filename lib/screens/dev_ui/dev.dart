@@ -30,12 +30,10 @@ class _devUiState extends State<devUi> {
 
   @override
   Widget build(BuildContext context) {
-    //var size = MediaQuery.of(context).size; //this gonna g
     return Scaffold(
       backgroundColor: Color.fromRGBO(44, 24, 83, 255),
       appBar: AppBar(
         backgroundColor: Colors.transparent,
-
         //title: Text('Side menu'),
       ),
       drawer: NavDrawer(),

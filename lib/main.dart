@@ -9,10 +9,11 @@ import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:technocrats/constants.dart';
 import 'package:technocrats/screens/tabscreen1.dart';
-import 'package:technocrats/screens/tabscreen2.dart';
+import 'package:technocrats/screens/acc_ui/account.dart';
 //import 'package:technocrats/screens/doctor_ui/doctors.dart';
 import 'package:technocrats/screens/dev_ui/dev.dart';
 import 'package:technocrats/screens/hospital_ui/hospitaldoctor.dart';
+import 'package:technocrats/screens/hospital_ui/DocInfo.dart';
 import 'package:technocrats/side_nav.dart';
 
 void main() => runApp(MyApp());
@@ -60,14 +61,13 @@ class _PagesState extends State<Pages> {
         .size; //this gonna give us total height and with of our device
 
     return Scaffold(
-      //drawer: NavDrawer(),
       body: PageView(
         controller: _pageController,
         children: <Widget>[
           TabScreen1(),
           hospitaldoctor(),
           devUi(),
-          TabScreen2(),
+          Account(),
         ],
         onPageChanged: (int index) {
           setState(() {
