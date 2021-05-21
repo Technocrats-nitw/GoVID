@@ -1,17 +1,17 @@
-import 'package:india_beats_covid/mutations/theme_mutation.dart';
-import 'package:india_beats_covid/utils/constants.dart';
-import 'package:india_beats_covid/utils/routes.dart';
-import 'package:india_beats_covid/utils/themes/theme.dart';
-import 'package:india_beats_covid/views/home/home_screen.dart';
-import 'package:india_beats_covid/views/home/treating_covid_screen.dart';
-import 'package:india_beats_covid/views/hospital/hospital_screen.dart';
-import 'package:india_beats_covid/views/links/crowdfunding.dart';
-import 'package:india_beats_covid/views/links/link_screen.dart';
-import 'package:india_beats_covid/views/links/twitter_screen.dart';
-import 'package:india_beats_covid/views/medicine/medicine_screen.dart';
-import 'package:india_beats_covid/views/oxygen/oxygen_screen.dart';
-import 'package:india_beats_covid/views/plasma/add_plasma_screen.dart';
-import 'package:india_beats_covid/views/plasma/plasma_screen.dart';
+import 'package:technocrats/mutations/theme_mutation.dart';
+import 'package:technocrats/constants.dart';
+import 'package:technocrats/utils/routes.dart';
+import 'package:technocrats/utils/themes/theme.dart';
+import 'package:technocrats/views/home/home_screen.dart';
+import 'package:technocrats/views/home/treating_covid_screen.dart';
+import 'package:technocrats/views/hospital/hospital_screen.dart';
+import 'package:technocrats/views/links/crowdfunding.dart';
+import 'package:technocrats/views/links/link_screen.dart';
+import 'package:technocrats/views/links/twitter_screen.dart';
+import 'package:technocrats/views/medicine/medicine_screen.dart';
+import 'package:technocrats/views/oxygen/oxygen_screen.dart';
+import 'package:technocrats/views/plasma/add_plasma_screen.dart';
+import 'package:technocrats/views/plasma/plasma_screen.dart';
 
 import '../pkgs.dart';
 

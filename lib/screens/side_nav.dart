@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:technocrats/constants.dart';
+import 'package:technocrats/views/links/twitter_screen.dart';
 
 class NavDrawer extends StatelessWidget {
   @override
@@ -10,7 +11,7 @@ class NavDrawer extends StatelessWidget {
         children: <Widget>[
           DrawerHeader(
             child: Text(
-              'Side menu',
+              'GoVID',
               style: TextStyle(color: Colors.white, fontSize: 25),
             ),
             decoration:
@@ -30,7 +31,7 @@ class NavDrawer extends StatelessWidget {
           ),
           ListTile(
             leading: Icon(Icons.input),
-            title: Text('Welcome'),
+            title: Text('Twitter Search'),
             onTap: () => {},
           ),
           ListTile(

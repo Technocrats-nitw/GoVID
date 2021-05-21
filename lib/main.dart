@@ -14,7 +14,8 @@ import 'package:technocrats/screens/acc_ui/account.dart';
 import 'package:technocrats/screens/dev_ui/dev.dart';
 import 'package:technocrats/screens/hospital_ui/hospitaldoctor.dart';
 import 'package:technocrats/screens/hospital_ui/DocInfo.dart';
-import 'package:technocrats/side_nav.dart';
+import 'package:technocrats/screens/side_nav.dart';
+import 'package:technocrats/views/links/twitter_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -64,7 +65,8 @@ class _PagesState extends State<Pages> {
       body: PageView(
         controller: _pageController,
         children: <Widget>[
-          TabScreen1(),
+          //TabScreen1(),
+          TwitterScreen(),
           hospitaldoctor(),
           devUi(),
           Account(),

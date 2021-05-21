@@ -29,8 +29,6 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  url_launcher: ^6.0.4
-  google_fonts: ^0.3.10
   curved_navigation_bar:
   line_awesome_icons:
   flutter_rating_bar:
