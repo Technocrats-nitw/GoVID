@@ -10,10 +10,9 @@ import 'package:flutter/material.dart';
 import 'package:technocrats/constants.dart';
 import 'package:technocrats/screens/tabscreen1.dart';
 import 'package:technocrats/screens/tabscreen2.dart';
-//import 'package:technocrats/screens/doctor_ui/doctors.dart';
 import 'package:technocrats/screens/dev_ui/dev.dart';
 import 'package:technocrats/screens/hospital_ui/hospitaldoctor.dart';
-import 'package:technocrats/side_nav.dart';
+import "package:technocrats/views/links/twitter_screen.dart";
 
 void main() => runApp(MyApp());
 
@@ -64,7 +63,7 @@ class _PagesState extends State<Pages> {
       body: PageView(
         controller: _pageController,
         children: <Widget>[
-          TabScreen1(),
+          TwitterScreen(),
           hospitaldoctor(),
           devUi(),
           TabScreen2(),
