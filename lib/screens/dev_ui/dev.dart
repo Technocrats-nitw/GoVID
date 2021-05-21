@@ -8,6 +8,7 @@ National Institute of Technology Warangal
 import 'package:flutter/material.dart';
 import 'package:line_awesome_icons/line_awesome_icons.dart';
 import 'package:technocrats/constants.dart';
+import 'package:technocrats/side_nav.dart';
 
 class devUi extends StatefulWidget {
   //doctorUI({Key key, this.title}) : super(key: key);
@@ -29,8 +30,15 @@ class _devUiState extends State<devUi> {
 
   @override
   Widget build(BuildContext context) {
+    //var size = MediaQuery.of(context).size; //this gonna g
     return Scaffold(
       backgroundColor: Color.fromRGBO(44, 24, 83, 255),
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+
+        //title: Text('Side menu'),
+      ),
+      drawer: NavDrawer(),
       body: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
@@ -217,10 +225,12 @@ class _devUiState extends State<devUi> {
   }
 
   Container _backBgCover() {
+    var size = MediaQuery.of(context).size; //this gonna g
     return Container(
-      height: 260.0,
+      //height: 260.0,
+      height: size.height * .45,
       decoration: BoxDecoration(
-        gradient: greenGradient,
+        gradient: purpleGradient,
         borderRadius: BorderRadius.only(
           bottomLeft: Radius.circular(40),
           bottomRight: Radius.circular(40),

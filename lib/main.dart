@@ -13,7 +13,7 @@ import 'package:technocrats/screens/tabscreen2.dart';
 //import 'package:technocrats/screens/doctor_ui/doctors.dart';
 import 'package:technocrats/screens/dev_ui/dev.dart';
 import 'package:technocrats/screens/hospital_ui/hospitaldoctor.dart';
-import 'package:technocrats/screens/hospital_ui/DocInfo.dart';
+import 'package:technocrats/side_nav.dart';
 
 void main() => runApp(MyApp());
 
@@ -26,7 +26,8 @@ class MyApp extends StatelessWidget {
       title: 'Hackon With Amazon',
       theme: ThemeData(
         fontFamily: "Cairo",
-        scaffoldBackgroundColor: Colors.white70,
+        scaffoldBackgroundColor: Colors.white,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
         textTheme: Theme.of(context).textTheme.apply(displayColor: kTextColor),
       ),
       home: Pages(),
@@ -59,6 +60,7 @@ class _PagesState extends State<Pages> {
         .size; //this gonna give us total height and with of our device
 
     return Scaffold(
+      //drawer: NavDrawer(),
       body: PageView(
         controller: _pageController,
         children: <Widget>[
