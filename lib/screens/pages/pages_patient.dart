@@ -3,7 +3,7 @@ import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:technocrats/screens/dev_ui/dev.dart';
 import 'package:technocrats/screens/hospital_ui/hospitaldoctor.dart';
 import 'package:technocrats/screens/acc_ui/account.dart';
-import 'package:technocrats/views/links/twitter_screen.dart';
+import 'package:technocrats/screens/twitter_screen.dart';
 
 class PagesPatient extends StatefulWidget {
   //const Pages({Key key}) : super(key: key);
@@ -53,8 +53,8 @@ class _PagesPatientState extends State<PagesPatient> {
             Icon(Icons.account_circle_outlined, size: 20, color: Colors.black),
           ],
           animationDuration: Duration(milliseconds: 400),
-          backgroundColor: Color.fromRGBO(245, 235, 201, 255),
-          buttonBackgroundColor: Color.fromRGBO(245, 235, 201, 255),
+          backgroundColor: Colors.black,
+          buttonBackgroundColor: Colors.blueGrey,
           index: 0,
           onTap: (index) {
             setState(() {

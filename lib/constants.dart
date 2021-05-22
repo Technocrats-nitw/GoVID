@@ -8,6 +8,11 @@ National Institute of Technology Warangal
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+mixin AppColors {
+  static Color primaryColor = Colors.purple;
+  static Color accentColor = Colors.pink;
+}
+
 const kBackgroundColor = Color(0xFFF8F8F8);
 const kActiveIconColor = Color(0xFFE68342);
 const kTextColor = Color(0xFF222B45);
@@ -156,4 +161,42 @@ class Constants {
 
   static double headerHeight = 228.5;
   static double paddingSide = 30.0;
+}
+
+class AppTheme {
+  static ThemeData lightTheme(BuildContext context) {
+    return ThemeData(
+      brightness: Brightness.light,
+      primaryColor: AppColors.primaryColor,
+      accentColor: AppColors.accentColor,
+      // cardColor: Colors.white,
+      // scaffoldBackgroundColor: Colors.white,
+      fontFamily: GoogleFonts.mulish().fontFamily,
+      appBarTheme: AppBarTheme(
+        elevation: 0.0,
+        backgroundColor: Colors.white,
+        textTheme: Theme.of(context).textTheme,
+        centerTitle: false,
+        iconTheme: const IconThemeData(color: Colors.black),
+      ),
+    );
+  }
+
+  static ThemeData darkTheme(BuildContext context) {
+    return ThemeData(
+      brightness: Brightness.dark,
+      primarySwatch: Colors.teal,
+      primaryColor: AppColors.primaryColor,
+      accentColor: AppColors.accentColor,
+      // cardColor: Colors.black26,
+      fontFamily: GoogleFonts.mulish().fontFamily,
+      appBarTheme: AppBarTheme(
+        elevation: 0.0,
+        color: Colors.black26,
+        textTheme: Theme.of(context).primaryTextTheme,
+        centerTitle: false,
+        iconTheme: const IconThemeData(color: Colors.white),
+      ),
+    );
+  }
 }

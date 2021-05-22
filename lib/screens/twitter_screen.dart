@@ -1,4 +1,4 @@
-import 'package:technocrats/core/mock/mock_data.dart';
+import 'package:technocrats/screens/mock_data.dart';
 import 'package:technocrats/constants.dart';
 import 'package:url_launcher/link.dart';
 
