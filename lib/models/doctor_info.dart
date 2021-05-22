@@ -4,14 +4,33 @@
 
 import 'dart:convert';
 
-List<DoctorModel> doctorModelFromJson(String str) => List<DoctorModel>.from(
-    json.decode(str).map((x) => DoctorModel.fromJson(x)));
+DoctorModel doctorModelFromJson(String str) =>
+    DoctorModel.fromJson(json.decode(str));
 
-String doctorModelToJson(List<DoctorModel> data) =>
-    json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
+String doctorModelToJson(DoctorModel data) => json.encode(data.toJson());
 
 class DoctorModel {
   DoctorModel({
+    this.itemCount,
+    this.item,
+  });
+
+  int itemCount;
+  List<Item> item;
+
+  factory DoctorModel.fromJson(Map<String, dynamic> json) => DoctorModel(
+        itemCount: json["ItemCount"],
+        item: List<Item>.from(json["item"].map((x) => Item.fromJson(x))),
+      );
+
+  Map<String, dynamic> toJson() => {
+        "ItemCount": itemCount,
+        "item": List<dynamic>.from(item.map((x) => x.toJson())),
+      };
+}
+
+class Item {
+  Item({
     this.id,
     this.uprnNo,
     this.name,
@@ -37,7 +56,7 @@ class DoctorModel {
   bool isUser;
   String email;
 
-  factory DoctorModel.fromJson(Map<String, dynamic> json) => DoctorModel(
+  factory Item.fromJson(Map<String, dynamic> json) => Item(
         id: json["id"],
         uprnNo: json["uprn_no"],
         name: json["name"],

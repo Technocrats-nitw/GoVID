@@ -29,9 +29,11 @@ class _doctorListState extends State<doctorList> {
             if (snapshot.hasData) {
               // return only if it has data
               return ListView.builder(
-                  itemCount: 3,
+                  itemCount: snapshot.data.itemCount,
                   itemBuilder: (context, index) {
-                    var id = snapshot.data.id,
+                    var details = snapshot.data.item[index];
+
+                    /*var id = snapshot.data.,
                         uprnNo = snapshot.data.uprnNo,
                         age = snapshot.data.age,
                         yearDob = snapshot.data.yearDob;
@@ -42,7 +44,7 @@ class _doctorListState extends State<doctorList> {
                         location = snapshot.data.location,
                         state = snapshot.data.state,
                         email = snapshot.data.email;
-
+                    */
                     return Container(
                       height: 100,
                       child: Row(
@@ -53,18 +55,18 @@ class _doctorListState extends State<doctorList> {
                                 borderRadius: BorderRadius.circular(24)),
                             child: AspectRatio(
                               aspectRatio: 1,
-                              child: Image.asset(
-                                "assets/icons/Hamburger.svg",
+                              child: Image.network(
+                                details.location,
                                 fit: BoxFit.cover,
                               ),
                             ),
                           ),
                           Column(
                             children: <Widget>[
-                              Text(name),
+                              Text(details.name),
                               //Text(age),
-                              Text(age.toString()),
-                              Text(specialisation.toString()),
+                              Text(details.age.toString()),
+                              Text(details.specialisation.toString()),
                             ],
                           )
                         ],
