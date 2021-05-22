@@ -19,8 +19,10 @@ class _doctorListState extends State<doctorList> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(
         title: Text("Doctors Nearby"),
+        backgroundColor: Color(0xFF2A0B35),
       ),
       body: Container(
         child: FutureBuilder<DoctorModel>(
@@ -32,21 +34,8 @@ class _doctorListState extends State<doctorList> {
                   itemCount: snapshot.data.itemCount,
                   itemBuilder: (context, index) {
                     var details = snapshot.data.item[index];
-
-                    /*var id = snapshot.data.,
-                        uprnNo = snapshot.data.uprnNo,
-                        age = snapshot.data.age,
-                        yearDob = snapshot.data.yearDob;
-                    var isUser = snapshot.data.isUser;
-                    var name = snapshot.data.name,
-                        gender = snapshot.data.gender,
-                        specialisation = snapshot.data.specialisation,
-                        location = snapshot.data.location,
-                        state = snapshot.data.state,
-                        email = snapshot.data.email;
-                    */
                     return Container(
-                      height: 100,
+                      height: 200,
                       child: Row(
                         children: <Widget>[
                           Card(
@@ -61,17 +50,39 @@ class _doctorListState extends State<doctorList> {
                               ),
                             ),
                           ),
-                          Column(
+                          SingleChildScrollView(
+                              child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
-                              Text(details.name),
-                              //Text(age),
-                              Text(details.age.toString()),
-                              Text(details.specialisation.toString()),
+                              //Container(child: [
+                              Text(
+                                details.name,
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold, fontSize: 20),
+                              ),
+                              Text("Specialization : " +
+                                  details.specialisation.toString()),
+                              Text("State : " + details.state),
+                              Text("Age : " + details.age.toString()),
+                              Text("Gender : " + details.gender),
+                              Text("DOB :" + details.yearDob.toString()),
+                              Text(details.uprnNo.toString()),
+                              Text("Contact : ",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                  )),
+                              Text(
+                                details.email,
+                                overflow: TextOverflow.ellipsis,
+                              ),
+                              //]),
                             ],
-                          )
+                          ))
                         ],
                       ),
                     );
+                    Spacer();
+                    Spacer();
                   });
             } else
               return Center(

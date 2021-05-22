@@ -11,6 +11,7 @@ import 'package:technocrats/widgets/card_items.dart';
 import 'package:technocrats/widgets/card_main.dart';
 import 'package:technocrats/widgets/card_section.dart';
 import 'package:technocrats/widgets/custom_clipper.dart';
+import 'package:technocrats/screens/side_nav.dart';
 
 class Account extends StatelessWidget {
   @override
@@ -18,6 +19,11 @@ class Account extends StatelessWidget {
     double statusBarHeight = MediaQuery.of(context).padding.top;
     return Scaffold(
       backgroundColor: Constants.backgroundColor,
+      appBar: AppBar(
+        backgroundColor: Theme.of(context).accentColor,
+        //title: Text('Side menu'),
+      ),
+      drawer: NavDrawer(),
       body: Stack(
         children: <Widget>[
           ClipPath(

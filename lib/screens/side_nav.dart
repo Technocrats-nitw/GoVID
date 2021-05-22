@@ -3,6 +3,8 @@ import 'package:technocrats/constants.dart';
 import 'package:technocrats/Start.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'package:technocrats/screens/acc_ui/account.dart';
+import 'package:technocrats/screens/twitter_screen.dart';
 
 class NavDrawer extends StatefulWidget {
   @override
@@ -67,17 +69,24 @@ class _NavDrawerState extends State<NavDrawer> {
           ListTile(
             leading: Icon(Icons.input),
             title: Text('Twitter Search'),
-            onTap: () => {},
+            onTap: () {
+              //debugPrint("CARD main clicked. redirect to details page");
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => TwitterScreen()),
+              );
+            },
           ),
           ListTile(
             leading: Icon(Icons.verified_user),
             title: Text('Profile'),
-            onTap: () => {}, //() => {Navigator.of(context).pop()},
-          ),
-          ListTile(
-            leading: Icon(Icons.settings),
-            title: Text('Settings'),
-            onTap: () => {}, //() => {Navigator.of(context).pop()},
+            onTap: () {
+              //debugPrint("CARD main clicked. redirect to details page");
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Account()),
+              );
+            },
           ),
           ListTile(
               leading: Icon(Icons.border_color),

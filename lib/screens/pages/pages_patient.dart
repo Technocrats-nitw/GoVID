@@ -1,10 +1,18 @@
+/*
+Author::
+Anshuman
+Technocrats NITW
+*/
+
 import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:technocrats/screens/dev_ui/dev.dart';
 import 'package:technocrats/screens/hospital_ui/hospitaldoctor.dart';
 import 'package:technocrats/screens/acc_ui/account.dart';
+import 'package:technocrats/screens/covid_ui/covid.dart';
 import 'package:technocrats/screens/twitter_screen.dart';
 import 'package:technocrats/doctor_list.dart';
+import 'package:technocrats/screens/covid_ui/covid.dart';
 
 class PagesPatient extends StatefulWidget {
   //const Pages({Key key}) : super(key: key);
@@ -32,11 +40,12 @@ class _PagesPatientState extends State<PagesPatient> {
         controller: _pageController,
         children: <Widget>[
           //TabScreen1(),
-          TwitterScreen(),
-          doctorList(),
+          Dashboard(),
+          //TwitterScreen(),
+          //doctorList(),
           hospitaldoctor(),
           devUi(),
-          Account(),
+          //Account(),
         ],
         onPageChanged: (int index) {
           setState(() {
@@ -49,16 +58,16 @@ class _PagesPatientState extends State<PagesPatient> {
           items: <Widget>[
             Icon(Icons.medical_services_outlined,
                 size: 20, color: Colors.black),
-            Icon(Icons.medical_services_outlined,
-                size: 20, color: Colors.black),
+            //Icon(Icons.medical_services_outlined,
+            //size: 20, color: Colors.black),
             Icon(Icons.map_sharp, size: 20, color: Colors.black),
             Icon(Icons.medical_services_outlined,
                 size: 20, color: Colors.black),
-            Icon(Icons.account_circle_outlined, size: 20, color: Colors.black),
+            //Icon(Icons.account_circle_outlined, size: 20, color: Colors.black),
           ],
           animationDuration: Duration(milliseconds: 400),
-          backgroundColor: Colors.black,
-          buttonBackgroundColor: Colors.blueGrey,
+          backgroundColor: Color(0xFF2A0B35),
+          buttonBackgroundColor: Colors.white,
           index: 0,
           onTap: (index) {
             setState(() {

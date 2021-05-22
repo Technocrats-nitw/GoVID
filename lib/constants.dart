@@ -7,10 +7,38 @@ National Institute of Technology Warangal
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:intl/intl.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 mixin AppColors {
   static Color primaryColor = Colors.purple;
   static Color accentColor = Colors.pink;
+}
+
+mixin Utils {
+  static bool get checkIfDebug {
+    var debug = false;
+    assert(debug = true);
+    return debug;
+  }
+
+  static String getFormattedTime(String iso) {
+    if (iso != null) {
+      final DateTime now = DateTime.parse(iso).toLocal();
+      final DateFormat formatter = DateFormat('dd-MM-yyyy hh:mm aa');
+      return "${formatter.format(now)} (~${now.toLocal().timeAgo()})";
+    }
+    return null;
+  }
+
+  // static String getTimeAgo(String iso, {bool enableShort = true}) {
+  //   if (iso != null) {
+  //     final DateTime now = DateTime.parse(iso);
+
+  //     return now.timeAgo(enableFromNow: enableShort);
+  //   }
+  //   return null;
+  // }
 }
 
 const kBackgroundColor = Color(0xFFF8F8F8);

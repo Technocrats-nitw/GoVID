@@ -33,7 +33,7 @@ class _devUiState extends State<devUi> {
     return Scaffold(
       backgroundColor: Color.fromRGBO(44, 24, 83, 255),
       appBar: AppBar(
-        backgroundColor: Colors.transparent,
+        backgroundColor: Color(0xFF2A0B35),
         //title: Text('Side menu'),
       ),
       drawer: NavDrawer(),
@@ -199,7 +199,7 @@ class _devUiState extends State<devUi> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Text(
-            'Teamtechnocrats',
+            'Team Technocrats',
             style: TextStyle(
               fontSize: 36,
               fontWeight: FontWeight.w500,
@@ -226,7 +226,7 @@ class _devUiState extends State<devUi> {
     var size = MediaQuery.of(context).size; //this gonna g
     return Container(
       //height: 260.0,
-      height: size.height * .45,
+      height: size.height * .25,
       decoration: BoxDecoration(
         gradient: purpleGradient,
         borderRadius: BorderRadius.only(

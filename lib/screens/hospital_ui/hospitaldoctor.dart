@@ -8,7 +8,7 @@ National Institute of Technology Warangal
 import 'package:technocrats/screens/hospital_ui/DocInfo.dart';
 import 'package:technocrats/constants.dart';
 import 'package:flutter/material.dart';
-import 'package:technocrats/widgets/category_card.dart';
+import 'package:technocrats/screens/side_nav.dart';
 
 class hospitaldoctor extends StatelessWidget {
   @override
@@ -37,12 +37,12 @@ class _DoctorListState extends State<DoctorList> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      /*
       appBar: AppBar(
-        backgroundColor: Colors.transparent,
+        backgroundColor: Color(0xFF2A0B35),
 
         //title: Text('Side menu'),
-      ),*/
+      ),
+      drawer: NavDrawer(),
       backgroundColor: bgColor,
       body: //SingleChildScrollView(
           //child: Column(
@@ -62,15 +62,16 @@ class _DoctorListState extends State<DoctorList> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                AppBar(
+                /*AppBar(
                   backgroundColor: Colors.transparent,
                   elevation: 0,
                   leading: Icon(
                     Icons.menu,
                     color: Colors.black,
                     size: 30,
-                  ),
-                  actions: <Widget>[
+                  ),*/
+                /*actions: <Widget>[
+                    
                     Container(
                       height: 75,
                       width: 75,
@@ -97,8 +98,8 @@ class _DoctorListState extends State<DoctorList> {
                         ),
                       ),
                     )
-                  ],
-                ),
+                  ],*/
+                //),
                 SingleChildScrollView(
                   //padding: EdgeInsets.only(left: 14, right: 10, top: 25),
                   child: Column(
