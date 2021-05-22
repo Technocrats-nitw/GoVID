@@ -44,6 +44,7 @@ dependencies:
   url_strategy:
   velocity_x:
   dio:
+  http:
 
 dev_dependencies:
   flutter_test:

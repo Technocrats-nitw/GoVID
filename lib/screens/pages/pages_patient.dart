@@ -4,6 +4,7 @@ import 'package:technocrats/screens/dev_ui/dev.dart';
 import 'package:technocrats/screens/hospital_ui/hospitaldoctor.dart';
 import 'package:technocrats/screens/acc_ui/account.dart';
 import 'package:technocrats/screens/twitter_screen.dart';
+import 'package:technocrats/doctor_list.dart';
 
 class PagesPatient extends StatefulWidget {
   //const Pages({Key key}) : super(key: key);
@@ -32,6 +33,7 @@ class _PagesPatientState extends State<PagesPatient> {
         children: <Widget>[
           //TabScreen1(),
           TwitterScreen(),
+          doctorList(),
           hospitaldoctor(),
           devUi(),
           Account(),
@@ -45,6 +47,8 @@ class _PagesPatientState extends State<PagesPatient> {
       // covid , doctor,hospital, self_history
       bottomNavigationBar: CurvedNavigationBar(
           items: <Widget>[
+            Icon(Icons.medical_services_outlined,
+                size: 20, color: Colors.black),
             Icon(Icons.medical_services_outlined,
                 size: 20, color: Colors.black),
             Icon(Icons.map_sharp, size: 20, color: Colors.black),
