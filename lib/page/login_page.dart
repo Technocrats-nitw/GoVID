@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:technocrats/screens/pages/pages_hospital.dart';
 import 'package:technocrats/screens/pages/pages_patient.dart';
 import 'package:technocrats/screens/pages/pages_doctor.dart';
-import 'package:technocrats/screens/pages/pages_patient.dart';
 import 'package:technocrats/model/user.dart';
 import 'package:technocrats/page/user_page.dart';
 import 'package:technocrats/utils/user_preferences.dart';

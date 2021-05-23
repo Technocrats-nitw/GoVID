@@ -43,19 +43,18 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
-
-assets:
-  - assets/icons/
-  - assets/images/
-  - assets/images/category/
-  - assets/onBoardDoc.png
-  - assets/images/docprofile/
-  - assets/images/docinfo/bg1.png
-  - assets/images/dev/
-  - images/start.png
-  - images/welcome.png
-  - images/login.jpg
-  - assets/images/covid/
+  assets:
+    - assets/icons/
+    - assets/images/
+    - assets/images/category/
+    - assets/onBoardDoc.png
+    - assets/images/docprofile/
+    - assets/images/docinfo/bg1.png
+    - assets/images/dev/
+    - images/start.png
+    - images/welcome.png
+    - images/login.jpg
+    - assets/images/covid/
 
 fonts:
   - family: Cairo

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:technocrats/constants.dart';
 import 'package:technocrats/screens/acc_ui/account.dart';
 import 'package:technocrats/screens/twitter_screen.dart';
+import 'package:technocrats/page/home_page.dart';
 
 class NavDrawer extends StatefulWidget {
   @override
@@ -68,10 +69,14 @@ class _NavDrawerState extends State<NavDrawer> {
               onTap: () => {} //() => {Navigator.of(context).pop()},
               ),
           ListTile(
-            leading: Icon(Icons.exit_to_app),
-            title: Text('Logout'),
-            onTap: signOut(),
-          ),
+              leading: Icon(Icons.exit_to_app),
+              title: Text('Logout'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => HomePage()),
+                );
+              }),
         ],
       ),
     );
