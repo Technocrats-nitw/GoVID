@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:technocrats/constants.dart';
 import 'package:technocrats/screens/acc_ui/account.dart';
-import 'package:technocrats/screens/twitter_screen.dart';
+import 'package:technocrats/screens/dev_ui/dev.dart';
 import 'package:technocrats/page/home_page.dart';
 
 class NavDrawer extends StatefulWidget {
@@ -43,12 +43,12 @@ class _NavDrawerState extends State<NavDrawer> {
           ),
           ListTile(
             leading: Icon(Icons.input),
-            title: Text('Twitter Search'),
+            title: Text('Developers info'),
             onTap: () {
               //debugPrint("CARD main clicked. redirect to details page");
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => TwitterScreen()),
+                MaterialPageRoute(builder: (context) => devUi()),
               );
             },
           ),

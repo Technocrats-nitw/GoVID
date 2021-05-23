@@ -78,30 +78,28 @@ class _LoginPageState extends State<LoginPage> {
 
     return ListTile(
       tileColor: Colors.blue[100],
-      onTap: checkRole(user),
+      onTap: () {
+        if (user.role == 'doctor') {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => PagesDoc()),
+          );
+        } else if (user.role == 'patient') {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => PagesPatient()),
+          );
+        } else if (user.role == 'hospital') {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => PagesHospital()),
+          );
+        }
+      },
       leading: user.imagePath.isEmpty
           ? null
           : CircleAvatar(backgroundImage: FileImage(imageFile)),
       title: Text(user.name, style: TextStyle(fontSize: 24)),
     );
-  }
-
-  checkRole(User user) {
-    if (user.role == 'doctor') {
-      Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) => PagesDoc()),
-      );
-    } else if (user.role == 'patient') {
-      Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) => PagesPatient()),
-      );
-    } else if (user.role == 'hospital') {
-      Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) => PagesHospital()),
-      );
-    }
   }
 }

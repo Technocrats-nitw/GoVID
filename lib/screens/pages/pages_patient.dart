@@ -41,10 +41,10 @@ class _PagesPatientState extends State<PagesPatient> {
         children: <Widget>[
           //TabScreen1(),
           Dashboard(),
-          //TwitterScreen(),
           //doctorList(),
           hospitaldoctor(),
-          devUi(),
+          //devUi(),
+          TwitterScreen(),
           //Account(),
         ],
         onPageChanged: (int index) {
