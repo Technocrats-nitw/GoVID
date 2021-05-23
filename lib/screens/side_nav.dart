@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:technocrats/constants.dart';
-import 'package:technocrats/Start.dart';
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:google_sign_in/google_sign_in.dart';
 import 'package:technocrats/screens/acc_ui/account.dart';
 import 'package:technocrats/screens/twitter_screen.dart';
 
@@ -12,32 +9,9 @@ class NavDrawer extends StatefulWidget {
 }
 
 class _NavDrawerState extends State<NavDrawer> {
-  final FirebaseAuth _auth = FirebaseAuth.instance;
-  User user;
-  bool isloggedin = false;
-
-  checkAuthentication() async {
-    _auth.authStateChanges().listen((user) {
-      if (user == null) {
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => Start()),
-        );
-      }
-    });
-  }
-
-  signOut() async {
-    _auth.signOut();
-    final googleSignIn = GoogleSignIn();
-    await googleSignIn.signOut();
-  }
-
   @override
   void initState() {
     super.initState();
-    this.checkAuthentication();
-    //this.getUser();
   }
 
   @override
@@ -96,9 +70,7 @@ class _NavDrawerState extends State<NavDrawer> {
           ListTile(
             leading: Icon(Icons.exit_to_app),
             title: Text('Logout'),
-            onTap: () {
-              signOut();
-            },
+            onTap: () {},
           ),
         ],
       ),

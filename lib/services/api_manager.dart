@@ -1,7 +1,7 @@
 import 'package:http/http.dart' as http;
 import 'package:technocrats/constants.dart';
 import 'dart:convert';
-import 'package:technocrats/models/doctor_info.dart';
+import 'package:technocrats/model/doctor_info.dart';
 
 class API_Manager {
   Future<DoctorModel> getDoctors() async {

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:technocrats/models/doctor_info.dart';
+import 'package:technocrats/model/doctor_info.dart';
 import 'package:technocrats/services/api_manager.dart';
 
 class doctorList extends StatefulWidget {

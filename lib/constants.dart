@@ -199,7 +199,7 @@ class AppTheme {
       accentColor: AppColors.accentColor,
       // cardColor: Colors.white,
       // scaffoldBackgroundColor: Colors.white,
-      fontFamily: GoogleFonts.mulish().fontFamily,
+      fontFamily: GoogleFonts.muli().fontFamily,
       appBarTheme: AppBarTheme(
         elevation: 0.0,
         backgroundColor: Colors.white,
@@ -217,7 +217,7 @@ class AppTheme {
       primaryColor: AppColors.primaryColor,
       accentColor: AppColors.accentColor,
       // cardColor: Colors.black26,
-      fontFamily: GoogleFonts.mulish().fontFamily,
+      fontFamily: GoogleFonts.muli().fontFamily,
       appBarTheme: AppBarTheme(
         elevation: 0.0,
         color: Colors.black26,
