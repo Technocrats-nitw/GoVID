@@ -20,7 +20,8 @@ class TwitterScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Constants.twitterSearch.text.xl3.semiBold.center.make(),
-            Constants.twitterResources.text.caption(context).center.make(),
+            //Constants.twitterResources.text.caption(context).center.make(),
+            "Find latest resources in real time on Twitter".text.center.make(),
             20.heightBox,
             Constants.selectRegion.text.xl.semiBold.center.make(),
             ValueListenableBuilder(

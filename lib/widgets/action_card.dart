@@ -14,7 +14,7 @@ class ActionCard extends StatelessWidget {
 
   const ActionCard(
       {Key key,
-      this.color = Vx.emerald400,
+      this.color = Colors.amberAccent,
       this.titleColor,
       @required this.title,
       this.subtitle,

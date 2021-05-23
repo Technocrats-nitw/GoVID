@@ -72,9 +72,14 @@ class _DashboardState extends State<Dashboard> {
                   subtitle: "xxx",
                   dense: "dd/mm/yyyy",
                   color: Colors.blue,
-                  titleColor: Vx.emerald700,
-                  onTap: () =>
-                      context.vxNav.push(Uri.parse(Routes.plasmaRoute)),
+                  titleColor: Vx.blue300, //Vx.emerald700,
+                  onTap: () {
+                    //debugPrint("CARD main clicked. redirect to details page");
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => doctorList()),
+                    );
+                  },
                 ),
                 ActionCard(
                   title: "Hospitals with Beds",
@@ -83,8 +88,13 @@ class _DashboardState extends State<Dashboard> {
                       "dd/mm/yyyy", //Utils.getFormattedTime(stats?.hospitalBeds?.formattedTime),
                   color: Vx.pink300,
                   titleColor: Vx.pink700,
-                  onTap: () =>
-                      context.vxNav.push(Uri.parse(Routes.hospitalRoute)),
+                  onTap: () {
+                    //debugPrint("CARD main clicked. redirect to details page");
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => doctorList()),
+                    );
+                  },
                 ),
                 ActionCard(
                   title: "Oxygen Suppliers",
@@ -93,8 +103,13 @@ class _DashboardState extends State<Dashboard> {
                   //  Utils.getFormattedTime(stats?.oxygenSuppliers?.formattedTime),
                   color: Vx.yellow300,
                   titleColor: Vx.yellow700,
-                  onTap: () =>
-                      context.vxNav.push(Uri.parse(Routes.oxygenRoute)),
+                  onTap: () {
+                    //debugPrint("CARD main clicked. redirect to details page");
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => doctorList()),
+                    );
+                  },
                 ),
                 ActionCard(
                   title: "Amazon Healthcare Center",
@@ -103,7 +118,7 @@ class _DashboardState extends State<Dashboard> {
                   //    ? Utils.getFormattedTime(stats?.medicines?.formattedTime)
                   //    : stats?.medicines?.formattedTime,
                   color: Color(0xFFFD685A),
-                  titleColor: Vx.cyan700,
+                  titleColor: Vx.blue700,
                   onTap: () {
                     //debugPrint("CARD main clicked. redirect to details page");
                     Navigator.push(
@@ -124,8 +139,13 @@ class _DashboardState extends State<Dashboard> {
               ).pOnly(left: 8),
               color: Color(0xFFFD685A),
               titleColor: Vx.blue700,
-              onTap: () =>
-                  context.vxNav.push(Uri.parse(Routes.crowdFundingRoute)),
+              onTap: () {
+                //debugPrint("CARD main clicked. redirect to details page");
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => doctorList()),
+                );
+              },
             ).wFull(context).pOnly(right: 30.0),
             20.heightBox,
             Link(
@@ -136,10 +156,10 @@ class _DashboardState extends State<Dashboard> {
                 subtitle2: Constants.vaccineSub,
                 iconOrImage: const Icon(
                   MaterialCommunityIcons.medical_bag,
-                  color: Vx.rose300,
+                  color: Vx.blue700,
                 ).pOnly(left: 8),
                 color: Color(0xFFFD685A),
-                titleColor: Vx.rose700,
+                titleColor: Vx.pink400,
                 onTap: followLink,
               ).wFull(context).pOnly(right: 30.0),
             ),
