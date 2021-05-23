@@ -70,7 +70,7 @@ class _NavDrawerState extends State<NavDrawer> {
           ListTile(
             leading: Icon(Icons.exit_to_app),
             title: Text('Logout'),
-            onTap: () {},
+            onTap: signOut(),
           ),
         ],
       ),

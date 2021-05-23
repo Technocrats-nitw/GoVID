@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:technocrats/screens/pages/pages_hospital.dart';
 import 'package:technocrats/screens/pages/pages_patient.dart';
 import 'package:technocrats/screens/pages/pages_doctor.dart';
 import 'package:technocrats/screens/pages/pages_patient.dart';
@@ -96,6 +97,11 @@ class _LoginPageState extends State<LoginPage> {
       Navigator.push(
         context,
         MaterialPageRoute(builder: (context) => PagesPatient()),
+      );
+    } else if (user.role == 'hospital') {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => PagesHospital()),
       );
     }
   }
