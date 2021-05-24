@@ -11,6 +11,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:technocrats/widgets/category_card.dart';
 import 'package:technocrats/widgets/search_bar.dart';
 import 'package:technocrats/constants.dart';
+import 'package:technocrats/screens/rendered_screen/doctors.dart';
 
 class TabScreen1 extends StatelessWidget {
   @override
@@ -71,7 +72,12 @@ class TabScreen1 extends StatelessWidget {
                         .copyWith(fontWeight: FontWeight.w900),
                         */
                   ),
-                  SearchBar(),
+                  //SearchBar(),
+                  Spacer(),
+                  Spacer(),
+                  Spacer(),
+                  Spacer(),
+                  Spacer(),
                   Expanded(
                     child: GridView.count(
                       crossAxisCount: 2,
@@ -81,23 +87,31 @@ class TabScreen1 extends StatelessWidget {
                       children: <Widget>[
                         CategoryCard(
                           title: "Hospitals",
-                          svgSrc: "assets/icons/Hamburger.svg",
-                          press: () {},
+                          svgSrc: "assets/image/Category1.png",
+                          press: () {
+                            //debugPrint("CARD main clicked. redirect to details page");
+                          },
                         ),
                         CategoryCard(
                           title: "Doctors",
-                          svgSrc: "assets/icons/Excrecises.svg",
-                          press: () {},
+                          svgSrc: "assets/image/Category2.png",
+                          press: () {
+                            //debugPrint("CARD main clicked. redirect to details page");
+                          },
                         ),
                         CategoryCard(
                           title: "Chat",
-                          svgSrc: "assets/icons/yoga.svg",
-                          press: () {},
+                          svgSrc: "assets/image/Category3.png",
+                          press: () {
+                            //debugPrint("CARD main clicked. redirect to details page");
+                          },
                         ),
                         CategoryCard(
                           title: "Chat",
-                          svgSrc: "assets/icons/yoga.svg",
-                          press: () {},
+                          svgSrc: "assets/image/Category4.png",
+                          press: () {
+                            //debugPrint("CARD main clicked. redirect to details page");
+                          },
                         ),
                       ],
                     ),

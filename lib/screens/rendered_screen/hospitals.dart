@@ -51,6 +51,7 @@ class _hospitalListState extends State<hospitalList> {
                               height: 300,
                               child: Row(
                                 children: <Widget>[
+                                  /*
                                   Container(
                                     width: 70,
                                     height: 90,
@@ -59,9 +60,9 @@ class _hospitalListState extends State<hospitalList> {
                                             image: AssetImage(
                                                 'assets/images/docprofile/doc1.png'),
                                             fit: BoxFit.cover)),
-                                  ),
+                                  ),*/
                                   SizedBox(
-                                    width: 20,
+                                    width: 10,
                                   ),
                                   SingleChildScrollView(
                                       child: Column(

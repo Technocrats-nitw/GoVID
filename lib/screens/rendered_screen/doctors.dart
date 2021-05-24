@@ -54,12 +54,39 @@ class _doctorListState extends State<doctorList> {
                                   Container(
                                     width: 70,
                                     height: 90,
-                                    decoration: BoxDecoration(
-                                        image: DecorationImage(
-                                            image: AssetImage(
-                                                'assets/images/docprofile/doc1.png'),
-                                            fit: BoxFit.cover)),
+                                    child: Card(
+                                      clipBehavior: Clip.antiAlias,
+                                      shape: RoundedRectangleBorder(
+                                          borderRadius:
+                                              BorderRadius.circular(24)),
+                                      child: AspectRatio(
+                                        aspectRatio: 1,
+                                        child: Image.network(
+                                          details.image,
+                                          fit: BoxFit.cover,
+                                        ),
+                                      ),
+                                    ),
+                                    /*decoration: BoxDecoration(
+                                      image: Image.network(details.image
+                                          .toString()), /*DecorationImage(
+                                            image: Image.network(),
+                                            fit: BoxFit.cover)*/
+                                    ),*/
                                   ),
+                                  /*Card(
+                                    clipBehavior: Clip.antiAlias,
+                                    shape: RoundedRectangleBorder(
+                                        borderRadius:
+                                            BorderRadius.circular(24)),
+                                    child: AspectRatio(
+                                      aspectRatio: 1,
+                                      child: Image.network(
+                                        details.image,
+                                        fit: BoxFit.cover,
+                                      ),
+                                    ),
+                                  ),*/
                                   SizedBox(
                                     width: 10,
                                   ),
