@@ -48,116 +48,133 @@ class _hospitalListState extends State<hospitalList> {
                             var details = snapshot.data.item[index];
                             this.hospitalname = details.name;
                             return Container(
-                              height: 300,
-                              child: Row(
-                                children: <Widget>[
-                                  /*
-                                  Container(
-                                    width: 70,
-                                    height: 90,
-                                    decoration: BoxDecoration(
-                                        image: DecorationImage(
-                                            image: AssetImage(
-                                                'assets/images/docprofile/doc1.png'),
-                                            fit: BoxFit.cover)),
-                                  ),*/
-                                  SizedBox(
-                                    width: 10,
-                                  ),
-                                  SingleChildScrollView(
-                                      child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: <Widget>[
-                                      Text(
-                                        details.name,
-                                        style: TextStyle(
-                                          fontSize: 24,
-                                          fontWeight: FontWeight.w600,
-                                        ),
-                                      ),
+                              child: Expanded(
+                                child: Row(
+                                  children: <Widget>[
+                                    Container(
+                                      width: 70,
+                                      height: 90,
+                                      decoration: BoxDecoration(
+                                          image: DecorationImage(
+                                              image: AssetImage(
+                                                  'assets/images/docprofile/doc1.png'),
+                                              fit: BoxFit.cover)),
+                                    ),
+                                    SizedBox(
+                                      width: 10,
+                                    ),
+                                    Flexible(
+                                      child: Container(
+                                        child: SingleChildScrollView(
+                                            child: Expanded(
+                                          child: Column(
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            mainAxisSize: MainAxisSize.min,
+                                            children: <Widget>[
+                                              Text(
+                                                details.name,
+                                                style: TextStyle(
+                                                  fontSize: 24,
+                                                  fontWeight: FontWeight.w600,
+                                                ),
+                                              ),
 
-                                      //Text(details.speciality),
-                                      Text(
-                                        "District : " + details.district,
-                                        overflow: TextOverflow.clip,
-                                      ),
-                                      Text(
-                                        "Location : " + details.location,
-                                        overflow: TextOverflow.clip,
-                                      ),
-                                      Text(
-                                        "State : " + details.state.toString(),
-                                        overflow: TextOverflow.clip,
-                                      ),
-                                      Text("Contacts : "),
-                                      Text(
-                                        details.email.toString(),
-                                        overflow: TextOverflow.clip,
-                                      ),
-                                      Text(
-                                        details.telephone,
-                                        overflow: TextOverflow.clip,
-                                      ),
-                                      Text(
-                                        details.website,
-                                        overflow: TextOverflow.clip,
-                                      ),
+                                              //Text(details.speciality),
+                                              Text(
+                                                "District : " +
+                                                    details.district,
+                                                overflow: TextOverflow.clip,
+                                              ),
+                                              Text(
+                                                "Location : " +
+                                                    details.location,
+                                                overflow: TextOverflow.clip,
+                                              ),
+                                              Text(
+                                                "State : " +
+                                                    details.state.toString(),
+                                                overflow: TextOverflow.clip,
+                                              ),
+                                              Text("Contacts : "),
+                                              Text(
+                                                details.email.toString(),
+                                                overflow: TextOverflow.clip,
+                                              ),
+                                              Text(
+                                                details.telephone,
+                                                overflow: TextOverflow.clip,
+                                              ),
+                                              Text(
+                                                details.website,
+                                                overflow: TextOverflow.clip,
+                                              ),
 
-                                      Container(
-                                        child: Text(
-                                          "Speciality : " + details.specialties,
-                                          style: TextStyle(
-                                            fontSize: 12,
-                                            fontWeight: FontWeight.w400,
+                                              Flexible(
+                                                child: Container(
+                                                  child: Text(
+                                                    "Speciality : " +
+                                                        details.specialties,
+                                                    style: TextStyle(
+                                                      fontSize: 12,
+                                                      fontWeight:
+                                                          FontWeight.w400,
+                                                    ),
+                                                    overflow: TextOverflow.clip,
+                                                  ),
+                                                ),
+                                              ),
+                                              Text(
+                                                "Oxygen Count : " +
+                                                    details.oxygenCount
+                                                        .toString(),
+                                                style: TextStyle(
+                                                    color: Colors.red,
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize: 16),
+                                                overflow: TextOverflow.clip,
+                                              ),
+                                              Text(
+                                                "Remdesivir Count : " +
+                                                    details.remedesivirCount
+                                                        .toString(),
+                                                style: TextStyle(
+                                                    color: Colors.red,
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize: 16),
+                                                overflow: TextOverflow.clip,
+                                              ),
+                                              Text(
+                                                "Vaccine Center : " +
+                                                    (details.isVaccineCenter
+                                                                .toString() ==
+                                                            "true"
+                                                        ? "YES"
+                                                        : "NO"),
+                                                style: TextStyle(
+                                                    color: Colors.red,
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize: 16),
+                                                overflow: TextOverflow.clip,
+                                              ),
+                                              Text(
+                                                "Available Beds : " +
+                                                    details.avaialbleBedsCount
+                                                        .toString(),
+                                                style: TextStyle(
+                                                    color: Colors.red,
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize: 16),
+                                                overflow: TextOverflow.clip,
+                                              ),
+                                              SizedBox(height: 25),
+                                            ],
                                           ),
-                                          overflow: TextOverflow.clip,
-                                        ),
+                                        )),
                                       ),
-                                      Text(
-                                        "Oxygen Count : " +
-                                            details.oxygenCount.toString(),
-                                        style: TextStyle(
-                                            color: Colors.red,
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 16),
-                                        overflow: TextOverflow.clip,
-                                      ),
-                                      Text(
-                                        "Remdesivir Count : " +
-                                            details.remedesivirCount.toString(),
-                                        style: TextStyle(
-                                            color: Colors.red,
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 16),
-                                        overflow: TextOverflow.clip,
-                                      ),
-                                      Text(
-                                        "Vaccine Center : " +
-                                            (details.isVaccineCenter
-                                                        .toString() ==
-                                                    "true"
-                                                ? "YES"
-                                                : "NO"),
-                                        style: TextStyle(
-                                            color: Colors.red,
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 16),
-                                        overflow: TextOverflow.clip,
-                                      ),
-                                      Text(
-                                        "Available Beds : " +
-                                            details.avaialbleBedsCount
-                                                .toString(),
-                                        style: TextStyle(
-                                            color: Colors.red,
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 16),
-                                        overflow: TextOverflow.clip,
-                                      ),
-                                    ],
-                                  ))
-                                ],
+                                    )
+                                  ],
+                                ),
                               ),
                             );
                             Spacer();
