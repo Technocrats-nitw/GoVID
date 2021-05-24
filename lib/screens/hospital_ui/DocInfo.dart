@@ -2,8 +2,13 @@ import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:technocrats/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:technocrats/constants.dart';
+import 'package:technocrats/screens/side_nav.dart';
 
 class DocInfoPage extends StatelessWidget {
+  DocInfoPage({
+    this.docname,
+  });
+  String docname = "Dr. Prashant Sinha";
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -11,20 +16,36 @@ class DocInfoPage extends StatelessWidget {
       theme: ThemeData(
         fontFamily: 'avenir',
       ),
-      home: docInfoPage(),
+      home: docInfoPage(
+        docname: this.docname,
+      ),
     );
   }
 }
 
 class docInfoPage extends StatefulWidget {
+  docInfoPage({
+    this.docname,
+  });
+  String docname = "Dr. Prashant Sinha";
   @override
-  _docInfoPageState createState() => _docInfoPageState();
+  _docInfoPageState createState() => _docInfoPageState(docname: this.docname);
 }
 
 class _docInfoPageState extends State<docInfoPage> {
+  _docInfoPageState({
+    this.docname,
+  });
+  String docname = "Dr. Prashant Sinha";
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        //title: Text('Side menu'),
+      ),
+      drawer: NavDrawer(),
       body: SingleChildScrollView(
         child: Column(
           children: <Container>[
@@ -79,7 +100,9 @@ class _docInfoPageState extends State<docInfoPage> {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: <Widget>[
                                     Text(
-                                      "Dr. Susan Thomas",
+                                      (docname == null)
+                                          ? "Dr Prashant Sinha"
+                                          : docname,
                                       style: TextStyle(
                                         fontSize: 20,
                                         fontWeight: FontWeight.w400,

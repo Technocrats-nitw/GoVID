@@ -3,7 +3,7 @@ import 'package:technocrats/constants.dart';
 import 'dart:convert';
 import 'package:technocrats/model/doctor_info.dart';
 
-class API_Manager {
+class API_doctor {
   Future<DoctorModel> getDoctors() async {
     var client = http.Client();
     var doctorModel = null;

@@ -9,6 +9,8 @@ import 'package:technocrats/screens/hospital_ui/DocInfo.dart';
 import 'package:technocrats/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:technocrats/screens/side_nav.dart';
+import 'package:technocrats/model/doctor_info.dart';
+import 'package:technocrats/services/api_doctor.dart';
 
 class hospitaldoctor extends StatelessWidget {
   @override
@@ -34,6 +36,14 @@ class DoctorList extends StatefulWidget {
 }
 
 class _DoctorListState extends State<DoctorList> {
+  Future<DoctorModel> _doctorModel;
+  // variable starting with '_' means it's a private variable
+  var details;
+  void initState() {
+    _doctorModel = API_doctor().getDoctors();
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -62,44 +72,6 @@ class _DoctorListState extends State<DoctorList> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                /*AppBar(
-                  backgroundColor: Colors.transparent,
-                  elevation: 0,
-                  leading: Icon(
-                    Icons.menu,
-                    color: Colors.black,
-                    size: 30,
-                  ),*/
-                /*actions: <Widget>[
-                    
-                    Container(
-                      height: 75,
-                      width: 75,
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        gradient: purpleGradient,
-                        /*
-                                  LinearGradient(colors: [
-                                    getStartedColorStart,
-                                    getStartedColorEnd
-                                  ], stops: [
-                                    0,
-                                    1
-                                  ])*/
-                      ),
-                      child: Center(
-                        child: Text(
-                          "C",
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ),
-                    )
-                  ],*/
-                //),
                 SingleChildScrollView(
                   //padding: EdgeInsets.only(left: 14, right: 10, top: 25),
                   child: Column(

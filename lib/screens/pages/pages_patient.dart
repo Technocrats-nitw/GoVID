@@ -10,6 +10,7 @@ import 'package:technocrats/screens/dev_ui/dev.dart';
 import 'package:technocrats/screens/hospital_ui/hospitaldoctor.dart';
 import 'package:technocrats/screens/acc_ui/account.dart';
 import 'package:technocrats/screens/covid_ui/covid.dart';
+import 'package:technocrats/screens/rendered_screen/hospitals.dart';
 import 'package:technocrats/screens/twitter_screen.dart';
 import 'package:technocrats/doctor_list.dart';
 import 'package:technocrats/screens/covid_ui/covid.dart';
@@ -39,13 +40,10 @@ class _PagesPatientState extends State<PagesPatient> {
       body: PageView(
         controller: _pageController,
         children: <Widget>[
-          //TabScreen1(),
           Dashboard(),
-          //doctorList(),
-          hospitaldoctor(),
-          //devUi(),
+          //hospitaldoctor(),
+          hospitalList(),
           TwitterScreen(),
-          //Account(),
         ],
         onPageChanged: (int index) {
           setState(() {

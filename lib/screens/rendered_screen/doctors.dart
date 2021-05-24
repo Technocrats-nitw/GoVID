@@ -19,6 +19,7 @@ class _doctorListState extends State<doctorList> {
     super.initState();
   }
 
+  String docname = "Doctorname";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -45,46 +46,11 @@ class _doctorListState extends State<doctorList> {
                           itemCount: snapshot.data.itemCount,
                           itemBuilder: (context, index) {
                             var details = snapshot.data.item[index];
-                            /*return Card(
-                      child: Padding(
-                        padding: const EdgeInsets.only(
-                            top: 32.0, bottom: 32.0, left: 16.0, right: 16.0),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: <Widget>[
-                            Text(
-                              details.name,
-                              style: TextStyle(
-                                  fontWeight: FontWeight.bold, fontSize: 20),
-                            ),
-                            //Text(details.speciality),
-                            Text("City : " + details.city),
-                            Text("Locality : " + details.locality),
-                            Text("Contacts : " + details.email.toString()),
-                            Text("Experience : " +
-                                details.experience.toString() +
-                                " years ")
-                          ],
-                        ),
-                      ),
-                    );*/
+                            this.docname = details.name;
                             return Container(
                               height: 200,
                               child: Row(
                                 children: <Widget>[
-                                  /*
-                          Card(
-                            clipBehavior: Clip.antiAlias,
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(24)),
-                            child: AspectRatio(
-                              aspectRatio: 1,
-                              child: Image.network(
-                                details.location,
-                                fit: BoxFit.cover,
-                              ),
-                            ),
-                          ),*/
                                   Container(
                                     width: 70,
                                     height: 90,
@@ -149,76 +115,15 @@ class _doctorListState extends State<doctorList> {
                 //debugPrint("CARD main clicked. redirect to details page");
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => DocInfoPage()),
+                  MaterialPageRoute(
+                      builder: (context) => DocInfoPage(
+                            docname: this.docname,
+                          )),
                 );
               },
             )
           ],
         ));
-
-    /*
-    Container createDocWidget(String imgName, var details) {
-    return Container(
-      child: InkWell(
-        child: Container(
-          margin: EdgeInsets.only(bottom: 15),
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.all(
-              Radius.circular(12),
-            ),
-            color: docContentBgColor,
-          ),
-          child: Container(
-            padding: EdgeInsets.all(7),
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.end,
-              children: <Widget>[
-                Container(
-                  width: 70,
-                  height: 90,
-                  decoration: BoxDecoration(
-                      image: DecorationImage(
-                          image:
-                              AssetImage('assets/images/docprofile/$imgName'),
-                          fit: BoxFit.cover)),
-                ),
-                SizedBox(
-                  width: 10,
-                ),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    Text(
-                      "Dr. $docName",
-                      style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.w600,
-                      ),
-                    ),
-                    SizedBox(
-                      height: 5,
-                    ),
-                    Container(
-                      width: 250,
-                      height: 50,
-                      child: Text(
-                        "A brief about the doctor.",
-                        style: TextStyle(
-                          fontSize: 12,
-                          fontWeight: FontWeight.w400,
-                        ),
-                        overflow: TextOverflow.clip,
-                      ),
-                    )
-                  ],
-                )
-              ],
-            ),
-          ),
-        ),
-        onTap: openDocInfo,
-      ),
-    );*/
   }
 
   _searchBar() {

@@ -232,4 +232,6 @@ class AppTheme {
 class Strings {
   static String doctors_url =
       'http://technocrats.pythonanywhere.com/api/doctor/';
+  static String hospital_url =
+      "https://technocrats.pythonanywhere.com/api/hospital";
 }
