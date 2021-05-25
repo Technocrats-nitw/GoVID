@@ -14,6 +14,7 @@ import 'package:technocrats/screens/rendered_screen/hospitals.dart';
 import 'package:technocrats/screens/twitter_screen.dart';
 import 'package:technocrats/doctor_list.dart';
 import 'package:technocrats/screens/covid_ui/covid.dart';
+import 'package:technocrats/screens/amz_health_cntr/amz_screen.dart';
 
 class PagesPatient extends StatefulWidget {
   //const Pages({Key key}) : super(key: key);

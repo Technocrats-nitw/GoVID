@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:technocrats/screens/side_nav.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:technocrats/screens/tabscreen1.dart';
+import 'package:technocrats/screens/amz_health_cntr/amz_screen.dart';
 
 class PagesDoc extends StatefulWidget {
   //const Pages({Key key}) : super(key: key);

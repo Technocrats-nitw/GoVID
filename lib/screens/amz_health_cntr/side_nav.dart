@@ -54,8 +54,8 @@ class _NavDrawerState extends State<NavDrawer> {
             },
           ),
           ListTile(
-            leading: Icon(Icons.verified_user),
-            title: Text('Profile'),
+            leading: Icon(Icons.calendar_view_month),
+            title: Text('Calender'),
             onTap: () {
               //debugPrint("CARD main clicked. redirect to details page");
               Navigator.push(
@@ -65,10 +65,23 @@ class _NavDrawerState extends State<NavDrawer> {
             },
           ),
           ListTile(
-              leading: Icon(Icons.border_color),
-              title: Text('Feedback'),
-              onTap: () => {} //() => {Navigator.of(context).pop()},
-              ),
+              leading: Icon(Icons.medical_services),
+              title: Text('Vaccine Cell'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => HomePage()),
+                );
+              }),
+          ListTile(
+              leading: Icon(Icons.settings),
+              title: Text('Settings'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => HomePage()),
+                );
+              }),
           ListTile(
               leading: Icon(Icons.exit_to_app),
               title: Text('Logout'),

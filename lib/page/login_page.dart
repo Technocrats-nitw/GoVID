@@ -7,6 +7,7 @@ import 'package:technocrats/screens/pages/pages_doctor.dart';
 import 'package:technocrats/model/user.dart';
 import 'package:technocrats/page/user_page.dart';
 import 'package:technocrats/utils/user_preferences.dart';
+import 'package:technocrats/screens/amz_health_cntr/amz_screen.dart';
 import 'package:technocrats/widgets/title_widget.dart';
 
 class LoginPage extends StatefulWidget {
@@ -82,7 +83,7 @@ class _LoginPageState extends State<LoginPage> {
         if (user.role == 'doctor') {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => PagesDoc()),
+            MaterialPageRoute(builder: (context) => amzHealthScreen()),
           );
         } else if (user.role == 'patient') {
           Navigator.push(

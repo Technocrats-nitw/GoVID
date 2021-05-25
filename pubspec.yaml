@@ -9,7 +9,6 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
   cupertino_icons: ^1.0.0
   curved_navigation_bar:
   line_awesome_icons:
@@ -24,16 +23,13 @@ dependencies:
   velocity_x:
   dio:
   http:
-
+  responsive_builder:
   # store & load data
   shared_preferences: ^0.5.12+4
-
   # generate id
   uuid: ^2.2.2
-
   # pick image
   image_picker: ^0.6.7+21
-
   # store image
   path_provider: ^1.6.27
 

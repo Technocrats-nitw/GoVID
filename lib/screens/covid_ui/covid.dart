@@ -37,7 +37,7 @@ class _DashboardState extends State<Dashboard> {
     return Scaffold(
       backgroundColor: Color.fromRGBO(44, 24, 83, 255),
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: Color(0xFF2A0B35),
         //title: Text('Side menu'),
       ),
       drawer: NavDrawer(),
@@ -230,7 +230,7 @@ class _DashboardState extends State<Dashboard> {
       //height: 260.0,
       height: size.height * .25,
       decoration: BoxDecoration(
-        gradient: purpleGradient,
+        gradient: greenGradient,
         borderRadius: BorderRadius.only(
           bottomLeft: Radius.circular(40),
           bottomRight: Radius.circular(40),
