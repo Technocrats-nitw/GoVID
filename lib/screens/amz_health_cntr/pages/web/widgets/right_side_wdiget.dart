@@ -10,7 +10,7 @@ class RightSideWidget extends StatelessWidget {
       width: 400,
       height: 900,
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: Colors.blueGrey,
         boxShadow: [
           BoxShadow(
             color: Colors.black.withOpacity(.2),

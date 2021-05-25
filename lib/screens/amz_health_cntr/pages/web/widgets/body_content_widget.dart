@@ -236,7 +236,7 @@ class _BodyContentWidgetState extends State<BodyContentWidget> {
       width: width,
       padding: EdgeInsets.symmetric(horizontal: 28, vertical: 18),
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: Colors.blueGrey,
         borderRadius: BorderRadius.all(Radius.circular(8)),
         boxShadow: [
           BoxShadow(
@@ -304,12 +304,14 @@ class _BodyContentWidgetState extends State<BodyContentWidget> {
             },
             child: _singleRowButton(
               title: "Current Medical Stock",
-              textColor:
-                  _rowCurrentBtnIndex == 0 ? Colors.black : Colors.grey[500],
+              textColor: _rowCurrentBtnIndex == 0 ? Colors.red : Colors.black,
               borderColor: _rowCurrentBtnIndex == 0
                   ? Colors.deepOrange
                   : Colors.transparent,
             ),
+          ),
+          SizedBox(
+            width: 50,
           ),
           InkWell(
             onTap: () {
@@ -319,12 +321,14 @@ class _BodyContentWidgetState extends State<BodyContentWidget> {
             },
             child: _singleRowButton(
               title: "Inbox",
-              textColor:
-                  _rowCurrentBtnIndex == 1 ? Colors.black : Colors.grey[500],
+              textColor: _rowCurrentBtnIndex == 1 ? Colors.red : Colors.black,
               borderColor: _rowCurrentBtnIndex == 1
                   ? Colors.deepOrange
                   : Colors.transparent,
             ),
+          ),
+          SizedBox(
+            width: 50,
           ),
           InkWell(
             onTap: () {
@@ -334,8 +338,7 @@ class _BodyContentWidgetState extends State<BodyContentWidget> {
             },
             child: _singleRowButton(
               title: "Order Under Process",
-              textColor:
-                  _rowCurrentBtnIndex == 2 ? Colors.black : Colors.grey[500],
+              textColor: _rowCurrentBtnIndex == 2 ? Colors.red : Colors.black,
               borderColor: _rowCurrentBtnIndex == 2
                   ? Colors.deepOrange
                   : Colors.transparent,
@@ -368,7 +371,7 @@ class _BodyContentWidgetState extends State<BodyContentWidget> {
       child: Container(
         margin: EdgeInsets.symmetric(horizontal: 20),
         child: GridView.builder(
-          physics: const NeverScrollableScrollPhysics(),
+          //physics: const NeverScrollableScrollPhysics(),
           itemCount: _data.length,
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount:

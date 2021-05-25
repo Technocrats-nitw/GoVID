@@ -16,7 +16,7 @@ class _WebVerticalNavWidgetState extends State<WebVerticalNavWidget> {
       width: 70,
       height: MediaQuery.of(context).size.height,
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: Colors.blueGrey,
         boxShadow: [
           BoxShadow(
               color: Colors.black.withOpacity(.2),
@@ -44,12 +44,15 @@ class _WebVerticalNavWidgetState extends State<WebVerticalNavWidget> {
     );
   }
 
-  Widget _colSingleButton({IconData icon, Color borderColor,Color iconColor}) {
+  Widget _colSingleButton({IconData icon, Color borderColor, Color iconColor}) {
     return Padding(
       padding: const EdgeInsets.only(bottom: 35),
       child: Container(
         width: 70,
-        child: Icon(icon,color: iconColor,),
+        child: Icon(
+          icon,
+          color: iconColor,
+        ),
         decoration: BoxDecoration(
           border: Border(
             right: BorderSide(
@@ -74,9 +77,8 @@ class _WebVerticalNavWidgetState extends State<WebVerticalNavWidget> {
               },
               child: _colSingleButton(
                   icon: Icons.widgets,
-                  iconColor: _buttonCurrentIndex == 0
-                      ? Colors.indigo
-                      : Colors.black,
+                  iconColor:
+                      _buttonCurrentIndex == 0 ? Colors.indigo : Colors.black,
                   borderColor: _buttonCurrentIndex == 0
                       ? Colors.deepOrange
                       : Colors.transparent)),
@@ -88,9 +90,8 @@ class _WebVerticalNavWidgetState extends State<WebVerticalNavWidget> {
               },
               child: _colSingleButton(
                   icon: Icons.score,
-                  iconColor: _buttonCurrentIndex == 1
-                      ? Colors.indigo
-                      : Colors.black,
+                  iconColor:
+                      _buttonCurrentIndex == 1 ? Colors.indigo : Colors.black,
                   borderColor: _buttonCurrentIndex == 1
                       ? Colors.deepOrange
                       : Colors.transparent)),
@@ -102,9 +103,8 @@ class _WebVerticalNavWidgetState extends State<WebVerticalNavWidget> {
             },
             child: _colSingleButton(
                 icon: Icons.calendar_today,
-                iconColor: _buttonCurrentIndex == 2
-                    ? Colors.indigo
-                    : Colors.black,
+                iconColor:
+                    _buttonCurrentIndex == 2 ? Colors.indigo : Colors.black,
                 borderColor: _buttonCurrentIndex == 2
                     ? Colors.deepOrange
                     : Colors.transparent),
@@ -117,9 +117,8 @@ class _WebVerticalNavWidgetState extends State<WebVerticalNavWidget> {
             },
             child: _colSingleButton(
                 icon: Icons.pages,
-                iconColor: _buttonCurrentIndex == 3
-                    ? Colors.indigo
-                    : Colors.black,
+                iconColor:
+                    _buttonCurrentIndex == 3 ? Colors.indigo : Colors.black,
                 borderColor: _buttonCurrentIndex == 3
                     ? Colors.deepOrange
                     : Colors.transparent),
@@ -132,9 +131,8 @@ class _WebVerticalNavWidgetState extends State<WebVerticalNavWidget> {
             },
             child: _colSingleButton(
                 icon: Icons.message,
-                iconColor: _buttonCurrentIndex == 4
-                    ? Colors.indigo
-                    : Colors.black,
+                iconColor:
+                    _buttonCurrentIndex == 4 ? Colors.indigo : Colors.black,
                 borderColor: _buttonCurrentIndex == 4
                     ? Colors.deepOrange
                     : Colors.transparent),
@@ -147,9 +145,8 @@ class _WebVerticalNavWidgetState extends State<WebVerticalNavWidget> {
             },
             child: _colSingleButton(
                 icon: Icons.settings,
-                iconColor: _buttonCurrentIndex == 5
-                    ? Colors.indigo
-                    : Colors.black,
+                iconColor:
+                    _buttonCurrentIndex == 5 ? Colors.indigo : Colors.black,
                 borderColor: _buttonCurrentIndex == 5
                     ? Colors.deepOrange
                     : Colors.transparent),

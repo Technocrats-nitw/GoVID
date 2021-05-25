@@ -11,6 +11,7 @@ class DesktopScreen extends StatelessWidget {
     return ResponsiveBuilder(
       builder: (_, sizingInformation) {
         return Scaffold(
+          backgroundColor: Colors.white,
           body: Stack(
             children: [
               Row(
