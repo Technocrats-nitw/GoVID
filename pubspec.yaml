@@ -23,6 +23,14 @@ dependencies:
   velocity_x:
   dio:
   http:
+  percent_indicator:
+  flutter_vector_icons:
+  # scan QR Code
+  flutter_barcode_scanner: ^1.0.1
+
+  # create QR Code
+  barcode_widget: ^1.5.0
+
   responsive_builder:
   # store & load data
   shared_preferences: ^0.5.12+4
@@ -47,9 +55,6 @@ flutter:
     - assets/images/docprofile/
     - assets/images/docinfo/bg1.png
     - assets/images/dev/
-    - images/start.png
-    - images/welcome.png
-    - images/login.jpg
     - assets/images/covid/
 
 fonts:

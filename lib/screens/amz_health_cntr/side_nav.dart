@@ -54,7 +54,7 @@ class _NavDrawerState extends State<NavDrawer> {
             },
           ),
           ListTile(
-            leading: Icon(Icons.calendar_view_month),
+            leading: Icon(Icons.calendar_view_day),
             title: Text('Calender'),
             onTap: () {
               //debugPrint("CARD main clicked. redirect to details page");

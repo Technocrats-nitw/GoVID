@@ -1,11 +1,9 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:technocrats/screens/pages/pages_hospital.dart';
-import 'package:technocrats/screens/pages/pages_patient.dart';
-import 'package:technocrats/screens/pages/pages_doctor.dart';
+import 'package:technocrats/Dashboard/Dashboard.dart';
+import 'package:technocrats/screens/patient_ui/pages_patient.dart';
 import 'package:technocrats/model/user.dart';
-import 'package:technocrats/page/user_page.dart';
 import 'package:technocrats/utils/user_preferences.dart';
 import 'package:technocrats/screens/amz_health_cntr/amz_screen.dart';
 import 'package:technocrats/widgets/title_widget.dart';
@@ -83,7 +81,7 @@ class _LoginPageState extends State<LoginPage> {
         if (user.role == 'doctor') {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => amzHealthScreen()),
+            MaterialPageRoute(builder: (context) => PagesPatient()),
           );
         } else if (user.role == 'patient') {
           Navigator.push(
@@ -93,7 +91,12 @@ class _LoginPageState extends State<LoginPage> {
         } else if (user.role == 'hospital') {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => PagesHospital()),
+            MaterialPageRoute(builder: (context) => DashBoard()),
+          );
+        } else if (user.role == 'amazon') {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => amzHealthScreen()),
           );
         }
       },
@@ -101,6 +104,7 @@ class _LoginPageState extends State<LoginPage> {
           ? null
           : CircleAvatar(backgroundImage: FileImage(imageFile)),
       title: Text(user.name, style: TextStyle(fontSize: 24)),
+      subtitle: Text(user.role, style: TextStyle(fontSize: 24)),
     );
   }
 }

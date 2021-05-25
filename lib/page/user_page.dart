@@ -139,7 +139,7 @@ class _UserPageState extends State<UserPage> {
           initialValue: user.role,
           decoration: InputDecoration(
             border: OutlineInputBorder(),
-            hintText: 'doctor,patient or hospital ?',
+            hintText: 'doctor,patient, hospital or amazon ?',
           ),
           onChanged: (role) => setState(() => user = user.copy(role: role)),
         ),

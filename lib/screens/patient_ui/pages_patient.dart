@@ -65,9 +65,8 @@ class _PagesPatientState extends State<PagesPatient> {
             //Icon(Icons.account_circle_outlined, size: 20, color: Colors.black),
           ],
           animationDuration: Duration(milliseconds: 400),
-          backgroundColor: Colors.white,
+          backgroundColor: Color(0xFF2A0B35),
           buttonBackgroundColor: Colors.white,
-          color: Colors.blueGrey,
           index: 0,
           onTap: (index) {
             setState(() {

@@ -1,5 +1,5 @@
 /*
-Coder : Ashiqa Rahman
+Author : Ashiqa Rahman
 Team :technocrats
 National Institute of Technology Warangal
 */
@@ -12,6 +12,8 @@ import 'package:technocrats/widgets/card_main.dart';
 import 'package:technocrats/widgets/card_section.dart';
 import 'package:technocrats/widgets/custom_clipper.dart';
 import 'package:technocrats/screens/side_nav.dart';
+import 'package:technocrats/widgets/button_widget_qr.dart';
+import 'package:technocrats/page/qr_create_page.dart';
 
 class Account extends StatelessWidget {
   @override
@@ -21,7 +23,6 @@ class Account extends StatelessWidget {
       backgroundColor: Constants.backgroundColor,
       appBar: AppBar(
         backgroundColor: Theme.of(context).accentColor,
-        //title: Text('Side menu'),
       ),
       drawer: NavDrawer(),
       body: Stack(
@@ -170,6 +171,14 @@ class Account extends StatelessWidget {
                         date: "20,March,2021",
                         type: "Testing : Negative",
                         color: Constants.lightBlue,
+                      ),
+                      ButtonWidget(
+                        color: Colors.cyan,
+                        text: 'QR med report',
+                        onClicked: () =>
+                            Navigator.of(context).push(MaterialPageRoute(
+                          builder: (BuildContext context) => QRCreatePage(),
+                        )),
                       ),
                     ],
                   ),
