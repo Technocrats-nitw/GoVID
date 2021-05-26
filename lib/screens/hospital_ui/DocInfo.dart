@@ -1,14 +1,21 @@
+/*
+Anshuman Mishra
+Techncorats
+NITW
+*/
+
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:technocrats/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:technocrats/constants.dart';
 import 'package:technocrats/screens/side_nav.dart';
+import 'package:technocrats/screens/chat/chat_screen_user.dart';
 
 class DocInfoPage extends StatelessWidget {
   DocInfoPage({
     this.docname,
   });
-  String docname = "Dr. Prashant Sinha";
+  String docname = "Dr. Monisha Tomlinson";
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -27,7 +34,7 @@ class docInfoPage extends StatefulWidget {
   docInfoPage({
     this.docname,
   });
-  String docname = "Dr. Prashant Sinha";
+  String docname = "Dr. Monisha Tomlinson";
   @override
   _docInfoPageState createState() => _docInfoPageState(docname: this.docname);
 }
@@ -36,13 +43,13 @@ class _docInfoPageState extends State<docInfoPage> {
   _docInfoPageState({
     this.docname,
   });
-  String docname = "Dr. Prashant Sinha";
+  String docname = "Dr. Monisha Tomlinson";
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: Color(0xFF2A0B35),
         //title: Text('Side menu'),
       ),
       drawer: NavDrawer(),
@@ -53,12 +60,7 @@ class _docInfoPageState extends State<docInfoPage> {
               height: MediaQuery.of(context).size.height,
               width: MediaQuery.of(context).size.width,
               decoration: BoxDecoration(
-                gradient: purpleGradient,
-                /*LinearGradient(
-                colors: [getStartedColorStart, getStartedColorEnd],
-                begin: Alignment(0, -1.15),
-                end: Alignment(0, 0.1),
-              )*/
+                gradient: greenGradient,
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -69,7 +71,7 @@ class _docInfoPageState extends State<docInfoPage> {
                     width: MediaQuery.of(context).size.width,
                     child: Container(
                       padding: EdgeInsets.all(20),
-                      child: Image.asset('assets/images/docinfo/bg1.png'),
+                      child: Image.asset('assets/images/onBoardDoc.png'),
                     ),
                   ),
                   Container(
@@ -101,7 +103,7 @@ class _docInfoPageState extends State<docInfoPage> {
                                   children: <Widget>[
                                     Text(
                                       (docname == null)
-                                          ? "Dr Prashant Sinha"
+                                          ? "Dr Monisha Tomlinson"
                                           : docname,
                                       style: TextStyle(
                                         fontSize: 20,
@@ -135,7 +137,7 @@ class _docInfoPageState extends State<docInfoPage> {
                                     height: 10,
                                   ),
                                   Text(
-                                    "Please write the description of the doctor here. This will be a detailed information about the doctor and the roles and achievements that the doctor has had over the past years",
+                                    "Description About Doctor",
                                     style: TextStyle(
                                       fontSize: 14,
                                       fontWeight: FontWeight.w400,
@@ -144,6 +146,31 @@ class _docInfoPageState extends State<docInfoPage> {
                                   SizedBox(
                                     height: 10,
                                   ),
+                                  TextButton(
+                                    style: ButtonStyle(
+                                      foregroundColor:
+                                          MaterialStateProperty.all<Color>(
+                                              Colors.white),
+                                      backgroundColor:
+                                          MaterialStateProperty.all<Color>(
+                                              Color(0xFF2A0B35)),
+                                    ),
+                                    onPressed: () {
+                                      //debugPrint("CARD main clicked. redirect to details page");
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) => ChatScreen()),
+                                      );
+                                    },
+                                    child: Text(
+                                      'Consult',
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 18),
+                                    ),
+                                  ),
+
                                   /*Padding(
                                     padding:
                                         EdgeInsets.symmetric(horizontal: 25.0),

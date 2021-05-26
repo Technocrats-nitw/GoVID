@@ -6,6 +6,7 @@ Technocrats NITW
 
 import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
+import 'package:technocrats/screens/chat/chat_screen_user.dart';
 import 'package:technocrats/screens/dev_ui/dev.dart';
 import 'package:technocrats/screens/hospital_ui/hospitaldoctor.dart';
 import 'package:technocrats/screens/acc_ui/account.dart';
@@ -45,6 +46,7 @@ class _PagesPatientState extends State<PagesPatient> {
           //hospitaldoctor(),
           hospitalList(),
           TwitterScreen(),
+          //ChatScreen(),
         ],
         onPageChanged: (int index) {
           setState(() {
@@ -62,6 +64,8 @@ class _PagesPatientState extends State<PagesPatient> {
             Icon(Icons.map_sharp, size: 20, color: Colors.black),
             Icon(Icons.medical_services_outlined,
                 size: 20, color: Colors.black),
+            //Icon(Icons.medical_services_outlined,
+            //   size: 20, color: Colors.black),
             //Icon(Icons.account_circle_outlined, size: 20, color: Colors.black),
           ],
           animationDuration: Duration(milliseconds: 400),
