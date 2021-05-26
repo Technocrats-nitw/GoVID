@@ -25,6 +25,8 @@ dependencies:
   http:
   percent_indicator:
   flutter_vector_icons:
+  flutter_native_splash:
+    
   # scan QR Code
   flutter_barcode_scanner: ^1.0.1
 
@@ -56,6 +58,7 @@ flutter:
     - assets/images/docinfo/bg1.png
     - assets/images/dev/
     - assets/images/covid/
+    - assets/images/launch/
 
 fonts:
   - family: Cairo

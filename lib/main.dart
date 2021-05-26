@@ -18,22 +18,53 @@ Future main() async {
 
 class MyApp extends StatelessWidget {
   @override
-  Widget build(BuildContext context) => MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: 'Hackon With Amazon',
-        theme: ThemeData(
-          fontFamily: "Cairo",
-          visualDensity: VisualDensity.adaptivePlatformDensity,
-          textTheme:
-              Theme.of(context).textTheme.apply(displayColor: kTextColor),
-          colorScheme: ColorScheme.light(),
-          scaffoldBackgroundColor: Colors.white,
-          accentColor: Colors.indigoAccent.withOpacity(0.8),
-          unselectedWidgetColor: Colors.indigo[900],
-          switchTheme: SwitchThemeData(
-            thumbColor: MaterialStateProperty.all(Colors.white),
-          ),
+  Widget build(BuildContext context) {
+    return FutureBuilder(
+      future: Future.delayed(Duration(seconds: 9)),
+      builder: (context, snapshot) {
+        if (snapshot.connectionState == ConnectionState.waiting) {
+          return MaterialApp(debugShowCheckedModeBanner: false, home: Splash());
+        } else {
+          return MaterialApp(
+            debugShowCheckedModeBanner: false,
+            title: 'Hackon With Amazon',
+            theme: ThemeData(
+              fontFamily: "Cairo",
+              visualDensity: VisualDensity.adaptivePlatformDensity,
+              textTheme:
+                  Theme.of(context).textTheme.apply(displayColor: kTextColor),
+              colorScheme: ColorScheme.light(),
+              scaffoldBackgroundColor: Colors.white,
+              accentColor: Colors.indigoAccent.withOpacity(0.8),
+              unselectedWidgetColor: Colors.indigo[900],
+              switchTheme: SwitchThemeData(
+                thumbColor: MaterialStateProperty.all(Colors.white),
+              ),
+            ),
+            home: HomePage(),
+          );
+        }
+      },
+    );
+  }
+}
+
+class Splash extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.black,
+      body: Center(
+        child: Image.asset(
+          "assets/images/launch/govid.gif",
+          //height: MediaQuery.of(context).size.height,
+          //width: MediaQuery.of(context).size.width)
         ),
-        home: HomePage(),
-      );
+        /*Icon(
+          Icons.apartment_outlined,
+          size: MediaQuery.of(context).size.width * 0.785,
+        ),*/
+      ),
+    );
+  }
 }
