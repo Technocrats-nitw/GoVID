@@ -12,6 +12,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) => Scaffold(
+        backgroundColor: Colors.white38,
         body: SafeArea(
           child: Container(
             padding: EdgeInsets.symmetric(horizontal: 32, vertical: 96),

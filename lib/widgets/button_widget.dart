@@ -13,7 +13,7 @@ class ButtonWidget extends StatelessWidget {
   Widget build(BuildContext context) => ElevatedButton(
         style: ElevatedButton.styleFrom(
           minimumSize: Size.fromHeight(52),
-          primary: Colors.indigo[900],
+          primary: Colors.indigo[700],
           elevation: 5,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(25),
