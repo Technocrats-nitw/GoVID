@@ -5,8 +5,6 @@ import './chart-painter.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:technocrats/screens/chat/chat_screen_doctor.dart';
 import './side_nav_doctor.dart';
-import 'package:technocrats/widgets/button_widget_qr.dart';
-import 'package:technocrats/page/qr_scan_page.dart';
 
 Color primaryColor = Color(0xff0074ff);
 
@@ -26,9 +24,6 @@ class _HospitalDashboardHomeState extends State<HospitalDashboardHome> {
 
   @override
   Widget build(BuildContext context) {
-    var size = MediaQuery.of(context)
-        .size; //this gonna give us total height and with of our device
-
     return Scaffold(
       body: PageView(
         controller: _pageController,
@@ -179,14 +174,6 @@ class DoctorDash extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 10),
-                  ButtonWidget(
-                    text: 'Scan QR',
-                    color: Colors.cyan,
-                    onClicked: () =>
-                        Navigator.of(context).push(MaterialPageRoute(
-                      builder: (BuildContext context) => QRScanPage(),
-                    )),
-                  ),
                 ],
               ),
             ),
@@ -244,8 +231,6 @@ class DoctorDash extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var size = MediaQuery.of(context)
-        .size; //this gonna give us total height and with of our device
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color(0xFF2A0B35),

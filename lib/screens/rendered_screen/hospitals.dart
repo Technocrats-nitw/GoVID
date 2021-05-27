@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:technocrats/model/hospital_info.dart' as hosp;
 import 'package:technocrats/screens/rendered_screen/doctors.dart';
 import 'package:technocrats/services/api_hospital.dart';
+import 'package:geolocator/geolocator.dart';
 
 class hospitalList extends StatefulWidget {
   @override
@@ -10,12 +11,45 @@ class hospitalList extends StatefulWidget {
 
 class _hospitalListState extends State<hospitalList> {
   Future<hosp.HospitalModel> _hospitalModel;
+  final Geolocator geolocator = Geolocator()..forceAndroidLocationManager;
+  Position _currentPosition;
+  String _currentCity;
   // variable starting with '_' means it's a private variable
   var details;
   Future<String> docname;
   void initState() {
+    _getCurrentLocation();
     _hospitalModel = API_hospital().getHospital();
     super.initState();
+  }
+
+  _getCurrentLocation() {
+    geolocator
+        .getCurrentPosition(desiredAccuracy: LocationAccuracy.best)
+        .then((Position position) {
+      setState(() {
+        _currentPosition = position;
+      });
+
+      _getAddressFromLatLng();
+    }).catchError((e) {
+      print(e);
+    });
+  }
+
+  _getAddressFromLatLng() async {
+    try {
+      List<Placemark> p = await geolocator.placemarkFromCoordinates(
+          _currentPosition.latitude, _currentPosition.longitude);
+
+      Placemark place = p[0];
+
+      setState(() {
+        _currentCity = "${place.locality}";
+      });
+    } catch (e) {
+      print(e);
+    }
   }
 
   String hospitalname = "Hospital name";
@@ -45,6 +79,10 @@ class _hospitalListState extends State<hospitalList> {
                           itemCount: snapshot.data.itemCount,
                           itemBuilder: (context, index) {
                             var details = snapshot.data.item[index];
+                            while (details.district != _currentCity) {
+                              index++;
+                              details = snapshot.data.item[index];
+                            }
                             this.hospitalname = details.name;
                             return Container(
                               child: Expanded(

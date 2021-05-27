@@ -21,12 +21,14 @@ dependencies:
   url_launcher:
   url_strategy:
   velocity_x:
+  geocoding: ^1.0.5
+  geolocator: ^5.3.1
   dio:
   http:
   percent_indicator:
   flutter_vector_icons:
   flutter_native_splash:
-    
+
   # scan QR Code
   flutter_barcode_scanner: ^1.0.1
 

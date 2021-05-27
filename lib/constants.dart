@@ -129,12 +129,15 @@ class Constants {
   static String medicineSuppliers = "COVID Medicine Suppliers";
   static String externalLinks = "External Links";
   static String twitterSearch = "Twitter Search for COVID";
+  static String patientSearch = " Search for patient record";
   static String crowdFunding = "Crowdfunding";
   static String fundRaising = "Fundraising to fight with COVID";
   static String twitterResources =
       "Find latest resources in real time on Twitter";
   static String selectRegion = "Select/Type Region";
+  static String selectPatient = "Select/Type Patient";
   static String findOnTwitter = "Find On Twitter";
+  static String findOnPatient = "Find On Patient";
   static String registerForVaccine = "Register for Vaccination";
   static String vaccineSub = "Registration open for Age 18+";
   static String treatingCovid = "Treating Covid-19 at Home";

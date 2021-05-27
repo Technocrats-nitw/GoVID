@@ -56,7 +56,6 @@ class _MobileScreenState extends State<MobileScreen> {
 
   @override
   Widget build(BuildContext context) {
-    var size = MediaQuery.of(context).size;
     return ResponsiveBuilder(
       builder: (_, sizingInformation) {
         return Scaffold(

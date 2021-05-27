@@ -10,7 +10,14 @@ const bloodGroups = [
   "Blood Bank",
   "All Blood Groups"
 ];
-
+const patients = [
+  "virat kohli",
+  "rohit saraf",
+  "shahrukh khan",
+  "disha patani",
+  "levi ackerman",
+  "disha patani",
+];
 const cities = [
   "Achalpur",
   "Achhnera",

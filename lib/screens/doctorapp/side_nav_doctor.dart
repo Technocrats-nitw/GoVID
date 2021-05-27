@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:technocrats/constants.dart';
-import 'package:technocrats/screens/acc_ui/account.dart';
+import 'package:technocrats/Dashboard/patient_search.dart';
 import 'package:technocrats/screens/dev_ui/dev.dart';
 import 'package:technocrats/page/home_page.dart';
+import 'package:technocrats/page/qr_scan_page.dart';
 
 class NavDrawer extends StatefulWidget {
   @override
@@ -27,14 +28,7 @@ class _NavDrawerState extends State<NavDrawer> {
               textAlign: TextAlign.center,
               style: TextStyle(color: Colors.white, fontSize: 45),
             ),
-            decoration:
-                /*BoxDecoration(
-                color: Colors.green,
-                image: DecorationImage(
-                    fit: BoxFit.fill,
-                    image: AssetImage('assets/images/cover.jpg'))),*/
-
-                BoxDecoration(
+            decoration: BoxDecoration(
               gradient: purpleGradient,
               borderRadius: BorderRadius.only(
                 bottomLeft: Radius.circular(40),
@@ -55,20 +49,24 @@ class _NavDrawerState extends State<NavDrawer> {
           ),
           ListTile(
             leading: Icon(Icons.verified_user),
-            title: Text('Profile'),
+            title: Text('Scan QR'),
             onTap: () {
               //debugPrint("CARD main clicked. redirect to details page");
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => Account()),
+                MaterialPageRoute(builder: (context) => QRScanPage()),
               );
             },
           ),
           ListTile(
               leading: Icon(Icons.border_color),
-              title: Text('Feedback'),
-              onTap: () => {} //() => {Navigator.of(context).pop()},
-              ),
+              title: Text('Patient Search'),
+              onTap: () => {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => PatientSearch()),
+                    ),
+                  }),
           ListTile(
               leading: Icon(Icons.exit_to_app),
               title: Text('Logout'),
