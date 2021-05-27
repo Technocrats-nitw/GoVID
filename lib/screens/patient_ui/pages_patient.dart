@@ -6,16 +6,9 @@ Technocrats NITW
 
 import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
-import 'package:technocrats/screens/chat/chat_screen_user.dart';
-import 'package:technocrats/screens/dev_ui/dev.dart';
-import 'package:technocrats/screens/hospital_ui/hospitaldoctor.dart';
-import 'package:technocrats/screens/acc_ui/account.dart';
 import 'package:technocrats/screens/covid_ui/covid.dart';
 import 'package:technocrats/screens/rendered_screen/hospitals.dart';
 import 'package:technocrats/screens/twitter_screen.dart';
-import 'package:technocrats/doctor_list.dart';
-import 'package:technocrats/screens/covid_ui/covid.dart';
-import 'package:technocrats/screens/amz_health_cntr/amz_screen.dart';
 
 class PagesPatient extends StatefulWidget {
   //const Pages({Key key}) : super(key: key);

@@ -1,19 +1,14 @@
 import 'package:flutter_icons/flutter_icons.dart';
-import 'package:flutter_svg/svg.dart';
-//import 'package:india_beats_covid/core/models/stats.dart';
 import 'package:technocrats/constants.dart';
 import 'package:technocrats/doctor_list.dart';
 import 'package:technocrats/screens/covid_ui/treating_covid.dart';
 
-//import 'package:india_beats_covid/utils/routes.dart';
-import 'package:technocrats/utils/utils.dart';
 import 'package:url_launcher/link.dart';
 
 import '../../pkgs.dart';
 import 'package:technocrats/widgets/action_card.dart';
 import 'package:intl/intl.dart';
 import 'package:velocity_x/velocity_x.dart';
-import 'package:technocrats/routes.dart';
 import 'package:technocrats/screens/side_nav.dart';
 
 class Dashboard extends StatefulWidget {

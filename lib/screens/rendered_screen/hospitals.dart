@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:technocrats/model/hospital_info.dart' as hosp;
-import 'package:technocrats/constants.dart';
 import 'package:technocrats/screens/rendered_screen/doctors.dart';
 import 'package:technocrats/services/api_hospital.dart';
 

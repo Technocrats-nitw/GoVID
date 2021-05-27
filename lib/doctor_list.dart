@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:technocrats/model/doctor_info.dart';
 import 'package:technocrats/screens/hospital_ui/DocInfo.dart';
 import 'package:technocrats/services/api_doctor.dart';
-import 'package:technocrats/constants.dart';
-import 'package:technocrats/widgets/search_bar.dart';
 
 class doctorList extends StatefulWidget {
   @override

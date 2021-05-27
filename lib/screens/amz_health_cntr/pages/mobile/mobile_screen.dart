@@ -3,7 +3,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'package:technocrats/constants.dart';
-import 'widgets/drawer_mobile.dart';
 import 'package:technocrats/screens/amz_health_cntr/side_nav.dart';
 
 class MobileScreen extends StatefulWidget {

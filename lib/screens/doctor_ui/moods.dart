@@ -6,7 +6,6 @@ National Institute of Technology Warangal
 */
 
 import 'package:flutter/material.dart';
-import 'package:line_awesome_icons/line_awesome_icons.dart';
 
 class MoodsSelector extends StatefulWidget {
   // MoodsSelector({Key key}) : super(key: key);
