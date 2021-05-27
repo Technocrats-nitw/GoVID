@@ -79,7 +79,7 @@ class _hospitalListState extends State<hospitalList> {
                           itemCount: snapshot.data.itemCount,
                           itemBuilder: (context, index) {
                             var details = snapshot.data.item[index];
-                            while (details.district != _currentCity) {
+                            while (!details.district.contains(_currentCity)) {
                               index++;
                               details = snapshot.data.item[index];
                             }
