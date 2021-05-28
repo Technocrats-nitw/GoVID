@@ -138,6 +138,7 @@ class Account extends StatelessWidget {
 
                 SizedBox(height: 50),
                 SizedBox(height: 20),
+                /*
                 TextButton(
                   style: ButtonStyle(
                     foregroundColor:
@@ -156,7 +157,7 @@ class Account extends StatelessWidget {
                     'Chat',
                     style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
                   ),
-                ),
+                ),*/
                 SizedBox(height: 20),
                 ButtonWidget(
                   color: Colors.cyan,
