@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:technocrats/Dashboard/patient_search.dart';
+import 'package:technocrats/constants.dart';
+import 'package:technocrats/page/qr_scan_page.dart';
 import './account_card.dart';
 import './appointment_card.dart';
 import './chart-painter.dart';
@@ -25,11 +28,14 @@ class _HospitalDashboardHomeState extends State<HospitalDashboardHome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.blueGrey,
       body: PageView(
         controller: _pageController,
         children: <Widget>[
           DoctorDash(),
-          ChatScreen(),
+          PatientSearch(),
+          QRScanPage(),
+          //ChatScreen(),
         ],
         onPageChanged: (int index) {
           setState(() {
@@ -42,6 +48,7 @@ class _HospitalDashboardHomeState extends State<HospitalDashboardHome> {
           items: <Widget>[
             Icon(Icons.label, size: 20, color: Colors.black),
             Icon(Icons.map_sharp, size: 20, color: Colors.black),
+            Icon(Icons.verified_user)
           ],
           animationDuration: Duration(milliseconds: 400),
           backgroundColor: Color(0xFF2A0B35),
@@ -64,9 +71,12 @@ class DoctorDash extends StatelessWidget {
         Flexible(
           flex: 2,
           child: Container(
+            //color: Colors.blueGrey,
             width: MediaQuery.of(context).size.width,
             decoration: BoxDecoration(
-              color: primaryColor,
+              //color: primaryColor,
+              gradient: purpleGradient,
+              //color: Colors.blueGrey,
               borderRadius: BorderRadius.only(
                 bottomLeft: Radius.circular(40),
                 bottomRight: Radius.circular(40),
@@ -89,7 +99,7 @@ class DoctorDash extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: <Widget>[
                         Text(
-                          "Monthly",
+                          "Monthly Stats",
                           style: TextStyle(
                             color: Colors.white,
                           ),

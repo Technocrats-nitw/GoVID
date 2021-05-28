@@ -47,6 +47,7 @@ class _NavDrawerState extends State<NavDrawer> {
               );
             },
           ),
+          /*
           ListTile(
             leading: Icon(Icons.verified_user),
             title: Text('Scan QR'),
@@ -57,7 +58,8 @@ class _NavDrawerState extends State<NavDrawer> {
                 MaterialPageRoute(builder: (context) => QRScanPage()),
               );
             },
-          ),
+          ),*/
+          /*
           ListTile(
               leading: Icon(Icons.border_color),
               title: Text('Patient Search'),
@@ -66,7 +68,7 @@ class _NavDrawerState extends State<NavDrawer> {
                       context,
                       MaterialPageRoute(builder: (context) => PatientSearch()),
                     ),
-                  }),
+                  }),*/
           ListTile(
               leading: Icon(Icons.exit_to_app),
               title: Text('Logout'),
