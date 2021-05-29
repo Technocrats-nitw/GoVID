@@ -81,6 +81,7 @@ The above code segment is responsible for handling POST Requests.
 - Main functionality of our  is the search function that provides user to search Doctor/Hospital city wise or state wise.
 - Doctors and Hospitals can also be searched on the basis of their specialities.
 - Also it suggests the Doctors nearby in Flutter using APIs.
+
 url:
 <pre>
 Location Based: 
