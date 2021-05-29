@@ -11,7 +11,7 @@ This **api** app deals with the main functionality of our Backend for the Projec
 There are several views which are called depending upon the url entered.
 
 - The first default JSON Response is how to use the website containing data of site.
-```js
+```json
 {
     "Message": "Follow given links for API",
     "Doctors": "https://technocrats.pythonanywhere.com/api/doctor",
@@ -143,29 +143,4 @@ And gets API in reponse.
 
 ``On searchKey = 'bad'``
 
-```js
-{
-    "ItemCount": 18,
-    "Message": "API Generated Successfully",
-    "item": [
-        {
-            "id": 256,
-            "type": "Dentist",
-            "uprn_no": 1002,
-            "name": "Dr. S.P.Shukla",
-            "email": "addsufiyan@gmail.com",
-            "contact": "7068502705",
-            "url": "https://www.practo.com/Allahabad/Doctor/dr-s-p-shukla-dentist-1?specialization=Dentist",
-            "image": "https://imagesx.practo.com/providers/42803c31-f22e-4c20-87a9-436d0aa14101.jpg?i_type=t_100x100",
-            "locality": "Allahabad Kty.",
-            "city": "Allahabad (Prayagraj)",
-            "latitude": "25.465977",
-            "longitude": "81.84904",
-            "priceRange": 500,
-            "experience": 3,
-            "isUser": false,
-            "speciality": "Dentist"
-        },...
-    ]
-}
-```
+![image](https://s3.amazonaws.com/hr-assets/0/1622323872-02557bca0a-city.jpg)

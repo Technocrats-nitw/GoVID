@@ -16,9 +16,9 @@ from .responseAPI import *
 # Create your views here.
 
 def finalResult(val):
-    return 'According to our CNN Model, there is a ' + str(round(100*val,3)) + '% chance that you are infected with Corona-virus'
+    return 'According to our CNN Model, there is a ' + str(round(100*val,3)) + '% chance \nthat you are infected with Corona-virus'
 
-# Default Responses
+# Default Response
 def api(request,key):
     if request.method == 'GET':
         API_INFO["Total Doctors Registered"] = len(Doctors.objects.all())
