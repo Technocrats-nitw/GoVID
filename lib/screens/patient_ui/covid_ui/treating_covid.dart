@@ -1,7 +1,7 @@
 import 'package:flutter_svg/svg.dart';
-import 'package:technocrats/constants.dart';
+import 'package:technocrats/utils/constants.dart';
 
-import '../../pkgs.dart';
+import '../../../utils/pkgs.dart';
 
 class TreatingCovidScreen extends StatefulWidget {
   @override

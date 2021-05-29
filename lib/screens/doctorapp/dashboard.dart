@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:technocrats/Dashboard/patient_search.dart';
-import 'package:technocrats/constants.dart';
-import 'package:technocrats/page/qr_scan_page.dart';
+import 'package:technocrats/utils/constants.dart';
+import 'package:technocrats/action_page/qr_scan_page.dart';
 import './account_card.dart';
 import './appointment_card.dart';
 import './chart-painter.dart';

@@ -7,7 +7,7 @@ National Institute of Technology Warangal
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:technocrats/constants.dart';
+import 'package:technocrats/utils/constants.dart';
 
 class CategoryCard extends StatelessWidget {
   final String svgSrc;

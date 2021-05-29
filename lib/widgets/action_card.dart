@@ -1,6 +1,6 @@
-import 'package:technocrats/constants.dart';
+import 'package:technocrats/utils/constants.dart';
 
-import 'package:technocrats/pkgs.dart';
+import 'package:technocrats/utils/pkgs.dart';
 
 class ActionCard extends StatelessWidget {
   final Color color;

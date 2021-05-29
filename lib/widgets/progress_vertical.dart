@@ -5,7 +5,7 @@ National Institute of Technology Warangal
 */
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:technocrats/constants.dart';
+import 'package:technocrats/utils/constants.dart';
 
 class ProgressVertical extends StatelessWidget {
   final int value;

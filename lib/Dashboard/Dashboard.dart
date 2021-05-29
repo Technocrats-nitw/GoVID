@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import 'package:technocrats/Dashboard/ProjectProgressCard.dart';
-import 'package:technocrats/Dashboard/ProjectStatisticsCards.dart';
-import 'package:technocrats/Dashboard/SharedFilesItem.dart';
-import 'package:technocrats/Dashboard/SubHeader.dart';
-import 'package:technocrats/Dashboard/Tabs.dart';
-import 'package:technocrats/constants.dart';
+import 'package:technocrats/widgets/ProjectProgressCard.dart';
+import 'package:technocrats/widgets/ProjectStatisticsCards.dart';
+import 'package:technocrats/widgets/SharedFilesItem.dart';
+import 'package:technocrats/widgets/SubHeader.dart';
+import 'package:technocrats/widgets/Tabs.dart';
+import 'package:technocrats/utils/constants.dart';
 import 'package:technocrats/Dashboard/side_nav.dart';
 
 class DashBoard extends StatelessWidget {

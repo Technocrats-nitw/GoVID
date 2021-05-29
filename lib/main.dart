@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:technocrats/constants.dart';
-import 'package:technocrats/page/home_page.dart';
+import 'package:technocrats/utils/constants.dart';
+import 'package:technocrats/action_page/home_page.dart';
 import 'package:technocrats/utils/user_preferences.dart';
+
 Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await SystemChrome.setPreferredOrientations([

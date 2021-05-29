@@ -1,4 +1,4 @@
-import 'package:technocrats/screens/amz_health_cntr/fake_repository.dart';
+import 'package:technocrats/model/data_repository.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:responsive_builder/responsive_builder.dart';

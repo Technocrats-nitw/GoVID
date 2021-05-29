@@ -1,11 +1,11 @@
 import 'package:flutter_icons/flutter_icons.dart';
-import 'package:technocrats/constants.dart';
-import 'package:technocrats/screens/rendered_screen/doctors.dart';
-import 'package:technocrats/screens/covid_ui/treating_covid.dart';
+import 'package:technocrats/utils/constants.dart';
+import 'package:technocrats/screens/patient_ui/nearby_hosp_doc/doctors.dart';
+import 'package:technocrats/screens/patient_ui/covid_ui/treating_covid.dart';
 
 import 'package:url_launcher/link.dart';
 
-import '../../pkgs.dart';
+import '../../../utils/pkgs.dart';
 import 'package:technocrats/widgets/action_card.dart';
 import 'package:intl/intl.dart';
 import 'package:velocity_x/velocity_x.dart';

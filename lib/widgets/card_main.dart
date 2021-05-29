@@ -5,8 +5,8 @@ National Institute of Technology Warangal
 */
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:technocrats/screens/acc_ui/healthreport.dart';
-import 'package:technocrats/constants.dart';
+import 'package:technocrats/screens/patient_ui/profile/heart_stats.dart';
+import 'package:technocrats/utils/constants.dart';
 import 'package:technocrats/widgets/custom_clipper.dart';
 
 class CardMain extends StatelessWidget {

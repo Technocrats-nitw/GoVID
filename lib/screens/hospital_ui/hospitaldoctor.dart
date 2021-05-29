@@ -6,7 +6,7 @@ National Institute of Technology Warangal
 */
 
 import 'package:technocrats/screens/hospital_ui/DocInfo.dart';
-import 'package:technocrats/constants.dart';
+import 'package:technocrats/utils/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:technocrats/screens/side_nav.dart';
 import 'package:technocrats/model/doctor_info.dart';
@@ -40,7 +40,7 @@ class _DoctorListState extends State<DoctorList> {
   // variable starting with '_' means it's a private variable
   var details;
   void initState() {
-    _doctorModel = API_doctor().getDoctors();
+    _doctorModel = API_doctor().getDoctors("Allahbad");
     super.initState();
   }
 

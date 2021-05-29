@@ -1,8 +1,8 @@
-import 'package:technocrats/screens/mock_data.dart';
-import 'package:technocrats/constants.dart';
+import 'package:technocrats/model/mock_data.dart';
+import 'package:technocrats/utils/constants.dart';
 import 'package:technocrats/screens/doctorapp/account.dart';
 
-import '../pkgs.dart';
+import '../utils/pkgs.dart';
 
 class PatientSearch extends StatelessWidget {
   final ValueNotifier<String> keyword = ValueNotifier<String>("");

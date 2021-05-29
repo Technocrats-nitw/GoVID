@@ -4,7 +4,7 @@ Team :technocrats
 National Institute of Technology Warangal
 */
 import 'package:flutter/material.dart';
-import 'package:technocrats/constants.dart';
+import 'package:technocrats/utils/constants.dart';
 
 class GridItem extends StatelessWidget {
   final String status;

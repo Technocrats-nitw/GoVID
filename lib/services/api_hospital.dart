@@ -1,5 +1,5 @@
 import 'package:http/http.dart' as http;
-import 'package:technocrats/constants.dart';
+import 'package:technocrats/utils/constants.dart';
 import 'dart:convert';
 import 'package:technocrats/model/hospital_info.dart';
 

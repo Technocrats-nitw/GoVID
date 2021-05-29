@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:technocrats/model/hospital_info.dart' as hosp;
-import 'package:technocrats/screens/rendered_screen/doctors.dart';
+import 'package:technocrats/screens/patient_ui/nearby_hosp_doc/doctors.dart';
 import 'package:technocrats/services/api_hospital.dart';
 import 'package:geolocator/geolocator.dart';
 

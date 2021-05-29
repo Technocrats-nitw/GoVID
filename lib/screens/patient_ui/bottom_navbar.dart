@@ -6,9 +6,9 @@ Technocrats NITW
 
 import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
-import 'package:technocrats/screens/covid_ui/covid.dart';
-import 'package:technocrats/screens/rendered_screen/hospitals.dart';
-import 'package:technocrats/screens/twitter_screen.dart';
+import 'package:technocrats/screens/patient_ui/covid_ui/covid.dart';
+import 'package:technocrats/screens/patient_ui/nearby_hosp_doc/hospitals.dart';
+import 'package:technocrats/screens/patient_ui/twitter_screen.dart';
 
 class PagesPatient extends StatefulWidget {
   //const Pages({Key key}) : super(key: key);
@@ -28,9 +28,6 @@ class _PagesPatientState extends State<PagesPatient> {
 
   @override
   Widget build(BuildContext context) {
-    var size = MediaQuery.of(context)
-        .size; //this gonna give us total height and with of our device
-
     return Scaffold(
       body: PageView(
         controller: _pageController,

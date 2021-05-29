@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:technocrats/screens/chat/message_model_user.dart';
 import 'package:technocrats/screens/chat/user_model.dart';
-import 'package:technocrats/constants.dart';
+import 'package:technocrats/utils/constants.dart';
 
 class ChatScreen extends StatefulWidget {
   final User user = User(

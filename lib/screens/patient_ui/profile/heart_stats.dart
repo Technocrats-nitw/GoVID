@@ -5,7 +5,7 @@ National Institute of Technology Warangal
 */
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:technocrats/constants.dart';
+import 'package:technocrats/utils/constants.dart';
 import 'package:technocrats/widgets/custom_clipper.dart';
 import 'package:technocrats/widgets/grid_item.dart';
 import 'package:technocrats/widgets/progress_vertical.dart';

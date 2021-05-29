@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:technocrats/page/login_page.dart';
-import 'package:technocrats/page/user_page.dart';
+import 'package:technocrats/action_page/login_page.dart';
+import 'package:technocrats/action_page/signup_page.dart';
 import 'package:technocrats/widgets/button_widget.dart';
 import 'package:technocrats/widgets/title_widget.dart';
 

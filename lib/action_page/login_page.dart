@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:technocrats/Dashboard/Dashboard.dart';
-import 'package:technocrats/screens/patient_ui/pages_patient.dart';
+import 'package:technocrats/screens/patient_ui/bottom_navbar.dart';
 import 'package:technocrats/model/user.dart';
 import 'package:technocrats/utils/user_preferences.dart';
 import 'package:technocrats/screens/amz_health_cntr/amz_screen.dart';

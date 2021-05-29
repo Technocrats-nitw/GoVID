@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:technocrats/constants.dart';
-import 'package:technocrats/screens/acc_ui/account.dart';
+import 'package:technocrats/utils/constants.dart';
+import 'package:technocrats/screens/patient_ui/profile/med_report.dart';
 import 'package:technocrats/screens/dev_ui/dev.dart';
-import 'package:technocrats/page/home_page.dart';
+import 'package:technocrats/action_page/home_page.dart';
 
 class NavDrawer extends StatefulWidget {
   @override

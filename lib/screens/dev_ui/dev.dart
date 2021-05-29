@@ -6,7 +6,7 @@ National Institute of Technology Warangal
 */
 
 import 'package:flutter/material.dart';
-import 'package:technocrats/constants.dart';
+import 'package:technocrats/utils/constants.dart';
 import 'package:technocrats/screens/side_nav.dart';
 
 class devUi extends StatefulWidget {

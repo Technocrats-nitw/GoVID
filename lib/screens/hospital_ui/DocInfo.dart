@@ -4,7 +4,7 @@ Techncorats
 NITW
 */
 
-import 'package:technocrats/constants.dart';
+import 'package:technocrats/utils/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:technocrats/screens/side_nav.dart';
 import 'package:technocrats/screens/chat/chat_screen_user.dart';

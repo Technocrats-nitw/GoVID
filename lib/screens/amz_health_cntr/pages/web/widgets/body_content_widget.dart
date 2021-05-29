@@ -1,8 +1,8 @@
-import 'package:technocrats/screens/amz_health_cntr/fake_repository.dart';
+import 'package:technocrats/model/data_repository.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:responsive_builder/responsive_builder.dart';
-import 'package:technocrats/constants.dart';
+import 'package:technocrats/utils/constants.dart';
 
 class BodyContentWidget extends StatefulWidget {
   final SizingInformation sizingInformation;
