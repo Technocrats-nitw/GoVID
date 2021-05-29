@@ -32,7 +32,7 @@ and head to http://127.0.0.1:8000 for the local server.
 
 <hr>
 
-### 
+### TECHNOLOGIES
 - **rest_framework** : This library is used to create and pass API via Response to client side.
 - **tensorflow & keras** : These libraries are used here to predict the chance of Covid by Chest X-ray
 
@@ -53,3 +53,5 @@ and head to http://127.0.0.1:8000 for the local server.
 	- This is to pass required msgs while sending API Response via rest_framework
 - [xray.py](api/xray.py)
 	- This python file is responsible for predicting the chance of COVID by CNN Models using Chest X-ray
+
+##### See this [README.md](api/README.md) for more and detailed explanation.
