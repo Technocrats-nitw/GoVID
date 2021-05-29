@@ -81,14 +81,17 @@ The above code segment is responsible for handling POST Requests.
 - Main functionality of our  is the search function that provides user to search Doctor/Hospital city wise or state wise.
 - Doctors and Hospitals can also be searched on the basis of their specialities.
 - Also it suggests the Doctors nearby in Flutter using APIs.
-<pre>
 url:
+<pre>
 Location Based: 
     /api/doctor/city/{searchKey}
     /api/hospital/city/{searchKey}
     /api/hospital/state/{searchkey}
 
 Specification Based:
-	/api/doctor/specs/{searchKey}
-	/api/hospital/specs/{searchKey}
+    /api/doctor/specs/{searchKey}
+    /api/hospital/specs/{searchKey}
 </pre>
+
+**Additions**: Database is filtered not just on the basis of whole word but also part of words accepted.
+For example: *path* can be searchKey for *Pathology* and *bad* can be search key for *Allahabad* and *Hyderabad* both.
