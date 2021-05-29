@@ -2,6 +2,11 @@
 
 `An App for the Mankind, of the Mankind and by the Mankind.`
 
+### Team Technocrats
+- BACKEND DEVELOPERS
+	- Mohd Sufiyan Ansari
+	- Chaitanya Hardikar
+
 There was an idea to put together all the functionalities, a healthcare app would ever need. This was not seeming possible by the series of actions being undertaken until now, because we haven't thought of creating a larger network by the help of pre-existing large network i.e. **AMAZON CARE** .
 
 Here we have used **DJANGO** Framework (Python) as preferred backend to act as API source and other several functionalities which includes filter, search and bulk database.
@@ -32,7 +37,7 @@ and head to http://127.0.0.1:8000 for the local server.
 
 <hr>
 
-### TECHNOLOGIES
+### Technologies
 - **rest_framework** : This library is used to create and pass API via Response to client side.
 - **tensorflow & keras** : These libraries are used here to predict the chance of Covid by Chest X-ray
 
