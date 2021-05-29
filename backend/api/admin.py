@@ -1,3 +1,8 @@
+'''
+Author : Mohd Sufiyan Ansari
+Team : Technocrats
+About : This file basically registers the models to backend/database.
+'''
 from django.contrib import admin
 
 from .models import *

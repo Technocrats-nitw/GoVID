@@ -1,3 +1,9 @@
+'''
+Author : Mohd Sufiyan Ansari
+Team : Technocrats
+About : This contains data for each views which is called upon corresponding url.
+'''
+
 from django.http import HttpResponse
 from django.http.response import JsonResponse
 from django.shortcuts import render, get_object_or_404

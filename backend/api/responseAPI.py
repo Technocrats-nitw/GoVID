@@ -1,3 +1,9 @@
+'''
+Author : Mohd Sufiyan Ansari
+Team : Technocrats
+About : This file contains constant responses for API requests.
+'''
+
 from collections import OrderedDict
 from .models import *
 

@@ -1,3 +1,9 @@
+'''
+Author : Chaitanya Hardikar
+Team : Technocrats
+About : This is the ML part of this project which is used for Predicting COVID using Chest X-ray.
+'''
+
 from keras import backend as K
 from keras.preprocessing.image import ImageDataGenerator,load_img, img_to_array
 from keras.models import Sequential, Model
@@ -15,9 +21,9 @@ import pandas as pd
 import cv2
 from pathlib import Path
 
-lc = Path(__file__).parent
+loc = os.path.join(Path(__file__).parent,'MLmodels')
 
-loaded_model = tf.keras.models.load_model(os.path.join(lc,'covid19.model'))
+loaded_model = tf.keras.models.load_model(os.path.join(loc,'covid19.model'))
 
 # loaded_model.summary()
 

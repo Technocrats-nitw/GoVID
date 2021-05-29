@@ -1,3 +1,9 @@
+'''
+Author : Mohd Sufiyan Ansari
+Team : Technocrats
+About : This file serializes all the data objects before sending response
+'''
+
 from rest_framework import serializers
 from .models import *
 
