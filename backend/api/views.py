@@ -18,8 +18,7 @@ from .responseAPI import *
 def finalResult(val):
     return 'According to our CNN Model, there is a ' + str(round(100*val,3)) + '% chance that you are infected with Corona-virus'
 
-API_ACCESS_KEY = 'ecd5476186efa43940e3282f4531cd5b'
-
+# Default Responses
 def api(request,key):
     if request.method == 'GET':
         API_INFO["Total Doctors Registered"] = len(Doctors.objects.all())

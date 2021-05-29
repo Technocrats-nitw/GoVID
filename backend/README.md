@@ -14,6 +14,7 @@ Here we have used **DJANGO** Framework (Python) as preferred backend to act as A
 ### Setting Up Project
 
 - Language Requirement: Python v3.7 or Higher
+- Database Used: Sqlte3
 
 #### Install the requirements by creating a new virtual environment or in system environment.
 
