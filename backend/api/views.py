@@ -216,10 +216,10 @@ class DetectImg(APIView):
             from .xray import load
             import os
             from django.conf import settings
-            pl = serializer.data['image'].split('/')[-1]
+            pic_name = serializer.data['image'].split('/')[-1]
             
             
-            ARRAY = load(os.path.join(settings.MEDIA_ROOT,pl))
+            ARRAY = load(os.path.join(settings.MEDIA_ROOT,pic_name))
             return HttpResponse(finalResult(ARRAY[0][0]))
         print(serializer.errors)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)

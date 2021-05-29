@@ -144,3 +144,50 @@ And gets API in reponse.
 ``On searchKey = 'bad'``
 
 ![image](https://s3.amazonaws.com/hr-assets/0/1622323872-02557bca0a-city.jpg)
+
+## COVID Prediction
+- This is the part where we have integrated ML with Django that uses CNN Model to predict COVID percentage using Chest X-ray.
+
+#### Libraries Used
+- Tensorflow
+- Keras
+- Numpy
+- skimage
+
+We have model named `covid19.model` that is being loaded by tensorflow and then we take the X-ray image which is further converted into numpy array and further converted to tensor and the prediction is made.
+
+```python
+def load(filename):
+   np_image = Image.open(filename)
+   np_image = np.array(np_image).astype('float32')/255
+   np_image = transform.resize(np_image, (224, 224, 3))
+   np_image = tf.convert_to_tensor(np_image[:,:,:3])
+   np_image = np.expand_dims(np_image, axis=0)
+   return loaded_model.predict(np_image)
+```
+Above code segment (function) is used for prediction which is called by `DetectImg` view on POST request @ `'/api/img'` and returns the proper message.
+
+```python
+class DetectImg(APIView):    
+    def post(self,request):
+        serializer = DetectSerializer(data = request.data)
+        if serializer.is_valid():
+            serializer.save()
+            from .xray import load
+            import os
+            from django.conf import settings
+            pic_name = serializer.data['image'].split('/')[-1]
+            
+            
+            ARRAY = load(os.path.join(settings.MEDIA_ROOT,pic_name))
+            return HttpResponse(finalResult(ARRAY[0][0]))
+        print(serializer.errors)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+```
+This is how POST request is handled in case of API image transfer.
+<br>
+Given below is its demonstration:
+
+![image](https://s3.amazonaws.com/hr-assets/0/1622325696-3e06cd0d46-less50.jpg)
+
+<hr>
