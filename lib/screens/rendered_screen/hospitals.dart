@@ -19,7 +19,7 @@ class _hospitalListState extends State<hospitalList> {
   Future<String> docname;
   void initState() {
     _getCurrentLocation();
-    _hospitalModel = API_hospital().getHospital();
+    _hospitalModel = API_hospital().getHospital(_currentCity);
     super.initState();
   }
 
@@ -79,10 +79,7 @@ class _hospitalListState extends State<hospitalList> {
                           itemCount: snapshot.data.itemCount,
                           itemBuilder: (context, index) {
                             var details = snapshot.data.item[index];
-                            while (!details.district.contains(_currentCity)) {
-                              index++;
-                              details = snapshot.data.item[index];
-                            }
+
                             this.hospitalname = details.name;
                             return Container(
                               child: Expanded(

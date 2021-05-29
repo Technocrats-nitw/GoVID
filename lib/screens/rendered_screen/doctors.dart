@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:technocrats/model/doctor_info.dart';
 import 'package:technocrats/screens/hospital_ui/DocInfo.dart';
 import 'package:technocrats/services/api_doctor.dart';
+import 'package:geolocator/geolocator.dart';
 
 class doctorList extends StatefulWidget {
   @override
@@ -10,11 +11,44 @@ class doctorList extends StatefulWidget {
 
 class _doctorListState extends State<doctorList> {
   Future<DoctorModel> _doctorModel;
+  final Geolocator geolocator = Geolocator()..forceAndroidLocationManager;
+  Position _currentPosition;
+  String _currentCity;
   // variable starting with '_' means it's a private variable
   var details;
   void initState() {
-    _doctorModel = API_doctor().getDoctors();
+    _getCurrentLocation();
+    _doctorModel = API_doctor().getDoctors(_currentCity);
     super.initState();
+  }
+
+  _getCurrentLocation() {
+    geolocator
+        .getCurrentPosition(desiredAccuracy: LocationAccuracy.best)
+        .then((Position position) {
+      setState(() {
+        _currentPosition = position;
+      });
+
+      _getAddressFromLatLng();
+    }).catchError((e) {
+      print(e);
+    });
+  }
+
+  _getAddressFromLatLng() async {
+    try {
+      List<Placemark> p = await geolocator.placemarkFromCoordinates(
+          _currentPosition.latitude, _currentPosition.longitude);
+
+      Placemark place = p[0];
+
+      setState(() {
+        _currentCity = "${place.locality}";
+      });
+    } catch (e) {
+      print(e);
+    }
   }
 
   String docname = "Doctorname";
@@ -89,40 +123,43 @@ class _doctorListState extends State<doctorList> {
                                     width: 10,
                                   ),
                                   SingleChildScrollView(
-                                      child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: <Widget>[
-                                      Text(
-                                        details.name,
-                                        style: TextStyle(
-                                          fontSize: 18,
-                                          fontWeight: FontWeight.w600,
-                                        ),
-                                      ),
-
-                                      Container(
-                                        width: 250,
-                                        height: 50,
-                                        child: Text(
-                                          "A brief about the doctor.",
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: <Widget>[
+                                        Text(
+                                          details.name,
                                           style: TextStyle(
-                                            fontSize: 12,
-                                            fontWeight: FontWeight.w400,
+                                            fontSize: 18,
+                                            fontWeight: FontWeight.w600,
                                           ),
-                                          overflow: TextOverflow.clip,
                                         ),
-                                      ),
-                                      //Text(details.speciality),
-                                      Text("City : " + details.city),
-                                      Text("Locality : " + details.locality),
-                                      Text("Contacts : " +
-                                          details.email.toString()),
-                                      Text("Experience : " +
-                                          details.experience.toString() +
-                                          " years ") //]),
-                                    ],
-                                  ))
+
+                                        SingleChildScrollView(
+                                          scrollDirection: Axis.horizontal,
+                                          child: Container(
+                                            width: 250,
+                                            height: 50,
+                                            child: Text(
+                                              "A brief about the doctor.",
+                                              style: TextStyle(
+                                                fontSize: 12,
+                                                fontWeight: FontWeight.w400,
+                                              ),
+                                              overflow: TextOverflow.clip,
+                                            ),
+                                          ),
+                                        ),
+                                        //Text(details.speciality),
+                                        Text("City : " + details.city),
+                                        Text("Locality : " + details.locality),
+                                        Text(details.email.toString()),
+                                        Text("Experience : " +
+                                            details.experience.toString() +
+                                            " years ") //]),
+                                      ],
+                                    ),
+                                  )
                                 ],
                               ),
                             );

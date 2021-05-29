@@ -1,6 +1,6 @@
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:technocrats/constants.dart';
-import 'package:technocrats/doctor_list.dart';
+import 'package:technocrats/screens/rendered_screen/doctors.dart';
 import 'package:technocrats/screens/covid_ui/treating_covid.dart';
 
 import 'package:url_launcher/link.dart';
@@ -64,8 +64,8 @@ class _DashboardState extends State<Dashboard> {
               children: [
                 ActionCard(
                   title: "Plasma Donors",
-                  subtitle: "xxx",
-                  dense: "dd/mm/yyyy",
+                  subtitle: "726",
+                  dense: "25/05/2021",
                   color: Colors.blue,
                   titleColor: Vx.blue300, //Vx.emerald700,
                   onTap: () {
@@ -78,9 +78,9 @@ class _DashboardState extends State<Dashboard> {
                 ),
                 ActionCard(
                   title: "Hospitals with Beds",
-                  subtitle: "xxx", //stats?.hospitalBeds?.total?.toString(),
+                  subtitle: "3256", //stats?.hospitalBeds?.total?.toString(),
                   dense:
-                      "dd/mm/yyyy", //Utils.getFormattedTime(stats?.hospitalBeds?.formattedTime),
+                      "25/05/2021", //Utils.getFormattedTime(stats?.hospitalBeds?.formattedTime),
                   color: Vx.pink300,
                   titleColor: Vx.pink700,
                   onTap: () {
@@ -93,8 +93,8 @@ class _DashboardState extends State<Dashboard> {
                 ),
                 ActionCard(
                   title: "Oxygen Suppliers",
-                  subtitle: "xxx", //stats?.oxygenSuppliers?.total?.toString(),
-                  dense: "dd/mm/yyyy",
+                  subtitle: "1751", //stats?.oxygenSuppliers?.total?.toString(),
+                  dense: "25/05/2021",
                   //  Utils.getFormattedTime(stats?.oxygenSuppliers?.formattedTime),
                   color: Vx.yellow300,
                   titleColor: Vx.yellow700,
@@ -108,8 +108,8 @@ class _DashboardState extends State<Dashboard> {
                 ),
                 ActionCard(
                   title: "Amazon Healthcare Center",
-                  subtitle: "xxx", //stats?.medicines?.total?.toString(),
-                  dense: "dd/mm/yyyy", //stats?.medicines?.formattedTime != "NA"
+                  subtitle: "5", //stats?.medicines?.total?.toString(),
+                  dense: "25/05/2021", //stats?.medicines?.formattedTime != "NA"
                   //    ? Utils.getFormattedTime(stats?.medicines?.formattedTime)
                   //    : stats?.medicines?.formattedTime,
                   color: Color(0xFFFD685A),
@@ -195,10 +195,11 @@ class _DashboardState extends State<Dashboard> {
             "assets/images/covid/care.jpeg",
             height: 200.0,
           ),*/
+
           Text(
-            'COVID 19 Emergency',
+            'COVID19 Emergency',
             style: TextStyle(
-              fontSize: 36,
+              fontSize: 30,
               fontWeight: FontWeight.w500,
               color: Colors.white,
             ),

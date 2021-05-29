@@ -4,11 +4,11 @@ import 'dart:convert';
 import 'package:technocrats/model/hospital_info.dart';
 
 class API_hospital {
-  Future<HospitalModel> getHospital() async {
+  Future<HospitalModel> getHospital(String cityName) async {
     var client = http.Client();
     var hospitalModel = null;
 
-    var response = await client.get(Uri.parse(Strings.hospital_url));
+    var response = await client.get(Uri.parse("https://technocrats.pythonanywhere.com/api/hospital/city/$cityName"));
     try {
       if (response.statusCode == 200) {
         var jsonString = response.body;
