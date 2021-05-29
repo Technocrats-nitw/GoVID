@@ -11,7 +11,7 @@ This **api** app deals with the main functionality of our Backend for the Projec
 There are several views which are called depending upon the url entered.
 
 - The first default JSON Response is how to use the website containing data of site.
-```json
+```js
 {
     "Message": "Follow given links for API",
     "Doctors": "https://technocrats.pythonanywhere.com/api/doctor",
@@ -98,22 +98,22 @@ Specification Based:
 For example: *path* can be searchKey for *Pathology* and *bad* can be search key for *Allahabad* and *Hyderabad* both.
 
 ```python
-class HospitalCity(APIView):    
+class DoctorsCity(APIView):    
     def get(self,request,city,format=None):
-        hospital_get = Hospital.objects.filter(district__icontains=city)
-        serializer = HospitalsSerializer(hospital_get,many=True)
+        doctor_get = Doctors.objects.filter(city__icontains=city)
+        serializer = DoctorsSerializer(doctor_get,many=True)
         ans = OrderedDict()
-        if(len(hospital_get) > 0):
-            ans['ItemCount'] = len(hospital_get)
+        if(len(doctor_get) > 0):
+            ans['ItemCount'] = len(doctor_get)
             ans['Message'] = SUCCESS_MESSAGE
             ans['item'] = serializer.data
         else:
-            ans['Message'] = HOSPITAL_NOT_FOUND
+            ans['Message'] = DOCTOR_NOT_FOUND
         final_response = Response(ans)
-        return final_response
+        return final_response 
 ```
 ###### The above class based view will be called upon the request by client.
-###### Here is the demonsration how FLutter will react with our Django Backend.
+###### Here is the demonsration how **Flutter** will react with our **Django** Backend.
 
 ```dart
 class API_doctor {
@@ -139,3 +139,33 @@ class API_doctor {
 }
 ```
 The above code sends get request for the doctor list filtered by city.
+And gets API in reponse.
+
+``On searchKey = 'bad'``
+
+```js
+{
+    "ItemCount": 18,
+    "Message": "API Generated Successfully",
+    "item": [
+        {
+            "id": 256,
+            "type": "Dentist",
+            "uprn_no": 1002,
+            "name": "Dr. S.P.Shukla",
+            "email": "addsufiyan@gmail.com",
+            "contact": "7068502705",
+            "url": "https://www.practo.com/Allahabad/Doctor/dr-s-p-shukla-dentist-1?specialization=Dentist",
+            "image": "https://imagesx.practo.com/providers/42803c31-f22e-4c20-87a9-436d0aa14101.jpg?i_type=t_100x100",
+            "locality": "Allahabad Kty.",
+            "city": "Allahabad (Prayagraj)",
+            "latitude": "25.465977",
+            "longitude": "81.84904",
+            "priceRange": 500,
+            "experience": 3,
+            "isUser": false,
+            "speciality": "Dentist"
+        },...
+    ]
+}
+```
