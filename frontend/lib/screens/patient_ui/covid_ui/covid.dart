@@ -17,23 +17,16 @@ class Dashboard extends StatefulWidget {
 }
 
 class _DashboardState extends State<Dashboard> {
-  //@override
-  //Widget build(BuildContext context) {
-  // return Container();
-  //}
 //}
 
 //class Dashboard extends StatefulWidget {
-  //final Stats stats;
 
-  //const Dashboard({Key key, @required this.stats}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color.fromRGBO(44, 24, 83, 255),
       appBar: AppBar(
         backgroundColor: Color(0xFF2A0B35),
-        //title: Text('Side menu'),
       ),
       drawer: NavDrawer(),
       body: SingleChildScrollView(
@@ -49,7 +42,7 @@ class _DashboardState extends State<Dashboard> {
               ],
             ),
             /*[
-            // if (!Vx.isWeb)
+            
             Image.asset(
               "assets/images/covid/care.jpeg",
               height: 100.0,
@@ -67,9 +60,8 @@ class _DashboardState extends State<Dashboard> {
                   subtitle: "726",
                   dense: "25/05/2021",
                   color: Colors.blue,
-                  titleColor: Vx.blue300, //Vx.emerald700,
+                  titleColor: Vx.blue300,
                   onTap: () {
-                    //debugPrint("CARD main clicked. redirect to details page");
                     Navigator.push(
                       context,
                       MaterialPageRoute(builder: (context) => doctorList()),
@@ -78,13 +70,11 @@ class _DashboardState extends State<Dashboard> {
                 ),
                 ActionCard(
                   title: "Hospitals with Beds",
-                  subtitle: "3256", //stats?.hospitalBeds?.total?.toString(),
-                  dense:
-                      "25/05/2021", //Utils.getFormattedTime(stats?.hospitalBeds?.formattedTime),
+                  subtitle: "3256",
+                  dense: "25/05/2021",
                   color: Vx.pink300,
                   titleColor: Vx.pink700,
                   onTap: () {
-                    //debugPrint("CARD main clicked. redirect to details page");
                     Navigator.push(
                       context,
                       MaterialPageRoute(builder: (context) => doctorList()),
@@ -93,13 +83,11 @@ class _DashboardState extends State<Dashboard> {
                 ),
                 ActionCard(
                   title: "Oxygen Suppliers",
-                  subtitle: "1751", //stats?.oxygenSuppliers?.total?.toString(),
+                  subtitle: "1751",
                   dense: "25/05/2021",
-                  //  Utils.getFormattedTime(stats?.oxygenSuppliers?.formattedTime),
                   color: Vx.yellow300,
                   titleColor: Vx.yellow700,
                   onTap: () {
-                    //debugPrint("CARD main clicked. redirect to details page");
                     Navigator.push(
                       context,
                       MaterialPageRoute(builder: (context) => doctorList()),
@@ -108,14 +96,11 @@ class _DashboardState extends State<Dashboard> {
                 ),
                 ActionCard(
                   title: "Amazon Healthcare Center",
-                  subtitle: "5", //stats?.medicines?.total?.toString(),
-                  dense: "25/05/2021", //stats?.medicines?.formattedTime != "NA"
-                  //    ? Utils.getFormattedTime(stats?.medicines?.formattedTime)
-                  //    : stats?.medicines?.formattedTime,
+                  subtitle: "5",
+                  dense: "25/05/2021",
                   color: Color(0xFFFD685A),
                   titleColor: Vx.blue700,
                   onTap: () {
-                    //debugPrint("CARD main clicked. redirect to details page");
                     Navigator.push(
                       context,
                       MaterialPageRoute(builder: (context) => doctorList()),
@@ -135,7 +120,6 @@ class _DashboardState extends State<Dashboard> {
               color: Color(0xFFFD685A),
               titleColor: Vx.blue700,
               onTap: () {
-                //debugPrint("CARD main clicked. redirect to details page");
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => doctorList()),
@@ -169,7 +153,6 @@ class _DashboardState extends State<Dashboard> {
               color: Color(0xFFFD685A),
               titleColor: Vx.purple700,
               onTap: () {
-                //debugPrint("CARD main clicked. redirect to details page");
                 Navigator.push(
                   context,
                   MaterialPageRoute(
@@ -221,9 +204,8 @@ class _DashboardState extends State<Dashboard> {
   }
 
   Container _backBgCover() {
-    var size = MediaQuery.of(context).size; //this gonna g
+    var size = MediaQuery.of(context).size;
     return Container(
-      //height: 260.0,
       height: size.height * .25,
       decoration: BoxDecoration(
         gradient: greenGradient,
@@ -251,13 +233,4 @@ mixin Utils {
     }
     return null;
   }
-
-  // static String getTimeAgo(String iso, {bool enableShort = true}) {
-  //   if (iso != null) {
-  //     final DateTime now = DateTime.parse(iso);
-
-  //     return now.timeAgo(enableFromNow: enableShort);
-  //   }
-  //   return null;
-  // }
 }

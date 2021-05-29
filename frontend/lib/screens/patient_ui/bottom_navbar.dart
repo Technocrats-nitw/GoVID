@@ -11,8 +11,6 @@ import 'package:technocrats/screens/patient_ui/nearby_hosp_doc/hospitals.dart';
 import 'package:technocrats/screens/patient_ui/twitter_screen.dart';
 
 class PagesPatient extends StatefulWidget {
-  //const Pages({Key key}) : super(key: key);
-
   @override
   _PagesPatientState createState() => _PagesPatientState();
 }
@@ -33,10 +31,8 @@ class _PagesPatientState extends State<PagesPatient> {
         controller: _pageController,
         children: <Widget>[
           Dashboard(),
-          //hospitaldoctor(),
           hospitalList(),
           TwitterScreen(),
-          //ChatScreen(),
         ],
         onPageChanged: (int index) {
           setState(() {
@@ -44,7 +40,6 @@ class _PagesPatientState extends State<PagesPatient> {
           });
         },
       ),
-      // covid , doctor,hospital, self_history
       bottomNavigationBar: CurvedNavigationBar(
           items: <Widget>[
             Icon(Icons.medical_services_outlined,

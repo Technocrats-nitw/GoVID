@@ -57,7 +57,6 @@ class CardMain extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
-                      // Icon and Hearbeat
                       Row(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: <Widget>[

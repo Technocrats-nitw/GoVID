@@ -41,7 +41,6 @@ class _TreatingCovidScreenState extends State<TreatingCovidScreen> {
               .make(),
           10.heightBox,
           [
-            // if (!Vx.isWeb)
             SvgPicture.asset(
               "assets/images/covid/doctor-woman.svg",
               height: 300.0,
@@ -73,7 +72,6 @@ class _TreatingCovidScreenState extends State<TreatingCovidScreen> {
               ],
               color: context.textTheme.bodyText1.color,
             ).w56(context),
-            // if (!Vx.isWeb)
             SvgPicture.asset(
               "assets/images/covid/mask-woman.svg",
               height: 200.0,
@@ -122,7 +120,6 @@ class _TreatingCovidScreenState extends State<TreatingCovidScreen> {
               ],
               color: context.textTheme.bodyText1.color,
             ).w56(context),
-            // if (!Vx.isWeb)
             SvgPicture.asset(
               "assets/images/doctor-man.svg",
               height: 200.0,
@@ -151,9 +148,8 @@ class _TreatingCovidScreenState extends State<TreatingCovidScreen> {
   }
 
   Container _backBgCover() {
-    var size = MediaQuery.of(context).size; //this gonna g
+    var size = MediaQuery.of(context).size;
     return Container(
-      //height: 260.0,
       height: size.height * .45,
       decoration: BoxDecoration(
         gradient: purpleGradient,

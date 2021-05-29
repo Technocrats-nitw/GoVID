@@ -30,15 +30,6 @@ mixin Utils {
     }
     return null;
   }
-
-  // static String getTimeAgo(String iso, {bool enableShort = true}) {
-  //   if (iso != null) {
-  //     final DateTime now = DateTime.parse(iso);
-
-  //     return now.timeAgo(enableFromNow: enableShort);
-  //   }
-  //   return null;
-  // }
 }
 
 const kBackgroundColor = Color(0xFFF8F8F8);
@@ -93,7 +84,6 @@ const USER_IMAGE =
     'https://cdn4.iconfinder.com/data/icons/people-avatar-flat-1/64/girl_chubby_beautiful_people_woman_lady_avatar-512.png';
 
 class Constants {
-  // App Related
   static String appName = "India Beats Covid";
   static double appVersion = 1.0;
   static String baseUrl = "https://indiabeatscovid.in/";
@@ -102,10 +92,8 @@ class Constants {
   static String githubUrl = "https://github.com/iampawan/IndiaBeatsCovid";
   static String mailID = "indiabeatscovid@gmail.com";
 
-  //Assets
   static String imageAsset = "assets/images/";
 
-  // Generic Texts
   static String weAreWithYou = "We are with you";
   static String effortsText =
       "This is an effort to bring together and verify all the contacts of the needed resources for people fighting COVID-19 in our country India.";
@@ -116,13 +104,10 @@ class Constants {
   static String lastUpdated = "Last updated";
   static String total = "Total";
 
-  // Utils
-
   static String noInternet = "Looks like you are not connected to the internet";
   static String wentWrong = "Something went wrong";
   static String noData = "No data found";
 
-  // * Home Texts
   static String plasmaDonors = "Plasma Donors";
   static String hospitalWithBeds = "Hospital With Beds";
   static String oxygenSuppliers = "Oxygen Suppliers";
@@ -161,11 +146,9 @@ class Constants {
   static Color darkYellow = Color(0xFF3ABD6F);
   static Color lightYellow = Color(0xFFFFDA7A);
 
-  // Blue
   static Color darkBlue = Color(0xFF3B72FF);
   static Color lightBlue = Color(0xFF3EC6FF);
 
-  // Orange
   static Color darkOrange = Color(0xFFFFB74D);
 //Purple
   static Color lightPurple = Color(0xFFCC99FF);
@@ -200,8 +183,6 @@ class AppTheme {
       brightness: Brightness.light,
       primaryColor: AppColors.primaryColor,
       accentColor: AppColors.accentColor,
-      // cardColor: Colors.white,
-      // scaffoldBackgroundColor: Colors.white,
       fontFamily: GoogleFonts.muli().fontFamily,
       appBarTheme: AppBarTheme(
         elevation: 0.0,
@@ -219,7 +200,6 @@ class AppTheme {
       primarySwatch: Colors.teal,
       primaryColor: AppColors.primaryColor,
       accentColor: AppColors.accentColor,
-      // cardColor: Colors.black26,
       fontFamily: GoogleFonts.muli().fontFamily,
       appBarTheme: AppBarTheme(
         elevation: 0.0,

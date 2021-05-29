@@ -10,8 +10,6 @@ import 'package:technocrats/utils/constants.dart';
 import 'package:technocrats/screens/side_nav.dart';
 
 class devUi extends StatefulWidget {
-  //doctorUI({Key key, this.title}) : super(key: key);
-
   final String title = "";
 
   @override
@@ -33,7 +31,6 @@ class _devUiState extends State<devUi> {
       backgroundColor: Color.fromRGBO(44, 24, 83, 255),
       appBar: AppBar(
         backgroundColor: Color(0xFF2A0B35),
-        //title: Text('Side menu'),
       ),
       drawer: NavDrawer(),
       body: SingleChildScrollView(
@@ -57,7 +54,6 @@ class _devUiState extends State<devUi> {
                   Container(
                     height: 500,
                     child: SingleChildScrollView(
-                      //physics: BouncingScrollPhysics(),
                       child: Column(
                         children: <Widget>[
                           createDevWidget("Ashiqa Rahman.jpeg", "Ashiqa Rahman",
@@ -88,10 +84,10 @@ class _devUiState extends State<devUi> {
     /*
     return Scaffold(
       backgroundColor: bgColor,
-      body: //SingleChildScrollView(
-          //child: Column(
-          //mainAxisAlignment: MainAxisAlignment.start,
-          //children: <Stack>[
+      body: 
+          
+          
+          
           Stack(
         children: <Widget>[
           Stack(
@@ -115,9 +111,9 @@ class _devUiState extends State<devUi> {
         ],
       ),
 
-      //],
-      //),
-      //)
+      
+      
+      
     );*/
   }
 
@@ -222,9 +218,8 @@ class _devUiState extends State<devUi> {
   }
 
   Container _backBgCover() {
-    var size = MediaQuery.of(context).size; //this gonna g
+    var size = MediaQuery.of(context).size;
     return Container(
-      //height: 260.0,
       height: size.height * .25,
       decoration: BoxDecoration(
         gradient: purpleGradient,

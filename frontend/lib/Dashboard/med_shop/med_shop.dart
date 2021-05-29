@@ -17,7 +17,6 @@ class MedShop extends StatelessWidget {
       drawer: NavDrawer(),
       body: Container(
           height: MediaQuery.of(context).size.height,
-          //   width: MediaQuery.of(context).size.width * 0.63,
           color: Colors.white,
           child: SingleChildScrollView(
               child: Expanded(

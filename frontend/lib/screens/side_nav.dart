@@ -46,7 +46,6 @@ class _NavDrawerState extends State<NavDrawer> {
             leading: Icon(Icons.input),
             title: Text('Developers info'),
             onTap: () {
-              //debugPrint("CARD main clicked. redirect to details page");
               Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => devUi()),
@@ -57,7 +56,6 @@ class _NavDrawerState extends State<NavDrawer> {
             leading: Icon(Icons.verified_user),
             title: Text('Profile'),
             onTap: () {
-              //debugPrint("CARD main clicked. redirect to details page");
               Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => Account()),
@@ -67,8 +65,7 @@ class _NavDrawerState extends State<NavDrawer> {
           ListTile(
               leading: Icon(Icons.border_color),
               title: Text('Feedback'),
-              onTap: () => {} //() => {Navigator.of(context).pop()},
-              ),
+              onTap: () => {}),
           ListTile(
               leading: Icon(Icons.exit_to_app),
               title: Text('Logout'),

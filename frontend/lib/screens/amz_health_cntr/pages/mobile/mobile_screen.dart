@@ -85,8 +85,6 @@ class _MobileScreenState extends State<MobileScreen> {
                     greetings(),
                   ],
                 ),
-
-                //_upgradeToProWidget(),
                 _row2by2Widget(sizingInformation),
                 _gridListItems()
               ],
@@ -301,7 +299,6 @@ class _MobileScreenState extends State<MobileScreen> {
       padding: EdgeInsets.symmetric(horizontal: 28, vertical: 18),
       decoration: BoxDecoration(
         color: Colors.blueGrey,
-        //gradient: blueGradient,
         borderRadius: BorderRadius.all(Radius.circular(8)),
         boxShadow: [
           BoxShadow(
@@ -352,9 +349,8 @@ class _MobileScreenState extends State<MobileScreen> {
   }
 
   Container _backBgCover() {
-    var size = MediaQuery.of(context).size; //this gonna g
+    var size = MediaQuery.of(context).size;
     return Container(
-      //height: 260.0,
       height: size.height * .25,
       decoration: BoxDecoration(
         gradient: greenGradient,

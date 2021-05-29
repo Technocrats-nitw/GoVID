@@ -14,7 +14,7 @@ class _doctorListState extends State<doctorList> {
   final Geolocator geolocator = Geolocator()..forceAndroidLocationManager;
   Position _currentPosition;
   String _currentCity;
-  // variable starting with '_' means it's a private variable
+
   var details;
   void initState() {
     _getCurrentLocation();
@@ -62,7 +62,6 @@ class _doctorListState extends State<doctorList> {
         ),
         body: Stack(
           children: <Widget>[
-            //SearchBar(),
             Spacer(),
             Spacer(),
             Spacer(),
@@ -72,8 +71,6 @@ class _doctorListState extends State<doctorList> {
                   future: _doctorModel,
                   builder: (context, snapshot) {
                     if (snapshot.hasData) {
-                      // return only if it has data
-
                       return ListView.builder(
                           itemCount: snapshot.data.itemCount,
                           itemBuilder: (context, index) {
@@ -134,7 +131,6 @@ class _doctorListState extends State<doctorList> {
                                             fontWeight: FontWeight.w600,
                                           ),
                                         ),
-
                                         SingleChildScrollView(
                                           scrollDirection: Axis.horizontal,
                                           child: Container(
@@ -150,13 +146,12 @@ class _doctorListState extends State<doctorList> {
                                             ),
                                           ),
                                         ),
-                                        //Text(details.speciality),
                                         Text("City : " + details.city),
                                         Text("Locality : " + details.locality),
                                         Text(details.email.toString()),
                                         Text("Experience : " +
                                             details.experience.toString() +
-                                            " years ") //]),
+                                            " years ")
                                       ],
                                     ),
                                   )
@@ -174,7 +169,6 @@ class _doctorListState extends State<doctorList> {
                 ),
               ),
               onTap: () {
-                //debugPrint("CARD main clicked. redirect to details page");
                 Navigator.push(
                   context,
                   MaterialPageRoute(

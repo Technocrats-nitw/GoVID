@@ -57,8 +57,6 @@ class Splash extends StatelessWidget {
       body: Center(
         child: Image.asset(
           "assets/images/launch/govid.gif",
-          //height: MediaQuery.of(context).size.height,
-          //width: MediaQuery.of(context).size.width)
         ),
         /*Icon(
           Icons.apartment_outlined,

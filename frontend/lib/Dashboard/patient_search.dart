@@ -9,11 +9,9 @@ class PatientSearch extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // final Store store = VxState.store;
     return Scaffold(
         appBar: AppBar(
           backgroundColor: Color(0xFF2A0B35),
-          //title: Text('Side menu'),
         ),
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.center,

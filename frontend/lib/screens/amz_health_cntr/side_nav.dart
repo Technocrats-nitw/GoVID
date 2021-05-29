@@ -46,7 +46,6 @@ class _NavDrawerState extends State<NavDrawer> {
             leading: Icon(Icons.input),
             title: Text('Developers info'),
             onTap: () {
-              //debugPrint("CARD main clicked. redirect to details page");
               Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => devUi()),
@@ -57,7 +56,6 @@ class _NavDrawerState extends State<NavDrawer> {
             leading: Icon(Icons.calendar_view_day),
             title: Text('Calender'),
             onTap: () {
-              //debugPrint("CARD main clicked. redirect to details page");
               Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => Account()),

@@ -35,7 +35,6 @@ class _HospitalDashboardHomeState extends State<HospitalDashboardHome> {
           DoctorDash(),
           PatientSearch(),
           QRScanPage(),
-          //ChatScreen(),
         ],
         onPageChanged: (int index) {
           setState(() {
@@ -43,7 +42,6 @@ class _HospitalDashboardHomeState extends State<HospitalDashboardHome> {
           });
         },
       ),
-      // covid , doctor,hospital, self_history
       bottomNavigationBar: CurvedNavigationBar(
           items: <Widget>[
             Icon(Icons.label, size: 20, color: Colors.black),
@@ -71,12 +69,9 @@ class DoctorDash extends StatelessWidget {
         Flexible(
           flex: 2,
           child: Container(
-            //color: Colors.blueGrey,
             width: MediaQuery.of(context).size.width,
             decoration: BoxDecoration(
-              //color: primaryColor,
               gradient: purpleGradient,
-              //color: Colors.blueGrey,
               borderRadius: BorderRadius.only(
                 bottomLeft: Radius.circular(40),
                 bottomRight: Radius.circular(40),
@@ -91,7 +86,6 @@ class DoctorDash extends StatelessWidget {
                     width: 100,
                     height: 30,
                     decoration: BoxDecoration(
-                      //color: Color(0xff4d9eff),
                       borderRadius: BorderRadius.circular(10),
                     ),
                     child: Row(
@@ -244,7 +238,6 @@ class DoctorDash extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color(0xFF2A0B35),
-        //title: Text('Side menu'),
       ),
       drawer: NavDrawer(),
       body: _buildBody(context),

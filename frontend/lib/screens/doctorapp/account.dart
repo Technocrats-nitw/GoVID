@@ -23,7 +23,7 @@ class Account extends StatelessWidget {
     return Scaffold(
       backgroundColor: Constants.backgroundColor,
       appBar: AppBar(
-        backgroundColor: Color(0xFF2A0B35), //Theme.of(context).accentColor,
+        backgroundColor: Color(0xFF2A0B35),
       ),
       drawer: NavDrawer(),
       body: Stack(
@@ -46,13 +46,10 @@ class Account extends StatelessWidget {
               ),
             ),
           ),
-
-          // BODY
           Padding(
             padding: EdgeInsets.all(Constants.paddingSide),
             child: ListView(
               children: <Widget>[
-                // Header - Greetings and Avatar
                 Row(
                   children: <Widget>[
                     Expanded(
@@ -70,10 +67,7 @@ class Account extends StatelessWidget {
                             AssetImage('assets/icons/profile_picture.png'))
                   ],
                 ),
-
                 SizedBox(height: 50),
-
-                // Main Cards - Heartbeat and Blood Pressure
                 Container(
                   height: 140,
                   child: ListView(
@@ -95,10 +89,7 @@ class Account extends StatelessWidget {
                     ],
                   ),
                 ),
-
-                // Section Cards - Daily Medication
                 SizedBox(height: 50),
-
                 Text(
                   "YOUR DAILY MEDICATIONS",
                   style: TextStyle(
@@ -107,9 +98,7 @@ class Account extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-
                 SizedBox(height: 20),
-
                 Container(
                     height: 125,
                     child: ListView(
@@ -135,7 +124,6 @@ class Account extends StatelessWidget {
                         )
                       ],
                     )),
-
                 SizedBox(height: 50),
                 SizedBox(height: 20),
                 TextButton(
@@ -146,7 +134,6 @@ class Account extends StatelessWidget {
                         MaterialStateProperty.all<Color>(Color(0xFF2A0B35)),
                   ),
                   onPressed: () {
-                    //debugPrint("CARD main clicked. redirect to details page");
                     Navigator.push(
                       context,
                       MaterialPageRoute(builder: (context) => ChatScreen()),
@@ -166,7 +153,6 @@ class Account extends StatelessWidget {
                   )),
                 ),
                 SizedBox(height: 20),
-                // Scheduled Activities
                 Text(
                   "MEDICAL HISTORY",
                   style: TextStyle(
@@ -174,9 +160,7 @@ class Account extends StatelessWidget {
                       fontSize: 13,
                       fontWeight: FontWeight.bold),
                 ),
-
                 SizedBox(height: 20),
-
                 Container(
                   child: ListView(
                     scrollDirection: Axis.vertical,

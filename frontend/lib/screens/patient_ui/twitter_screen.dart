@@ -9,18 +9,15 @@ class TwitterScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // final Store store = VxState.store;
     return Scaffold(
         appBar: AppBar(
           backgroundColor: Color(0xFF2A0B35),
-          //title: Text('Side menu'),
         ),
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Constants.twitterSearch.text.xl3.semiBold.center.make(),
-            //Constants.twitterResources.text.caption(context).center.make(),
             "Find latest resources in real time on Twitter".text.center.make(),
             20.heightBox,
             Constants.selectRegion.text.xl.semiBold.center.make(),
@@ -35,7 +32,6 @@ class TwitterScreen extends StatelessWidget {
                         TextField(
                       controller: textEditingController,
                       focusNode: focusNode,
-                      // onEditingComplete: onFieldSubmitted,
                       decoration: const InputDecoration(
                           border: OutlineInputBorder(), hintText: "Delhi"),
                     ),

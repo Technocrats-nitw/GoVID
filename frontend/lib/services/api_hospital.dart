@@ -8,7 +8,8 @@ class API_hospital {
     var client = http.Client();
     var hospitalModel = null;
 
-    var response = await client.get(Uri.parse("https://technocrats.pythonanywhere.com/api/hospital/city/$cityName"));
+    var response = await client.get(Uri.parse(
+        "https://technocrats.pythonanywhere.com/api/hospital/city/$cityName"));
     try {
       if (response.statusCode == 200) {
         var jsonString = response.body;
@@ -17,7 +18,6 @@ class API_hospital {
         hospitalModel = HospitalModel.fromJson(jsonMap);
       }
     } catch (Exception) {
-      //catch all exception=> here we can be specific though yet it's better this way
       return hospitalModel;
     }
 

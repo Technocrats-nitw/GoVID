@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:technocrats/screens/doctorapp/current-data-chart-painter.dart';
 
 class AppointmentCard extends StatelessWidget {
-  //const AppointmentCard({Key key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Row(

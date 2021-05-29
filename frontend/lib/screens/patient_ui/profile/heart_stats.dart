@@ -15,7 +15,6 @@ class DetailScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     double statusBarHeight = MediaQuery.of(context).padding.top;
 
-    // For Grid Layout
     double _crossAxisSpacing = 16, _mainAxisSpacing = 16, _cellHeight = 150.0;
     int _crossAxisCount = 2;
 
@@ -36,7 +35,6 @@ class DetailScreen extends StatelessWidget {
               height: Constants.headerHeight + statusBarHeight,
             ),
           ),
-
           Positioned(
             right: -45,
             top: -30,
@@ -48,8 +46,6 @@ class DetailScreen extends StatelessWidget {
               ),
             ),
           ),
-
-          // BODY
           Padding(
             padding: EdgeInsets.all(Constants.paddingSide),
             child: ListView(
@@ -63,7 +59,6 @@ class DetailScreen extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: <Widget>[
-                        // Back Button
                         SizedBox(
                           width: 34,
                           child: RawMaterialButton(
@@ -129,17 +124,16 @@ class DetailScreen extends StatelessWidget {
                   ],
                 ),
                 SizedBox(height: 30),
-                // Chart
                 Material(
-                  shadowColor: Colors.grey.withOpacity(0.01), // added
+                  shadowColor: Colors.grey.withOpacity(0.01),
                   type: MaterialType.card,
-                  elevation: 10, borderRadius: new BorderRadius.circular(10.0),
+                  elevation: 10,
+                  borderRadius: new BorderRadius.circular(10.0),
                   child: Container(
                     padding: EdgeInsets.all(20.0),
                     height: 300,
                     child: Column(
                       children: <Widget>[
-                        // Rest Active Legend
                         Row(
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: <Widget>[
@@ -164,7 +158,6 @@ class DetailScreen extends StatelessWidget {
                           ],
                         ),
                         SizedBox(height: 20),
-                        // Main Cards - Heartbeat and Blood Pressure
                         Container(
                           height: 100,
                           child: ListView(
@@ -214,7 +207,6 @@ class DetailScreen extends StatelessWidget {
                           ),
                         ),
                         SizedBox(height: 20),
-                        // Line Graph
                         Expanded(
                           child: Container(
                               decoration: new BoxDecoration(
@@ -237,7 +229,7 @@ class DetailScreen extends StatelessWidget {
                         ),
                       ],
                     ),
-                  ), // added
+                  ),
                 ),
                 SizedBox(height: 30),
                 Container(

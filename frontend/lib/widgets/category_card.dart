@@ -14,18 +14,16 @@ class CategoryCard extends StatelessWidget {
   final String title;
   final Function press;
   const CategoryCard({
-    //Key key,
     this.svgSrc = "assets/icons/Meditation.svg",
     this.title = "title",
     this.press,
-  }); // : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
     return ClipRRect(
       borderRadius: BorderRadius.circular(13),
       child: Container(
-        // padding: EdgeInsets.all(20),
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(13),

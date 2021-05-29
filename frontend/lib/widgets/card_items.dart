@@ -54,7 +54,6 @@ class CardItems extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
-              // Icon and Hearbeat
               image,
               SizedBox(width: 30),
               Expanded(

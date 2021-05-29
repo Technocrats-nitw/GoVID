@@ -14,7 +14,7 @@ class _hospitalListState extends State<hospitalList> {
   final Geolocator geolocator = Geolocator()..forceAndroidLocationManager;
   Position _currentPosition;
   String _currentCity;
-  // variable starting with '_' means it's a private variable
+
   var details;
   Future<String> docname;
   void initState() {
@@ -63,7 +63,6 @@ class _hospitalListState extends State<hospitalList> {
         ),
         body: Stack(
           children: <Widget>[
-            //SearchBar(),
             Spacer(),
             Spacer(),
             Spacer(),
@@ -73,8 +72,6 @@ class _hospitalListState extends State<hospitalList> {
                   future: _hospitalModel,
                   builder: (context, snapshot) {
                     if (snapshot.hasData) {
-                      // return only if it has data
-
                       return ListView.builder(
                           itemCount: snapshot.data.itemCount,
                           itemBuilder: (context, index) {
@@ -113,8 +110,6 @@ class _hospitalListState extends State<hospitalList> {
                                                   fontWeight: FontWeight.w600,
                                                 ),
                                               ),
-
-                                              //Text(details.speciality),
                                               Text(
                                                 "District : " +
                                                     details.district,
@@ -143,7 +138,6 @@ class _hospitalListState extends State<hospitalList> {
                                                 details.website,
                                                 overflow: TextOverflow.clip,
                                               ),
-
                                               Flexible(
                                                 child: Container(
                                                   child: Text(
@@ -222,7 +216,6 @@ class _hospitalListState extends State<hospitalList> {
                 ),
               ),
               onTap: () {
-                //debugPrint("CARD main clicked. redirect to details page");
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => doctorList()),

@@ -48,7 +48,6 @@ class _docInfoPageState extends State<docInfoPage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color(0xFF2A0B35),
-        //title: Text('Side menu'),
       ),
       drawer: NavDrawer(),
       body: SingleChildScrollView(
@@ -115,7 +114,6 @@ class _docInfoPageState extends State<docInfoPage> {
                                         fontWeight: FontWeight.w400,
                                       ),
                                     )
-                                    //RatingBar.builder(itemBuilder: itemBuilder, onRatingUpdate: onRatingUpdate)
                                   ],
                                 )
                               ],
@@ -154,7 +152,6 @@ class _docInfoPageState extends State<docInfoPage> {
                                               Color(0xFF2A0B35)),
                                     ),
                                     onPressed: () {
-                                      //debugPrint("CARD main clicked. redirect to details page");
                                       Navigator.push(
                                         context,
                                         MaterialPageRoute(
@@ -174,10 +171,10 @@ class _docInfoPageState extends State<docInfoPage> {
                                         EdgeInsets.symmetric(horizontal: 25.0),
                                     child: Row(
                                       children: <Widget>[
-                                        //Container(),
+                                        
                                         Stats(name: "Patients", total: 352),
-                                        //Spacer(),
-                                        //Spacer(),
+                                        
+                                        
                                         Stats(
                                             name: "Certifications", total: 31),
                                       ],

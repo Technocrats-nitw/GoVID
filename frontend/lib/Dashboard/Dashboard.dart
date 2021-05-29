@@ -16,13 +16,11 @@ class DashBoard extends StatelessWidget {
     return Scaffold(
       backgroundColor: Constants.backgroundColor,
       appBar: AppBar(
-        //Title: Text('Hospital Dashboard'),
         backgroundColor: Theme.of(context).accentColor,
       ),
       drawer: NavDrawer(),
       body: Container(
         height: MediaQuery.of(context).size.height,
-        //   width: MediaQuery.of(context).size.width * 0.63,
         color: Colors.white,
         child: SingleChildScrollView(
           child: Expanded(

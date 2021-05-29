@@ -9,12 +9,10 @@ class AccountCard extends StatelessWidget {
   final String hour;
 
   const AccountCard(
-      {
-      //Key key,
-      this.active = false,
+      {this.active = false,
       this.name = "Anshuman",
       this.hour = "5",
-      this.id = "17171"}); // super(key: key);
+      this.id = "17171"});
 
   @override
   Widget build(BuildContext context) {

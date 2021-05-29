@@ -25,7 +25,6 @@ class _BodyContentWidgetState extends State<BodyContentWidget> {
       child: Column(
         children: [
           Container(
-            // Here the height of the container is 45% of our total height
             height: size.height * .15,
             decoration: BoxDecoration(
               gradient: purpleGradient,
@@ -371,7 +370,6 @@ class _BodyContentWidgetState extends State<BodyContentWidget> {
       child: Container(
         margin: EdgeInsets.symmetric(horizontal: 20),
         child: GridView.builder(
-          //physics: const NeverScrollableScrollPhysics(),
           itemCount: _data.length,
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount:

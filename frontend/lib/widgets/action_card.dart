@@ -25,7 +25,6 @@ class ActionCard extends StatelessWidget {
       : super(key: key);
   @override
   Widget build(BuildContext context) {
-    //final Store store = VxState.store;
     /*
     final _titleColor = store.isDarkTheme
         ? context.textTheme.bodyText1.color
@@ -69,7 +68,7 @@ class ActionCard extends StatelessWidget {
           .box
           .clip(Clip.antiAlias)
           .width(context.percentWidth * 40)
-          // .height(Vx.isWeb ? null : context.percentHeight * 18)
+
           /*
           .linearGradient(
             [

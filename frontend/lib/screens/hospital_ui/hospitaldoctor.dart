@@ -20,9 +20,7 @@ class hospitaldoctor extends StatelessWidget {
       theme: ThemeData(
         fontFamily: 'avenir',
       ),
-      //home: DocInfoPage()
       home: DoctorList(),
-
       routes: {
         '/DocInfo': (context) => DocInfoPage(),
       },
@@ -37,7 +35,7 @@ class DoctorList extends StatefulWidget {
 
 class _DoctorListState extends State<DoctorList> {
   Future<DoctorModel> _doctorModel;
-  // variable starting with '_' means it's a private variable
+
   var details;
   void initState() {
     _doctorModel = API_doctor().getDoctors("Allahbad");
@@ -49,16 +47,10 @@ class _DoctorListState extends State<DoctorList> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color(0xFF2A0B35),
-
-        //title: Text('Side menu'),
       ),
       drawer: NavDrawer(),
       backgroundColor: bgColor,
-      body: //SingleChildScrollView(
-          //child: Column(
-          //mainAxisAlignment: MainAxisAlignment.start,
-          //children: <Stack>[
-          Stack(
+      body: Stack(
         children: <Widget>[
           Container(
             width: MediaQuery.of(context).size.width,
@@ -73,9 +65,7 @@ class _DoctorListState extends State<DoctorList> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 SingleChildScrollView(
-                  //padding: EdgeInsets.only(left: 14, right: 10, top: 25),
                   child: Column(
-                    //crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: <Widget>[
                       Text(
@@ -123,7 +113,6 @@ class _DoctorListState extends State<DoctorList> {
                             Container(
                               height: 400,
                               child: SingleChildScrollView(
-                                //physics: BouncingScrollPhysics(),
                                 child: Column(
                                   children: <Widget>[
                                     createDocWidget("doc1.png", "Susan Thomas"),
@@ -149,9 +138,6 @@ class _DoctorListState extends State<DoctorList> {
           )
         ],
       ),
-      //],
-      //),
-      //)
     );
   }
 
@@ -258,7 +244,6 @@ class pathPainter extends CustomPainter {
 
   @override
   bool shouldRepaint(CustomPainter oldDelegate) {
-    // TODO: implement shouldRepaint
     return true;
   }
 }

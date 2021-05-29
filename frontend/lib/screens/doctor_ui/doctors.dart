@@ -11,8 +11,6 @@ import 'package:line_awesome_icons/line_awesome_icons.dart';
 import 'package:technocrats/utils/constants.dart';
 
 class doctorUi extends StatefulWidget {
-  //doctorUI({Key key, this.title}) : super(key: key);
-
   final String title = "";
 
   @override
@@ -62,8 +60,6 @@ class _doctorUiState extends State<doctorUi> {
                     _specialistsCardInfo(),
                     _specialistsCardInfo(),
                     _specialistsCardInfo(),
-
-                    //_specialistsCardInfo(),
                   ],
                 ),
               ),
@@ -276,7 +272,6 @@ class _doctorUiState extends State<doctorUi> {
       padding: EdgeInsets.all(12),
       decoration: BoxDecoration(
         color: Color(0xFFBF4954),
-        // gradient: redGradient,
         borderRadius: BorderRadius.circular(10),
       ),
       child: ListTile(
@@ -431,8 +426,7 @@ class _doctorUiState extends State<doctorUi> {
                       ),
                       child: Container(
                         constraints: const BoxConstraints(
-                            minWidth: 88.0,
-                            minHeight: 36.0), // min sizes for Material buttons
+                            minWidth: 88.0, minHeight: 36.0),
                         alignment: Alignment.center,
                         child: const Text(
                           'Book Visit',
@@ -456,8 +450,7 @@ class _doctorUiState extends State<doctorUi> {
                       ),
                       child: Container(
                         constraints: const BoxConstraints(
-                            minWidth: 88.0,
-                            minHeight: 36.0), // min sizes for Material buttons
+                            minWidth: 88.0, minHeight: 36.0),
                         alignment: Alignment.center,
                         child: const Text(
                           'Consult',
