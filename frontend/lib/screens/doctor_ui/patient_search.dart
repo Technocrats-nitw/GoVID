@@ -1,6 +1,6 @@
 import 'package:technocrats/model/mock_data.dart';
 import 'package:technocrats/utils/constants.dart';
-import 'package:technocrats/screens/patient_ui/profile/med_report.dart';
+import 'account.dart';
 
 import '../../utils/pkgs.dart';
 
