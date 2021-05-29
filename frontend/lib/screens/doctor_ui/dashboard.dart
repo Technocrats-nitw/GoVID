@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:technocrats/Dashboard/patient_search.dart';
+import 'package:technocrats/screens/doctor_ui/patient_search.dart';
 import 'package:technocrats/utils/constants.dart';
-import 'package:technocrats/action_page/qr_scan_page.dart';
-import './account_card.dart';
-import './appointment_card.dart';
-import './chart-painter.dart';
+import 'package:technocrats/screens/doctor_ui/qr_scan_page.dart';
+import '../../widgets/account_card.dart';
+import '../../widgets/appointment_card.dart';
+import '../../widgets/chart-painter.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
-import 'package:technocrats/screens/chat/chat_screen_doctor.dart';
-import './side_nav_doctor.dart';
+import 'side_nav_doctor.dart';
 
 Color primaryColor = Color(0xff0074ff);
 

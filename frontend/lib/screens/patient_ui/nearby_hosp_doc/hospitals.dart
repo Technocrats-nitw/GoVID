@@ -19,6 +19,7 @@ class _hospitalListState extends State<hospitalList> {
   Future<String> docname;
   void initState() {
     _getCurrentLocation();
+    _currentCity = "Allahabad";
     _hospitalModel = API_hospital().getHospital(_currentCity);
     super.initState();
   }

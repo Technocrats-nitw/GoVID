@@ -5,7 +5,7 @@ National Institute of Technology Warangal
 */
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:technocrats/Dashboard/med_shop/cart.dart';
+import 'package:technocrats/screens/hospital_ui/med_shop/cart.dart';
 import 'package:technocrats/widgets/custom_clipper.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:google_fonts/google_fonts.dart';

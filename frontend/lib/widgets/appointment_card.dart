@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:technocrats/screens/doctorapp/current-data-chart-painter.dart';
+import 'package:technocrats/widgets/current-data-chart-painter.dart';
 
 class AppointmentCard extends StatelessWidget {
   @override

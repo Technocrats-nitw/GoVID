@@ -13,7 +13,7 @@ import 'package:technocrats/widgets/card_section.dart';
 import 'package:technocrats/widgets/custom_clipper.dart';
 import 'package:technocrats/screens/side_nav.dart';
 import 'package:technocrats/widgets/button_widget_qr.dart';
-import 'package:technocrats/action_page/qr_create_page.dart';
+import 'package:technocrats/screens/patient_ui/profile/qr_create_page.dart';
 import 'package:technocrats/screens/chat/chat_screen_doctor.dart';
 
 class Account extends StatelessWidget {

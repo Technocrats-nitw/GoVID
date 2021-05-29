@@ -8,7 +8,7 @@ import 'package:technocrats/widgets/SharedFilesItem.dart';
 import 'package:technocrats/widgets/SubHeader.dart';
 import 'package:technocrats/widgets/Tabs.dart';
 import 'package:technocrats/utils/constants.dart';
-import 'package:technocrats/Dashboard/side_nav.dart';
+import 'package:technocrats/screens/hospital_ui/side_nav.dart';
 
 class DashBoard extends StatelessWidget {
   @override

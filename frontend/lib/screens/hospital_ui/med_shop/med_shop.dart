@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:technocrats/utils/constants.dart';
-import 'package:technocrats/Dashboard/side_nav.dart';
+import 'package:technocrats/screens/hospital_ui/side_nav.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:technocrats/widgets/card_section_hsp.dart';
 

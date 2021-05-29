@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:technocrats/model/doctor_info.dart';
-import 'package:technocrats/screens/hospital_ui/DocInfo.dart';
+import 'package:technocrats/screens/patient_ui/nearby_hosp_doc/appointment.dart';
 import 'package:technocrats/services/api_doctor.dart';
 import 'package:geolocator/geolocator.dart';
 
@@ -18,6 +18,7 @@ class _doctorListState extends State<doctorList> {
   var details;
   void initState() {
     _getCurrentLocation();
+    _currentCity = "Allahabad";
     _doctorModel = API_doctor().getDoctors(_currentCity);
     super.initState();
   }
