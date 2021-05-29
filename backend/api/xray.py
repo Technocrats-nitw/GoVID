@@ -7,7 +7,7 @@ from keras.models import Sequential, Model
 from keras.applications.vgg16 import VGG16, preprocess_input
 from keras.optimizers import Adam, SGD, RMSprop
 
-import tensorflow as tf
+import tensorflow as tf 
 
 import os
 import numpy as np

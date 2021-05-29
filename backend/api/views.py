@@ -5,7 +5,7 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import  status
 from django.core import serializers
-from .models import *
+from .models import * 
 from .serializers import *
 from rest_framework.decorators import api_view
 import requests
@@ -16,7 +16,7 @@ from .responseAPI import *
 # Create your views here.
 
 def finalResult(val):
-    return 'According to out CNN Model, there is a ' + str(round(100*val,3)) + '% chance that you are infected with Corona-virus'
+    return 'According to our CNN Model, there is a ' + str(round(100*val,3)) + '% chance that you are infected with Corona-virus'
 
 API_ACCESS_KEY = 'ecd5476186efa43940e3282f4531cd5b'
 
