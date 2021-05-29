@@ -30,3 +30,16 @@ There are several views which are called depending upon the url entered.
     }
 }
 ```
+
+- If the valid url is used, then corresponding view is called and data is serialized into JSON format and sent back in form of API.
+- [serializers.py](serializers.py) is responsible for serializing all database.
+```python
+from rest_framework import serializers
+from .models import *
+class DoctorsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Doctors
+        fields = '__all__'
+```
+The above piece of code serializes the Doctors Object.
+And the response is thus sent back to client via `Response()` with proper messages defined in [responseAPI.py](responseAPI.py) .
