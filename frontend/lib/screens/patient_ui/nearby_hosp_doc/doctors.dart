@@ -18,7 +18,6 @@ class _doctorListState extends State<doctorList> {
   var details;
   void initState() {
     _getCurrentLocation();
-    _currentCity = "Allahabad";
     _doctorModel = API_doctor().getDoctors(_currentCity);
     super.initState();
   }
