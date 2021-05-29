@@ -1,6 +1,6 @@
 ## GoVID Backend
 
-`This **api** app deals with the main functionality of our Backend for the Project.`
+This **api** app deals with the main functionality of our Backend for the Project.
 
 #### Tables Created
 - Doctors: Contains Database of Doctors
@@ -78,3 +78,17 @@ class DoctorsList(APIView):
 The above code segment is responsible for handling POST Requests.
 
 ### Search & Filter
+- Main functionality of our  is the search function that provides user to search Doctor/Hospital city wise or state wise.
+- Doctors and Hospitals can also be searched on the basis of their specialities.
+- Also it suggests the Doctors nearby in Flutter using APIs.
+<pre>
+url:
+Location Based: 
+	/api/doctor/city/{searchKey}
+    /api/hospital/city/{searchKey}
+    /api/hospital/state/{searchkey}
+
+Specification Based:
+	/api/doctor/specs/{searchKey}
+	/api/hospital/specs/{searchKey}
+</pre>
