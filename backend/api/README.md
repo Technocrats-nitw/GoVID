@@ -58,7 +58,7 @@ class DoctorsSerializer(serializers.ModelSerializer):
         fields = '__all__'
 ```
 The above piece of code serializes the Doctors Object.
-And the response is thus sent back to client via `Response()` in correspinding views with proper messages like *SUCESS_MESSAGE*  defined in [responseAPI.py](responseAPI.py).
+And the response is thus sent back to client via `Response()` in correspinding views with proper messages like *SUCCESS_MESSAGE*  defined in [responseAPI.py](responseAPI.py).
 
 ### POST Request
 
