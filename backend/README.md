@@ -16,7 +16,7 @@ Here we have used **DJANGO** Framework (Python) as preferred backend to act as A
 - Language Requirement: Python v3.7 or Higher
 - Database Used: Sqlte3
 
-#### Install the requirements by creating a new virtual environment or in system environment.
+#### Install the requirements by creating a new virtual environment or use system environment.
 
 ```bash
 python -m venv <env-name>
@@ -27,7 +27,7 @@ OR
 
 - Install requirements from requirements.txt via command
 ```bash
-pip install requirements.txt
+pip install -r requirements.txt
 ```
 
 - Start the server via following command

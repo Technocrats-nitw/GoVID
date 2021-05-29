@@ -96,3 +96,46 @@ Specification Based:
 
 **Additions**: Database is filtered not just on the basis of whole word but also part of words accepted.
 For example: *path* can be searchKey for *Pathology* and *bad* can be search key for *Allahabad* and *Hyderabad* both.
+
+```python
+class HospitalCity(APIView):    
+    def get(self,request,city,format=None):
+        hospital_get = Hospital.objects.filter(district__icontains=city)
+        serializer = HospitalsSerializer(hospital_get,many=True)
+        ans = OrderedDict()
+        if(len(hospital_get) > 0):
+            ans['ItemCount'] = len(hospital_get)
+            ans['Message'] = SUCCESS_MESSAGE
+            ans['item'] = serializer.data
+        else:
+            ans['Message'] = HOSPITAL_NOT_FOUND
+        final_response = Response(ans)
+        return final_response
+```
+###### The above class based view will be called upon the request by client.
+###### Here is the demonsration how FLutter will react with our Django Backend.
+
+```dart
+class API_doctor {
+  Future<DoctorModel> getDoctors(String cityName) async {
+    var client = http.Client();
+    var doctorModel = null;
+
+    var response = await client.get(Uri.parse(
+        'http://technocrats.pythonanywhere.com/api/doctor/city/$cityName'));
+    try {
+      if (response.statusCode == 200) {
+        var jsonString = response.body;
+        var jsonMap = json.decode(jsonString);
+
+        doctorModel = DoctorModel.fromJson(jsonMap);
+      }
+    } catch (Exception) {
+      return doctorModel;
+    }
+
+    return doctorModel;
+  }
+}
+```
+The above code sends get request for the doctor list filtered by city.
