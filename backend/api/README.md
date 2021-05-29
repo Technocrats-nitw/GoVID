@@ -1,13 +1,13 @@
-## GoVID Backend
+# GoVID Backend
 
 This **api** app deals with the main functionality of our Backend for the Project.
 
-#### Tables Created
+### Tables Created
 - Doctors: Contains Database of Doctors
 - Hospital: Contains Database of Hospital
 - Detect: Stores Chest X-ray image for COVID Prediction
 
-### Main Functionality
+## Main Functionality
 There are several views which are called depending upon the url entered.
 
 - The first default JSON Response is how to use the website containing data of site.
@@ -31,7 +31,7 @@ There are several views which are called depending upon the url entered.
 }
 ```
 
-### GET Request
+## GET Request
 
 - If the valid url is used, then corresponding view is called and data is serialized into JSON format and sent back in form of API.
 
@@ -60,7 +60,7 @@ class DoctorsSerializer(serializers.ModelSerializer):
 The above piece of code serializes the Doctors Object.
 And the response is thus sent back to client via `Response()` in correspinding views with proper messages like *SUCCESS_MESSAGE*  defined in [responseAPI.py](responseAPI.py).
 
-### POST Request
+## POST Request
 
 - Data can be sent to the server too via POST request created by client (Here Flutter).
 - Data is first serialised and saved into database after validating.
@@ -77,14 +77,14 @@ class DoctorsList(APIView):
 ```
 The above code segment is responsible for handling POST Requests.
 
-### Search & Filter
+## Search & Filter
 - Main functionality of our  is the search function that provides user to search Doctor/Hospital city wise or state wise.
 - Doctors and Hospitals can also be searched on the basis of their specialities.
 - Also it suggests the Doctors nearby in Flutter using APIs.
 <pre>
 url:
 Location Based: 
-	/api/doctor/city/{searchKey}
+    /api/doctor/city/{searchKey}
     /api/hospital/city/{searchKey}
     /api/hospital/state/{searchkey}
 
