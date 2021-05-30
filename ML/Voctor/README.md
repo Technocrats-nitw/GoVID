@@ -1,2 +1,6 @@
-![Colab ](https://colab.research.google.com/drive/1EDLeotVVunWFMXVHE9dcsF0Vkg6gCKVv?usp=sharing)
+# Voctor - Virtual Doctor
+
+![Colab](https://colab.research.google.com/drive/1EDLeotVVunWFMXVHE9dcsF0Vkg6gCKVv?usp=sharing)
+
+
 
