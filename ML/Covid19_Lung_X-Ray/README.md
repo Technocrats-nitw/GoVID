@@ -7,11 +7,13 @@ We have trained the model to predict whether a person is infected with covid-19 
 
 ### 1)
 <img src = "https://github.com/Technocrats-nitw/Care/blob/master/ML/Covid19_Lung_X-Ray/sample/predict1.jpeg">
-According to our CNN Model, there is a 85.275% chance that you are infected with Coronavirus
+Output : According to our CNN Model, there is a 85.275% chance that you are infected with Coronavirus
 
 ### 2)
 <img src = "https://github.com/Technocrats-nitw/Care/blob/master/ML/Covid19_Lung_X-Ray/sample/predict2.jpeg">
-According to our CNN Model, there is a 40.417% chance that you are infected with Coronavirus
+Output : According to our CNN Model, there is a 40.417% chance that you are infected with Coronavirus
+
+
 
 
 ## Methodology :
