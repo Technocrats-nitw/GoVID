@@ -1,6 +1,21 @@
-See code in lib folder
+#### 1. [Flutter Environment Setup](https://flutter.dev/docs/get-started/install)
+
+> **Note**: Flutter sdk version `2.0.5` is recommended to run project
+
+#### 2. Clone the repo
+
+```sh
+$ git clone https://github.com/Technocrats-nitw/Care.git
+$ cd Care/frontend
+```
+#### 3. Start the Project After setting it up
+```sh
+$ flutter run
+```
+
 
 ## Directory Structure
+- See code in `lib` folder
 <details>
      <summary> Click to expand </summary>
 
