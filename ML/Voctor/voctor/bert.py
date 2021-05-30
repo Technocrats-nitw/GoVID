@@ -128,17 +128,10 @@ class Bert(keras.Model):
             dropout_layer = embed_layer
 
         embedding_output = self.embedding_layer_norm(dropout_layer)
-
+        # Wrap layers with residual, normalization and dropout.
+        
         def _wrap_layer(name, input_layer, build_func, norm_layer, dropout_rate=0.0, trainable=True):
-            """Wrap layers with residual, normalization and dropout.
-
-            :param name: Prefix of names for internal layers.
-            :param input_layer: Input layer.
-            :param build_func: A callable that takes the input tensor and generates the output tensor.
-            :param dropout_rate: Dropout rate.
-            :param trainable: Whether the layers are trainable.
-            :return: Output layer.
-            """
+            # param build_func: A callable that takes the input tensor and generates the output tensor.
             build_output = build_func(input_layer)
             if dropout_rate > 0.0:
                 dropout_layer = keras.layers.Dropout(
