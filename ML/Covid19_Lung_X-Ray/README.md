@@ -14,6 +14,7 @@ Output : According to our CNN Model, there is a 85.275% chance that you are infe
 Output : According to our CNN Model, there is a 40.417% chance that you are infected with Coronavirus
 
 <br />
+<br />
 
 ## Methodology :
 
