@@ -1,5 +1,6 @@
 import tensorflow as tf
 
+# L2 norm evaluation metrics
 
 def qa_pair_batch_accuracy(y_true, y_pred):
     y_true = tf.eye(tf.shape(y_pred)[0])
