@@ -1,36 +1,36 @@
-import json
 
 import tensorflow as tf
 from tensorflow import keras
 import tensorflow.keras.backend as K
-
-from tf_bert.pos_embd import PositionEmbedding
-from tf_bert.layers import get_inputs, get_embedding, TokenEmbedding, EmbeddingSimilarity, Masked, Extract
-from tf_bert.layer_normalization import LayerNormalization
-from tf_bert.multi_head import MultiHeadAttention
 from tf_bert.position_wise_feed_forward import FeedForward
+from tf_bert.layer_normalization import LayerNormalization
+from tf_bert.pos_embd import PositionEmbedding
+from tf_bert.multi_head import MultiHeadAttention
+from tf_bert.layers import get_inputs, get_embedding, TokenEmbedding, EmbeddingSimilarity, Masked, Extract
 
+
+import json
+
+'''
+Implementation of BERT. Inherits tf_bert module and generates bert from the configuration file
+    Here config file should be a json with following entries
+      vocab_size = number of tokens reqd.
+      max_position_embeddings = length of sequence
+      hidden_size = for size of embedding layer (which is a hidden layer)
+      num_hidden_layers = total number of hidden layers
+      intermediate_size = dimension of feed_forward embedding that is to dimensions of vector matrix to transform bert embeddings to input to fcnn
+      num_attention_head = transformer is using multi head attention so the num of required heads
+      training = flag to specify training mode if false then backprop doesn't take place
+      trainable = if false then weights will be freezed
+'''
+#activation function
 def gelu(x):
     return 0.5 * x * (1.0 + tf.math.erf(x / tf.sqrt(2.0)))
 
+#bert implementation
 class Bert(keras.Model):
-    def __init__(
-            self,
-            token_num,
-            pos_num=512,
-            seq_len=512,
-            embed_dim=768,
-            transformer_num=12,
-            head_num=12,
-            feed_forward_dim=3072,
-            dropout_rate=0.1,
-            attention_activation=None,
-            feed_forward_activation=gelu,
-            custom_layers=None,
-            training=True,
-            trainable=None,
-            lr=1e-4,
-            name='Bert'):
+    def __init__(self,token_num,pos_num=512,seq_len=512,embed_dim=768,transformer_num=12,head_num=12,feed_forward_dim=3072,dropout_rate=0.1,
+            attention_activation=None,feed_forward_activation=gelu,custom_layers=None,training=True,trainable=None,lr=1e-4,name='Bert'):
         super().__init__(name=name)
         self.token_num = token_num
         self.pos_num = pos_num
@@ -49,19 +49,6 @@ class Bert(keras.Model):
 
         # build layers
         # embedding
-        self.token_embedding_layer = TokenEmbedding(
-            input_dim=token_num,
-            output_dim=embed_dim,
-            mask_zero=True,
-            trainable=trainable,
-            name='Embedding-Token',
-        )
-        self.segment_embedding_layer = keras.layers.Embedding(
-            input_dim=2,
-            output_dim=embed_dim,
-            trainable=trainable,
-            name='Embedding-Segment',
-        )
         self.position_embedding_layer = PositionEmbedding(
             input_dim=pos_num,
             output_dim=embed_dim,
@@ -69,15 +56,31 @@ class Bert(keras.Model):
             trainable=trainable,
             name='Embedding-Position',
         )
+        self.segment_embedding_layer = keras.layers.Embedding(
+            input_dim=2,
+            output_dim=embed_dim,
+            trainable=trainable,
+            name='Embedding-Segment',
+        )
+        
+
+        self.token_embedding_layer = TokenEmbedding(
+            input_dim=token_num,
+            output_dim=embed_dim,
+            mask_zero=True,
+            trainable=trainable,
+            name='Embedding-Token',
+        )
+        
         self.embedding_layer_norm = LayerNormalization(
             trainable=trainable,
             name='Embedding-Norm',
         )
-
-        self.encoder_multihead_layers = []
-        self.encoder_ffn_layers = []
         self.encoder_attention_norm = []
         self.encoder_ffn_norm = []
+        self.encoder_multihead_layers = []
+        self.encoder_ffn_layers = []
+        
         # attention layers
         for i in range(transformer_num):
             base_name = 'Encoder-%d' % (i + 1)
@@ -158,6 +161,7 @@ class Bert(keras.Model):
             base_name = 'Encoder-%d' % (i + 1)
             attention_name = '%s-MultiHeadSelfAttention' % base_name
             feed_forward_name = '%s-FeedForward' % base_name
+            
             self_attention_output = _wrap_layer(
                 name=attention_name,
                 input_layer=last_layer,
@@ -165,6 +169,7 @@ class Bert(keras.Model):
                 norm_layer=self.encoder_attention_norm[i],
                 dropout_rate=self.dropout_rate,
                 trainable=self.trainable)
+            
             last_layer = _wrap_layer(
                 name=attention_name,
                 input_layer=self_attention_output,
@@ -177,24 +182,17 @@ class Bert(keras.Model):
         return output_tensor_list
 
 
-def build_model_from_config(config_file,
-                            training=False,
-                            trainable=None,
-                            seq_len=None,
-                            build=True):
-    """Build the model from config file.
-    :param config_file: The path to the JSON configuration file.
-    :param training: If training, the whole model will be returned.
-    :param trainable: Whether the model is trainable.
-    :param seq_len: If it is not None and it is shorter than the value in the config file, the weights in
-                    position embeddings will be sliced to fit the new length.
-    :return: model and config
-    """
+def build_model_from_config(config_file,training=False,trainable=None,seq_len=None,build=True):
+    
+    # config_file: The path to the JSON configuration file.
     with open(config_file, 'r') as reader:
         config = json.loads(reader.read())
+    # If it is not None and it is shorter than the value in the config file, the weights in position embeddings will be sliced to fit the new length.
     if seq_len is not None:
         config['max_position_embeddings'] = min(
             seq_len, config['max_position_embeddings'])
+        
+    # training: If training, the whole model will be returned.
     if trainable is None:
         trainable = training
     model = Bert(
@@ -210,4 +208,4 @@ def build_model_from_config(config_file,
     )
     if build:
         model.build(input_shape=[(None, None), (None, None), (None, None)])
-    return model, config
+    return model, config #returning model and config
