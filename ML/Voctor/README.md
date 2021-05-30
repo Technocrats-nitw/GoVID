@@ -3,9 +3,7 @@
 
 The idea of Voctor2.0 inherently comes from [Voctor 1.0](https://github.com/shivanshuman021/Voctor/tree/main/models/module3), which was our project in a previous hackathon. At that time we planned to train a T5 model to make a full fledged medical chatbot but ended up hardcoding a simple chatbot because of lack of gpu's and knowledge of training heavy models on colab. Through steady practice we explored NLP , and here in Hackon we got a chance to explore even broader aspect where we trained a BERT on medical Q/A dataset scraped from web and used GPT-2 as head of our model to generate answers to medical questions .
 
-<img src="https://github.com/Technocrats-nitw/Care/blob/master/res/train-arch.png" alt="Training Architecture">
-
-<img src="https://github.com/Technocrats-nitw/Care/blob/master/res/test-arch.png" alt="Testing Architecture">
+<i
 
 ## Show time :
 
@@ -46,9 +44,24 @@ Data Sources :
 
 ### Training :
 
-The architecture consists of a fine-tuned bioBert (same for both questions and answers) to convert text input to an embedding representation. The embedding is then input into a FCNN (a different one for the questions and answers) to develop an embedding which is used for similarity lookup. The top similar questions and answers are then used by GPT-2 to generate an answer. The full architecture is shown below.
+    We used a pretrained BioBERT and used it as shared model as an Encoder, encoding input text to embedding 
+    This embedding was then feeded into FCNN layers (as CNN's have tendency to extract out the similarity in different features.
+    These embeddings were then feeded into pretrained GPT-2 (the generative pretrained transformer) to generate the similar Q&A 
+    The loss was calculated and error was backpropagated.
 
-Lets take a look at the first half of the diagram above above in more detail, the training of the BERT and the FCNNs. A detailed figure of this part is shown below
+<img src="https://github.com/Technocrats-nitw/Care/blob/master/res/train-arch.png" alt="Training Architecture">
+
+
+
+### Testing :
+
+    The same BioBERT was taken to encode the input question vector into embedding 
+    This embedding was passed through the FCNN trained above to extract features and this acted as kindof similarity search of testing data with training data
+    The embedding thus obtained was feeded to the GPT-2 tuned during training to generate the answer
+
+
+<img src="https://github.com/Technocrats-nitw/Care/blob/master/res/test-arch.png" alt="Testing Architecture">
+
 
 <a href="https://colab.research.google.com/drive/1EDLeotVVunWFMXVHE9dcsF0Vkg6gCKVv?usp=sharing" target="_top">Colab</a>
 
