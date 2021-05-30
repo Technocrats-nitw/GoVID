@@ -66,30 +66,22 @@ def ffn_serialize_fn(features):
         features=tf.train.Features(feature=features_tuple))
     return example_proto.SerializeToString()
 
-
+#converts csv in data dir and generates tfrecords out of them
 def make_tfrecord(data_dir, generator_fn, serialize_fn, suffix='', **kwargs):
-    """Function to make TF Records from csv files
-    This function will take all csv files in data_dir, convert them
-    to tf example and write to *_{suffix}_train/eval.tfrecord to data_dir.
-
-    Arguments:
-        data_dir {str} -- dir that has csv files and store tf record
-        generator_fn {fn} -- A function that takes a list of filepath and yield the
-        parsed recored from file.
-        serialize_fn {fn} -- A function that takes output of generator fn and convert to tf example
-
-    Keyword Arguments:
-        suffix {str} -- suffix to add to tf record files (default: {''})
-    """
+    # data_dir {str} -- dir that has csv files and store tf record
     file_list = glob(os.path.join(data_dir, '*.csv'))
+    # suffix {str} -- suffix to add to tf record files (default: {''})
     train_tf_record_file_list = [
         f.replace('.csv', '_{0}_train.tfrecord'.format(suffix)) for f in file_list]
     test_tf_record_file_list = [
         f.replace('.csv', '_{0}_eval.tfrecord'.format(suffix)) for f in file_list]
+    
     for full_file_path, train_tf_record_file_path, test_tf_record_file_path in zip(file_list, train_tf_record_file_list, test_tf_record_file_list):
         print('Converting file {0} to TF Record'.format(full_file_path))
         with tf.io.TFRecordWriter(train_tf_record_file_path) as writer:
+            #generator_fn {fn} -- A function that takes a list of filepath and yield the parsed recored from file.
             for features in generator_fn([full_file_path], mode='train', **kwargs):
+                # serialize_fn {fn} -- A function that takes output of generator fn and convert to tf example
                 example = serialize_fn(features)
                 writer.write(example)
         with tf.io.TFRecordWriter(test_tf_record_file_path) as writer:
@@ -150,20 +142,10 @@ class InputExample(object):
     """A single training/test example for simple sequence classification."""
 
     def __init__(self, guid, text_a, text_b=None, label=None):
-        """Constructs a InputExample.
-    Args:
-      guid: Unique id for the example.
-      text_a: string. The untokenized text of the first sequence. For single
-        sequence tasks, only this sequence must be specified.
-      text_b: (Optional) string. The untokenized text of the second sequence.
-        Only must be specified for sequence pair tasks.
-      label: (Optional) string. The label of the example. This should be
-        specified for train and dev examples, but not for test examples.
-    """
         self.guid = guid
-        self.text_a = text_a
-        self.text_b = text_b
-        self.label = label
+        self.text_a = text_a #The untokenized text of the first sequence. For single sequence tasks, only this sequence must be specified.
+        self.text_b = text_b #The untokenized text of the second sequence. Only must be specified for sequence pair tasks.
+        self.label = label #The label of the example. This should be specified for train and dev examples, but not for test examples.
 
 
 def convert_single_example(tokenizer, example, max_seq_length=256, dynamic_padding=False):
