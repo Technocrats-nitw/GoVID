@@ -1,11 +1,7 @@
 # Voctor 2.0 - Virtual Doctor
 ## < Hackon > with Amazon ;)
 
-The idea of Voctor2.0 inherently comes from [Voctor 1.0](https://github.com/shivanshuman021/Voctor/tree/main/models/module3), which was our project in a previous hackathon. At that time we planned to train a T5 model to make a full fledged medical chatbot but ended up hardcoding a simple chatbot because of lack of gpu's and knowledge of training heavy models on colab. Through steady practice we explored NLP , and here in Hackon we got a chance to explore even broader aspect where we trained a BERT on medical Q/A dataset scraped from web and used GPT-2 as head of our model to generate answers to medical questions .
-
-
-
-## Show time :
+## It's Show time first of all !
 
 ### <b>Que</b> : 
 Since last week I am having headache with mild fever. I didn’t feel like eating or drinking anything and today morning I fell unconscious due to inadequate intake of fluids and food. I have dry cough. I don’t have cold. It’s been quite a few days but my fever isn’t getting cured. My improper intake of food has also caused me mild diarrhea. What should I do to cure myself from this?
