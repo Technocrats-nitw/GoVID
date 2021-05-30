@@ -11,16 +11,8 @@ from voctor.tokenization import FullTokenizer
 from voctor.metrics import qa_pair_batch_accuracy
 
 
-def train_bertffn(model_path='models/bertffn_crossentropy/bertffn',
-                  data_path='data/mqa_csv',
-                  num_epochs=20,
-                  num_gpu=1,
-                  batch_size=64,
-                  learning_rate=2e-5,
-                  validation_split=0.2,
-                  loss='categorical_crossentropy',
-                  pretrained_path='models/pubmed_pmc_470k/',
-                  max_seq_len=256):
+def train_bertffn(model_path='models/bertffn_crossentropy/bertffn',data_path='data/mqa_csv',num_epochs=20,num_gpu=1,batch_size=64,learning_rate=2e-5,validation_split=0.2,
+                  loss='categorical_crossentropy',pretrained_path='models/pubmed_pmc_470k/',max_seq_len=256):
     """A function to train BertFFNN similarity embedding model.
 
     Input file format:
