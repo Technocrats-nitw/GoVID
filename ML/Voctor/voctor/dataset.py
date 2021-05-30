@@ -1,20 +1,18 @@
-
+import tensorflow as tf
+import numpy as np
+import pandas as pd
+from sklearn.model_selection import train_test_split
 import os
 from glob import glob
 from tqdm import tqdm
 
-import numpy as np
-import pandas as pd
-import tensorflow as tf
-from sklearn.model_selection import train_test_split
+"""
+To be used to generate the dataset from tfrecords as Tensorflow recommends to store and read data in tfRecords format. 
+It internally uses Protocol Buffers to serialize/deserialize the data and store them in bytes, as it takes less space 
+to hold an ample amount of data and to transfer them as well.
+"""
 
 SEED = 42
-
-
-def _float_list_feature(value):
-    """Returns a float_list from a float / double."""
-    return tf.train.Feature(float_list=tf.train.FloatList(value=value))
-
 
 def _int64_list_feature(value):
     """Returns an int64_list from a bool / enum / int / uint."""
@@ -25,7 +23,12 @@ def _int64_feature(value):
     """Returns an int64_list from a bool / enum / int / uint."""
     return tf.train.Feature(int64_list=tf.train.Int64List(value=[value]))
 
+def _float_list_feature(value):
+    """Returns a float_list from a float / double."""
+    return tf.train.Feature(float_list=tf.train.FloatList(value=value))
 
+
+# takes in the list of the data_files, splits it up into train test set
 def create_generator_for_ffn(
         file_list,
         mode='train'):
