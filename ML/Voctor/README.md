@@ -30,6 +30,26 @@ My grandmother has started forgetting a lot of things and I’m concerned that s
 
 <b>Voctor's reply</b> : she may be developing alzheimer's disease or having a reaction to her medications or experiencing a vitamin or thyroid deficiency. her doctors can perform a variety of tests and arrive at a fairly reliable diagnosis. memory loss can be treated and it is very worthwhile to pursue the full explanation.
 
+## Methodology 
+
+### Data : 
+
+Collecting data was major obstacle before training the model. So we spent our two entire days the first one in collecting and the second one in cleaning the data . 
+Data Sources : 
+    
+    Reddit
+    eHealthForums
+    WebMD
+    HealthTap
+    iClinic
+
+
+### Training :
+
+The architecture consists of a fine-tuned bioBert (same for both questions and answers) to convert text input to an embedding representation. The embedding is then input into a FCNN (a different one for the questions and answers) to develop an embedding which is used for similarity lookup. The top similar questions and answers are then used by GPT-2 to generate an answer. The full architecture is shown below.
+
+Lets take a look at the first half of the diagram above above in more detail, the training of the BERT and the FCNNs. A detailed figure of this part is shown below
+
 <a href="https://colab.research.google.com/drive/1EDLeotVVunWFMXVHE9dcsF0Vkg6gCKVv?usp=sharing" target="_top">Colab</a>
 
 
