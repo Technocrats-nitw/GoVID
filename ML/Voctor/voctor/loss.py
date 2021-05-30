@@ -1,5 +1,6 @@
 import tensorflow as tf
 
+# L2 norm loss function
 def qa_pair_loss(y_true, y_pred):
     y_true = tf.eye(tf.shape(y_pred)[0])*2-1
     q_embedding, a_embedding = tf.unstack(y_pred, axis=1)
@@ -11,7 +12,7 @@ def qa_pair_loss(y_true, y_pred):
         q_embedding, a_embedding, transpose_b=True)
     return tf.reduce_mean(tf.norm(y_true - similarity_matrix, axis=-1))
 
-
+#categorical cross entropy 
 def qa_pair_cross_entropy_loss(y_true, y_pred):
     y_true = tf.eye(tf.shape(y_pred)[0])
     q_embedding, a_embedding = tf.unstack(y_pred, axis=1)
