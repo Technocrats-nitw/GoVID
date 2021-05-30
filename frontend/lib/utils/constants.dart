@@ -1,6 +1,6 @@
 /*
 Author :
-Anshuman Mishra & Ashiqa Rahman
+Anshuman Mishra & Ashiqa Rahman & Chaitanya Hardikar & Sufiyan Ansari
 Team :technocrats
 National Institute of Technology Warangal
 */

@@ -1,3 +1,9 @@
+/*
+Author :
+Chaitanya Hardikar
+NIT Warangal
+*/
+
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'pages/mobile/mobile_screen.dart';

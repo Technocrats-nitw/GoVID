@@ -1,3 +1,8 @@
+/*
+Author :
+Anshuman Mishra
+NIT Warangal
+*/
 import 'package:flutter/material.dart';
 import 'package:technocrats/screens/chat/user_model.dart';
 import 'package:technocrats/utils/constants.dart';

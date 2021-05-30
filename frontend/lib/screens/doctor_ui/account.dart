@@ -1,4 +1,4 @@
-//*
+/*
 Author : Ashiqa Rahman
 Team :technocrats
 National Institute of Technology Warangal

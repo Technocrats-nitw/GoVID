@@ -1,3 +1,9 @@
+/*
+Author :
+Anshuman Mishra
+Ashiqa Rahman
+NIT Warangal
+*/
 import 'package:flutter/material.dart';
 import 'package:technocrats/widgets/current-data-chart-painter.dart';
 

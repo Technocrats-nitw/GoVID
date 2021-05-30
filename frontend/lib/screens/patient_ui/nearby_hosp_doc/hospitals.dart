@@ -1,3 +1,8 @@
+/*
+Author :
+Anshuman Mishra
+NIT Warangal
+*/
 import 'package:flutter/material.dart';
 import 'package:technocrats/model/hospital_info.dart' as hosp;
 import 'package:technocrats/screens/patient_ui/nearby_hosp_doc/doctors.dart';

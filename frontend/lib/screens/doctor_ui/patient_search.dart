@@ -1,3 +1,8 @@
+/*
+Author :
+Ashiqa Rahman
+NIT Warangal
+*/
 import 'package:technocrats/model/mock_data.dart';
 import 'package:technocrats/utils/constants.dart';
 import 'account.dart';

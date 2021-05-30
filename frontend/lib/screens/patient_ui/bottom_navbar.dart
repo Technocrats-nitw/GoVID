@@ -1,6 +1,6 @@
 /*
-Author::
-Anshuman
+Author:
+Anshuman Mishra
 Technocrats NITW
 */
 

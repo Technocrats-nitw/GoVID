@@ -1,3 +1,8 @@
+/*
+Author :
+Ashiqa Rahman
+NIT Warangal
+*/
 import 'package:flutter/material.dart';
 
 Color primaryColor = Color(0xff0074ff);

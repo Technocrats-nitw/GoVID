@@ -1,3 +1,13 @@
+/*
+Coders :
+  - Ashiqa Rahman
+  - Anshuman Mishra
+  - Chaitanya Hardikar
+  - Sufiyan Ansari
+  
+NIT Warangal
+*/
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:technocrats/utils/constants.dart';

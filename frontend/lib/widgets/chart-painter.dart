@@ -1,3 +1,9 @@
+/*
+Author :
+Chaitanya Hardikar
+Ashiqa Rahman
+NIT Warangal
+*/
 import 'package:flutter/material.dart';
 import 'package:path_drawing/path_drawing.dart';
 import 'dart:math' as math;

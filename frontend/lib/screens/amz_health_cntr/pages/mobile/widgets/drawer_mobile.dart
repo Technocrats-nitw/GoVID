@@ -1,3 +1,8 @@
+/*
+Author :
+Chaitanya Hardikar
+NIT Warangal
+*/
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -39,9 +44,15 @@ class DrawerMobile extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(height: 20,),
-          Divider(thickness: 0.50,),
-          SizedBox(height: 20,),
+          SizedBox(
+            height: 20,
+          ),
+          Divider(
+            thickness: 0.50,
+          ),
+          SizedBox(
+            height: 20,
+          ),
           _singleButton(icon: Icons.widgets, title: 'Main'),
           Divider(
             thickness: 0.50,

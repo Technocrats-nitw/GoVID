@@ -1,3 +1,8 @@
+/*
+Author :
+Anshuman Mishra
+NIT Warangal
+*/
 import 'package:technocrats/model/mock_data.dart';
 import 'package:technocrats/utils/constants.dart';
 import 'package:url_launcher/link.dart';

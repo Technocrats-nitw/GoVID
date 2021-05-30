@@ -1,3 +1,8 @@
+/*
+Author :
+Chaitanya Hardikar
+NIT Warangal
+*/
 import 'package:flutter_svg/svg.dart';
 import 'package:technocrats/utils/constants.dart';
 

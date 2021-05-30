@@ -1,3 +1,9 @@
+/*
+Author :
+Chaitanya Hardikar
+NIT Warangal
+*/
+
 import 'package:flutter/material.dart';
 import 'package:technocrats/utils/constants.dart';
 import 'package:technocrats/screens/hospital_ui/side_nav.dart';

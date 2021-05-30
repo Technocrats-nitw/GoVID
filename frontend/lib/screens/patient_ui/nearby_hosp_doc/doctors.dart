@@ -1,3 +1,8 @@
+/*
+Author :
+Ashiqa Rahman
+NIT Warangal
+*/
 import 'package:flutter/material.dart';
 import 'package:technocrats/model/doctor_info.dart';
 import 'package:technocrats/screens/patient_ui/nearby_hosp_doc/appointment.dart';

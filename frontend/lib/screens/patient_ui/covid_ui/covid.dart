@@ -1,3 +1,8 @@
+/*
+Author :
+Anshuman Mishra
+NIT Warangal
+*/
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:technocrats/utils/constants.dart';
 import 'package:technocrats/screens/patient_ui/nearby_hosp_doc/doctors.dart';

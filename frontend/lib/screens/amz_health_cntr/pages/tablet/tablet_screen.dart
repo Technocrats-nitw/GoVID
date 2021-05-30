@@ -1,3 +1,8 @@
+/*
+Author :
+Ashiqa Rahman
+NIT Warangal
+*/
 import 'package:technocrats/screens/amz_health_cntr/pages/tablet/widgets/body_content_tablet_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';

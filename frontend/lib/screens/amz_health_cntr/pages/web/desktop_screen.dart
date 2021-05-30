@@ -1,3 +1,8 @@
+/*
+Author :
+Anshuman Mishra
+NIT Warangal
+*/
 import 'package:technocrats/screens/amz_health_cntr/pages/web/widgets/right_side_wdiget.dart';
 import 'package:technocrats/screens/amz_health_cntr/pages/web/widgets/web_vertical_nav_widget.dart';
 import 'package:flutter/material.dart';

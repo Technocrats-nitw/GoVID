@@ -1,3 +1,8 @@
+/*
+Author :
+Ashiqa Rahman
+NIT Warangal
+*/
 import 'package:flutter/material.dart';
 import 'package:technocrats/screens/chat/message_model_user.dart';
 import 'package:technocrats/screens/chat/user_model.dart';

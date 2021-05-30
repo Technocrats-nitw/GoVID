@@ -1,3 +1,8 @@
+/*
+Author :
+Anshuman Mishra
+NIT Warangal
+*/
 import 'package:technocrats/screens/chat/user_model.dart';
 
 class Message {

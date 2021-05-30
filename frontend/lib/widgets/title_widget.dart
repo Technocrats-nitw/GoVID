@@ -1,3 +1,8 @@
+/*
+Author :
+Ashiqa Rahman
+NIT Warangal
+*/
 import 'package:flutter/material.dart';
 
 class TitleWidget extends StatelessWidget {
