@@ -1,6 +1,8 @@
 # GoVID
 
-> An end-to-end Healthcare solution that intends to aid the trivial healthcare system by covering vital areas of Prognosis , Diagnosis and Treatment. [Here](https://www.youtube.com/watch?v=_4IFknlfqIU) is the YouTube link for the demonstration of the application.
+> An end-to-end Healthcare solution that intends to aid the trivial healthcare system by covering vital areas of Prognosis , Diagnosis and Treatment. 
+
+[Here](https://www.youtube.com/watch?v=_4IFknlfqIU) is the YouTube link for the demonstration of the application.
 
 ## TechStack : 
 - Flutter and Android Studio 
@@ -17,7 +19,8 @@
 
 #### Tensorflow for Natural Language Processing 
 
->
+>A BERT(Bidirectional Encoder Representation) based model with GPT2 as head fine tuned with BioBert weights, being used for question answering on medical datasets and being used as chatbot.
+
 
 ## File Structure (Upto two Level)
 
