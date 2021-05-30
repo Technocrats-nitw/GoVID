@@ -1,1 +1,1 @@
-<img src="https://github.com/Technocrats-nitw/Care/blob/master/res/tree-ml.png">
+<img src="https://github.com/Technocrats-nitw/Care/blob/master/res/ML_tree_struct.png">
