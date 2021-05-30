@@ -13,8 +13,7 @@ Output : According to our CNN Model, there is a 85.275% chance that you are infe
 <img src = "https://github.com/Technocrats-nitw/Care/blob/master/ML/Covid19_Lung_X-Ray/sample/predict2.jpeg">
 Output : According to our CNN Model, there is a 40.417% chance that you are infected with Coronavirus
 
-
-
+<br />
 
 ## Methodology :
 
