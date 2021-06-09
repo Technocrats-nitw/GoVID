@@ -18,7 +18,7 @@ class MedShop extends StatelessWidget {
     return Scaffold(
       backgroundColor: Constants.backgroundColor,
       appBar: AppBar(
-        backgroundColor: Theme.of(context).accentColor,
+        backgroundColor: Color(0xFF2A0B35),
       ),
       drawer: NavDrawer(),
       body: Container(

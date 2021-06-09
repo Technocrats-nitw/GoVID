@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:technocrats/screens/chat/user_model.dart';
 import 'package:technocrats/utils/constants.dart';
 import 'package:technocrats/screens/chat/message_model_doctor.dart';
+import 'package:technocrats/screens/hospital_ui/med_shop/med_shop.dart';
 
 class ChatScreen extends StatefulWidget {
   final User user = User(
@@ -117,7 +118,12 @@ class _ChatScreenState extends State<ChatScreen> {
             icon: Icon(Icons.shop),
             iconSize: 25.0,
             color: Colors.green,
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => MedShop()),
+              );
+            },
           ),
           IconButton(
             icon: Icon(Icons.send),
