@@ -4,6 +4,7 @@ Techncorats
 NITW
 */
 
+import 'package:technocrats/screens/video_call/index.dart';
 import 'package:technocrats/utils/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:technocrats/screens/side_nav.dart';
@@ -160,6 +161,32 @@ class _docInfoPageState extends State<docInfoPage> {
                                     },
                                     child: Text(
                                       'Consult',
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 18),
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    height: 10,
+                                  ),
+                                  TextButton(
+                                    style: ButtonStyle(
+                                      foregroundColor:
+                                          MaterialStateProperty.all<Color>(
+                                              Colors.white),
+                                      backgroundColor:
+                                          MaterialStateProperty.all<Color>(
+                                              Color(0xFF2A0B35)),
+                                    ),
+                                    onPressed: () {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) => IndexPage()),
+                                      );
+                                    },
+                                    child: Text(
+                                      'Video Chat',
                                       style: TextStyle(
                                           fontWeight: FontWeight.bold,
                                           fontSize: 18),
