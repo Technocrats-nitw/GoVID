@@ -14,7 +14,6 @@ import 'package:technocrats/widgets/custom_clipper.dart';
 import 'package:technocrats/screens/side_nav.dart';
 import 'package:technocrats/widgets/button_widget_qr.dart';
 import 'package:technocrats/screens/patient_ui/profile/qr_create_page.dart';
-import 'package:technocrats/screens/chat/chat_screen_doctor.dart';
 
 class Account extends StatelessWidget {
   @override
@@ -126,26 +125,6 @@ class Account extends StatelessWidget {
                     )),
                 SizedBox(height: 50),
                 SizedBox(height: 20),
-                /*
-                TextButton(
-                  style: ButtonStyle(
-                    foregroundColor:
-                        MaterialStateProperty.all<Color>(Colors.white),
-                    backgroundColor:
-                        MaterialStateProperty.all<Color>(Color(0xFF2A0B35)),
-                  ),
-                  onPressed: () {
-                    
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => ChatScreen()),
-                    );
-                  },
-                  child: Text(
-                    'Chat',
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
-                  ),
-                ),*/
                 SizedBox(height: 20),
                 ButtonWidget(
                   color: Colors.cyan,
@@ -187,15 +166,6 @@ class Account extends StatelessWidget {
                         type: "Testing : Negative",
                         color: Constants.lightBlue,
                       ),
-                      /*
-                      ButtonWidget(
-                        color: Colors.cyan,
-                        text: 'QR med report',
-                        onClicked: () =>
-                            Navigator.of(context).push(MaterialPageRoute(
-                          builder: (BuildContext context) => QRCreatePage(),
-                        )),
-                      ),*/
                     ],
                   ),
                 ),

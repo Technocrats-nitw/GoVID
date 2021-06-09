@@ -10,19 +10,13 @@ NIT Warangal
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:technocrats/utils/constants.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:technocrats/screens/account/home_page.dart';
-import 'package:technocrats/utils/user_preferences.dart';
+import 'package:technocrats/utils/constants.dart';
 
-Future main() async {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await SystemChrome.setPreferredOrientations([
-    DeviceOrientation.portraitUp,
-    DeviceOrientation.portraitDown,
-  ]);
-
-  await UserPreferences.init();
-
+  await Firebase.initializeApp();
   runApp(MyApp());
 }
 

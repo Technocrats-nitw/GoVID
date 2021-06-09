@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:technocrats/screens/account/login_page.dart';
-import 'package:technocrats/screens/account/signup_page.dart';
 import 'package:technocrats/widgets/button_widget.dart';
 import 'package:technocrats/widgets/title_widget.dart';
+import 'package:technocrats/helper/authenticate.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -21,28 +20,22 @@ class _HomePageState extends State<HomePage> {
               children: [
                 TitleWidget(icon: Icons.home, text: 'Amazon Care'),
                 buildButtons(),
+                SizedBox(
+                  height: 10,
+                ),
               ],
             ),
           ),
         ),
       );
 
-  Widget buildButtons() => Column(
-        children: [
-          const SizedBox(height: 24),
-          ButtonWidget(
-            text: 'Login',
-            onClicked: () => Navigator.of(context).push(MaterialPageRoute(
-              builder: (context) => LoginPage(),
-            )),
-          ),
-          const SizedBox(height: 24),
-          ButtonWidget(
-            text: 'Register',
-            onClicked: () => Navigator.of(context).push(MaterialPageRoute(
-              builder: (context) => UserPage(),
-            )),
-          ),
-        ],
+  Widget buildButtons() => Container(
+        alignment: Alignment.center,
+        child: ButtonWidget(
+          text: 'Get Started',
+          onClicked: () => Navigator.of(context).push(MaterialPageRoute(
+            builder: (context) => Authenticate(),
+          )),
+        ),
       );
 }

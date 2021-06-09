@@ -9,7 +9,9 @@ import 'package:technocrats/utils/constants.dart';
 import 'package:technocrats/screens/dev_ui/dev.dart';
 import 'package:technocrats/screens/hospital_ui/med_shop/med_shop.dart';
 import 'package:technocrats/screens/account/home_page.dart';
-import 'package:technocrats/screens/chat/chat_screen_doctor.dart';
+
+import '../chat/chatrooms.dart';
+
 
 class NavDrawer extends StatefulWidget {
   @override
@@ -68,7 +70,7 @@ class _NavDrawerState extends State<NavDrawer> {
             onTap: () => {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => ChatScreen()),
+                MaterialPageRoute(builder: (context) => ChatRoom()),
               ),
             },
           ),

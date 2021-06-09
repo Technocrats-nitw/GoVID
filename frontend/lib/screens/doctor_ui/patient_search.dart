@@ -5,9 +5,9 @@ NIT Warangal
 */
 import 'package:technocrats/model/mock_data.dart';
 import 'package:technocrats/utils/constants.dart';
-import 'account.dart';
 
 import '../../utils/pkgs.dart';
+import '../patient_ui/profile/med_report.dart';
 
 class PatientSearch extends StatelessWidget {
   final ValueNotifier<String> keyword = ValueNotifier<String>("");

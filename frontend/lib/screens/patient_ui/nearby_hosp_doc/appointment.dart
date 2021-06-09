@@ -8,7 +8,9 @@ import 'package:technocrats/screens/video_call/index.dart';
 import 'package:technocrats/utils/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:technocrats/screens/side_nav.dart';
-import 'package:technocrats/screens/chat/chat_screen_user.dart';
+
+import '../../chat/chatrooms.dart';
+
 
 class DocInfoPage extends StatelessWidget {
   DocInfoPage({
@@ -153,11 +155,11 @@ class _docInfoPageState extends State<docInfoPage> {
                                               Color(0xFF2A0B35)),
                                     ),
                                     onPressed: () {
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (context) => ChatScreen()),
-                                      );
+                                      Navigator.pushReplacement(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  ChatRoom()));
                                     },
                                     child: Text(
                                       'Consult',

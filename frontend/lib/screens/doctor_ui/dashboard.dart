@@ -8,6 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:technocrats/screens/doctor_ui/patient_search.dart';
 import 'package:technocrats/utils/constants.dart';
 import 'package:technocrats/screens/doctor_ui/qr_scan_page.dart';
+import 'package:technocrats/screens/chat/chatrooms.dart';
 import '../../widgets/account_card.dart';
 import '../../widgets/appointment_card.dart';
 import '../../widgets/chart-painter.dart';
@@ -40,6 +41,7 @@ class _HospitalDashboardHomeState extends State<HospitalDashboardHome> {
           DoctorDash(),
           PatientSearch(),
           QRScanPage(),
+          ChatRoom(),
         ],
         onPageChanged: (int index) {
           setState(() {
@@ -51,7 +53,8 @@ class _HospitalDashboardHomeState extends State<HospitalDashboardHome> {
           items: <Widget>[
             Icon(Icons.label, size: 20, color: Colors.black),
             Icon(Icons.map_sharp, size: 20, color: Colors.black),
-            Icon(Icons.verified_user)
+            Icon(Icons.verified_user),
+            Icon(Icons.chat)
           ],
           animationDuration: Duration(milliseconds: 400),
           backgroundColor: Color(0xFF2A0B35),
