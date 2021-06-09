@@ -4,8 +4,8 @@ Team :technocrats
 National Institute of Technology Warangal
 */
 import 'package:technocrats/helper/constants.dart';
+import 'package:technocrats/screens/hospital_ui/med_shop/med_shop.dart';
 import 'package:technocrats/services/database.dart';
-import 'package:technocrats/widgets/appbar.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
@@ -68,8 +68,11 @@ class _ChatScreenState extends State<ChatScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black45,
-      appBar: appBarMain(context),
+      backgroundColor: Colors.white,
+      appBar: AppBar(
+        title: Text('Your Chat'),
+        backgroundColor: Colors.indigo[700],
+      ),
       body: Container(
         child: Stack(children: [
           ChatMessageList(),
@@ -77,7 +80,7 @@ class _ChatScreenState extends State<ChatScreen> {
             alignment: Alignment.bottomCenter,
             width: MediaQuery.of(context).size.width,
             child: Container(
-              color: Color(0x54FFFFFF),
+              color: Colors.grey,
               padding: EdgeInsets.symmetric(horizontal: 24, vertical: 16),
               child: Row(
                 children: [
@@ -91,6 +94,25 @@ class _ChatScreenState extends State<ChatScreen> {
                         border: InputBorder.none,
                       ),
                     ),
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      MedShop();
+                    },
+                    child: Container(
+                        height: 40,
+                        width: 40,
+                        decoration: BoxDecoration(
+                            gradient: LinearGradient(colors: [
+                              const Color(0x36FFFFFF),
+                              const Color(0x0FFFFFFF),
+                            ]),
+                            borderRadius: BorderRadius.circular(40)),
+                        padding: EdgeInsets.all(12),
+                        child: Image.asset("assets/icons/capsule.png")),
+                  ),
+                  SizedBox(
+                    width: 30,
                   ),
                   GestureDetector(
                     onTap: () {
@@ -145,16 +167,15 @@ class MessageTile extends StatelessWidget {
                     bottomRight: Radius.circular(23)),
             gradient: LinearGradient(
               colors: sendByMe
-                  ? [const Color(0xff007EF4), const Color(0xff2A75BC)]
-                  : [Colors.grey, Colors.grey],
+                  ? [Colors.indigo[700], Colors.indigo[700]]
+                  : [Colors.indigo[100], Colors.indigo[100]],
             )),
         child: Text(message,
             textAlign: TextAlign.start,
             style: TextStyle(
-                color: Colors.white,
+                color: sendByMe ? Colors.white : Colors.black,
                 fontSize: 16,
-                fontFamily: 'OverpassRegular',
-                fontWeight: FontWeight.w300)),
+                fontWeight: FontWeight.w400)),
       ),
     );
   }

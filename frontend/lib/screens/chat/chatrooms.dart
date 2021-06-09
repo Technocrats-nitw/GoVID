@@ -66,9 +66,10 @@ class _ChatRoomState extends State<ChatRoom> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black54,
+      backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text('Chat 24X7'),
+        backgroundColor: Colors.indigo[700],
         actions: <Widget>[
           GestureDetector(
             onTap: () {
@@ -103,7 +104,7 @@ class ChatRoomTile extends StatelessWidget {
       },
       child: Container(
         decoration: new BoxDecoration(
-          color: Colors.black38,
+          color: Colors.black12,
         ),
         padding: EdgeInsets.symmetric(horizontal: 24, vertical: 20),
         child: Row(
@@ -112,22 +113,21 @@ class ChatRoomTile extends StatelessWidget {
               height: 30,
               width: 30,
               decoration: BoxDecoration(
-                  color: Colors.blue, borderRadius: BorderRadius.circular(30)),
+                  color: Colors.indigo[700],
+                  borderRadius: BorderRadius.circular(30)),
               child: Text(userName.substring(0, 1),
                   textAlign: TextAlign.center,
                   style: TextStyle(
                       color: Colors.white,
                       fontSize: 20,
-                      fontFamily: 'OverpassRegular',
-                      fontWeight: FontWeight.w300)),
+                      fontWeight: FontWeight.w400)),
             ),
             SizedBox(width: 12),
             Text(userName,
                 textAlign: TextAlign.start,
                 style: TextStyle(
-                    color: Colors.white,
+                    color: Colors.black,
                     fontSize: 20,
-                    fontFamily: 'OverpassRegular',
                     fontWeight: FontWeight.w300))
           ],
         ),

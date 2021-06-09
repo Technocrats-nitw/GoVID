@@ -176,14 +176,14 @@ class _SignUpState extends State<SignUp> {
                         padding: EdgeInsets.symmetric(vertical: 16),
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(30),
-                            gradient: LinearGradient(
-                                begin: Alignment.centerLeft,
-                                end: Alignment.centerRight,
-                                colors: [Colors.indigo, Colors.blue])),
+                            color: Colors.indigo[700]),
                         width: MediaQuery.of(context).size.width,
                         child: Text(
                           "Save",
-                          style: TextStyle(color: Colors.white, fontSize: 17),
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 17,
+                              fontWeight: FontWeight.bold),
                           textAlign: TextAlign.center,
                         ),
                       ),
