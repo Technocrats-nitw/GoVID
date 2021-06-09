@@ -15,7 +15,8 @@ class API_hospital {
     var hospitalModel = null;
 
     var response = await client.get(Uri.parse(
-        "https://technocrats.pythonanywhere.com/api/hospital/city/$cityName"));
+        //"https://technocrats.pythonanywhere.com/api/hospital/city/$cityName"));
+        Strings.hospital_url));
     try {
       if (response.statusCode == 200) {
         var jsonString = response.body;

@@ -15,7 +15,8 @@ class API_doctor {
     var doctorModel = null;
 
     var response = await client.get(Uri.parse(
-        'http://technocrats.pythonanywhere.com/api/doctor/city/$cityName'));
+        //'http://technocrats.pythonanywhere.com/api/doctor/city/$cityName'));
+        Strings.doctors_url));
     try {
       if (response.statusCode == 200) {
         var jsonString = response.body;
