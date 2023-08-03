@@ -1,6 +1,6 @@
 # GoVID
 
-> An end-to-end Healthcare solution that intends to aid the trivial healthcare system by covering vital areas of Prognosis , Diagnosis and Treatment. 
+An end-to-end Healthcare solution that intends to aid the trivial healthcare system by covering vital areas of Prognosis , Diagnosis and Treatment. 
 
 [Here](https://www.youtube.com/watch?v=_4IFknlfqIU) is the YouTube link for the demonstration of the application.
 
